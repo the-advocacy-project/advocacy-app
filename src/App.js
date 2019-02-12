@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BeginButton from './components/beginButton';
-import YourConsent from './yourConsent';
+import YourConsent from './components/dynamicPages/yourConsent';
 
 
 class App extends Component {
@@ -8,7 +8,6 @@ class App extends Component {
     consent: false,
     sendMail: false,
     consentInput: "",
-    testInput: "",
   }
 
   toggleChange = (event) => {
