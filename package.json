@@ -24,6 +24,10 @@
         "not op_mini all"
     ],
     "devDependencies": {
-        "node-sass": "^4.11.0"
+        "node-sass": "^4.11.0",
+        "eslint": "5.12.0",
+        "eslint-config-react-minimal": "^1.0.0",
+        "eslint-plugin-import": "^2.15.0",
+        "eslint-plugin-react": "^7.12.4"
     }
 }
