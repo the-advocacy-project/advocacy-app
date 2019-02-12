@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import BeginButton from './components/buttons/beginButton';
-import YourConsent from './components/dynamicPages/yourConsent';
+import BeginButton from './components/beginButton';
+import YourConsent from './yourConsent';
 
 
 class App extends Component {
