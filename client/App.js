@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 // import './App.css';
+import BeginButton from './components/beginButton';
+import YourConsent from './components/dynamicPages/yourConsent';
 import Home from './pages/Home';
 import List from './pages/List';
 
@@ -8,18 +10,33 @@ import axios from 'axios';
 
 class App extends Component {
     state = {
-        value: ''
-    };
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         value: ''
-    //     };
-    //     this.handleChange = this.handleChange.bind(this);
-    //     this.handleSubmit = this.handleSubmit.bind(this);
-    // }
+        value: '',
+        consent: false,
+        sendMail: false,
+        consentInput: "",
+    }
 
-    // componentDidMount() {}
+    toggleChange = (event) => {
+      const target = event.target;
+      const value = target.type === 'checkbox' ? target.checked : target.value;
+      this.setState({
+        [target.name]: value
+      })
+    }
+
+    handleChangeInput = (el) => {
+      const target = el.target;
+      const value = target.type === 'text' ?  null : target.value;
+      this.setState({
+        // consentInput: el.target.value
+        [target.name]: value
+      })
+    }
+
+    handleSubmitInput = (e) => {
+      alert('Advocacy ' + this.state.consentInput)
+      e.preventDefault();
+    }
 
     handleChange = event => {
         this.setState({
@@ -35,40 +52,27 @@ class App extends Component {
         });
     };
     render() {
-        // const App = () => (
-        // <div>
-        //     <Switch>
-        //         <Route exact path="/" component={Home} />
-        //         <Route path="/list" component={List} />
-        //     </Switch>
-        // </div>
-        //     <div>
-        //         <Switch>
-        //             <form
-        //                 onSubmit={this.handleSubmit}
-        //                 method="POST"
-        //                 action="/api/data"
-        //             >
-        //                 <label>
-        //                     Name:
-        //                     <input
-        //                         type="text"
-        //                         value={this.state.value}
-        //                         onChange={this.handleChange}
-        //                     />
-        //                 </label>
-        //                 <input type="submit" value="Submit" />
-        //             </form>
-        //         </Switch>
-        //     </div>
-        // );
+
         return (
             <div>
-                <Switch>
+            <header className="App-header">
+              <h1>The Advocacy Project</h1>
+              <h2>Your voice. Your rights. Your choice.</h2>
+            </header>
+            <h2>Need help with day to day tasks?
+            See if you can get the help you need.</h2>
+            <BeginButton/>
+            <YourConsent
+            consent={this.state.consent}
+            sendMail={this.state.sendMail}
+            toggleChange={this.toggleChange}
+            handleChangeInput={this.handleChangeInput}
+            handleSubmitInput={this.handleSubmitInput}/>
+                // <Switch>
                     // <Route exact path="/" component={Home} />
                     // <Route path="/list" component={List} />
                     //{' '}
-                </Switch>
+                // </Switch>
                 <form onSubmit={this.handleSubmit} method="POST" action="/">
                     <label>
                         Name:
