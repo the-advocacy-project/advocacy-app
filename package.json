@@ -1,33 +1,47 @@
 {
-    "name": "the-advocacy-project",
-    "version": "0.1.0",
-    "private": true,
+    "name": "parcelExpressTest",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build-watch": "parcel watch ./client/index.html",
+        "start-watch": "nodemon server/index.js",
+        "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
+        "build": "parcel build ./client/index.html",
+        "start": "npm run build && node server/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-env",
+            "@babel/preset-react"
+        ],
+        "plugins": [
+            "@babel/plugin-proposal-class-properties"
+        ]
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.2.2",
+        "@babel/plugin-proposal-class-properties": "^7.3.0",
+        "@babel/preset-env": "^7.3.1",
+        "@babel/preset-react": "^7.0.0",
+        "babel-eslint": "^10.0.1",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "concurrently": "^4.1.0",
+        "nodemon": "^1.18.10",
+        "parcel-bundler": "^1.11.0"
+    },
     "dependencies": {
+        "axios": "^0.18.0",
+        "body-parser": "^1.18.3",
+        "express": "^4.16.4",
+        "greeting": "^1.0.6",
+        "nodemailer": "^5.1.1",
         "react": "^16.8.1",
         "react-dom": "^16.8.1",
-        "react-scripts": "2.1.5"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "sass": "node-sass --watch public/scss/styles.scss -o public/css"
-    },
-    "eslintConfig": {
-        "extends": "react-app"
-    },
-    "browserslist": [
-        ">0.2%",
-        "not dead",
-        "not ie <= 11",
-        "not op_mini all"
-    ],
-    "devDependencies": {
-        "node-sass": "^4.11.0",
-        "eslint": "5.12.0",
-        "eslint-config-react-minimal": "^1.0.0",
-        "eslint-plugin-import": "^2.15.0",
-        "eslint-plugin-react": "^7.12.4"
+        "react-router-dom": "^4.3.1"
     }
 }
