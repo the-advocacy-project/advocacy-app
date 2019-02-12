@@ -6,12 +6,31 @@ import YourConsent from './yourConsent';
 class App extends Component {
   state = {
     consent: false,
+    sendMail: false,
+    consentInput: "",
+    testInput: "",
   }
 
-  toggleChange = () => {
+  toggleChange = (event) => {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({
-      consent: !this.state.consent,
+      [target.name]: value
     })
+  }
+
+  handleChange = (el) => {
+    const target = el.target;
+    const value = target.type === 'text' ?  null : target.value;
+    this.setState({
+      // consentInput: el.target.value
+      [target.name]: value
+    })
+  }
+
+  handleSubmit = (e) => {
+    alert('Advocacy ' + this.state.consentInput)
+    e.preventDefault();
   }
 
   render() {
@@ -26,7 +45,10 @@ class App extends Component {
         <BeginButton/>
         <YourConsent
         consent={this.state.consent}
-        toggleChange={this.toggleChange}/>
+        sendMail={this.state.sendMail}
+        toggleChange={this.toggleChange}
+        handleChange={this.handleChange}
+        handleSubmit={this.handleSubmit}/>
       </div>
     );
   }
