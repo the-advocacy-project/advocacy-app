@@ -20,6 +20,7 @@ import HowTo from './components/staticPages/HowTo';
 import KeyRights from './components/staticPages/KeyRights';
 import Sorry from './components/staticPages/Sorry';
 import Support from './components/staticPages/Support';
+import Advocacy from './components/staticPages/Advocacy';
 
 // DYNAMIC PAGE IMPORTS
 import InitialChecks from './components/dynamicPages/InitialChecks';
@@ -50,22 +51,16 @@ class App extends Component {
                 <div>
                     <Switch>
                         <Route exact path="/" component={Home} />
-
-                        <Route exact path="/about" component={About} />
-                        <Route path="/begin" component={Begin} />
-                        <Route path="/care-act" component={CareAct} />
                         <Route path="/help" component={Help} />
-
                         <Route path="/how-to" component={HowTo} />
-                        <Route path="/key-rights" component={KeyRights} />
-                        <Route path="/sorry" component={Sorry} />
-                        <Route path="/support" component={Support} />
                         <Route
                             path="/initial-checks"
                             component={InitialChecks}
                         />
                         <Route path="/consent" component={Consent} />
+                        <Route path="/sorry" component={Sorry} />
                         <Route path="/contact" component={Contact} />
+                        <Route path="/begin" component={Begin} />
                         <Route path="/nutrition" component={Nutrition} />
                         <Route path="/hygiene" component={Hygiene} />
                         <Route path="/toilet" component={Toilet} />
@@ -84,9 +79,16 @@ class App extends Component {
                         />
                         <Route path="/eligibility" component={Eligibility} />
                         <Route path="/wellbeing" component={Wellbeing} />
-                        <Route path="/complete" component={Complete} />
                         <Route path="/duty" component={Duty} />
                         <Route path="/overview" component={Overview} />
+                        <Route path="/complete" component={Complete} />
+                        {/* NAV COMPONENTS */}
+                        <Route exact path="/about" component={About} />
+                        <Route exact path="/advocacy" component={Advocacy} />
+                        <Route path="/care-act" component={CareAct} />
+                        <Route path="/support" component={Support} />
+                        <Route path="/key-rights" component={KeyRights} />
+                        {/* 404 */}
                         <Route component={FourZeroFour} />
                     </Switch>
                 </div>
