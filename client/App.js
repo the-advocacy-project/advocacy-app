@@ -9,49 +9,49 @@ import axios from 'axios';
 // import List from './components/pages/List';
 
 // STATIC PAGE IMPORTS
-import FourZeroFour from './staticPages/404';
-import FiveHundred from './staticPages/500';
-import About from './staticPages/About';
-import Begin from './staticPages/Begin';
-import CareAct from './staticPages/CareAct';
-import Help from './staticPages/Help';
-import Home from './staticPages/Home';
-import HowTo from './staticPages/HowTo';
-import KeyRights from './staticPages/KeyRights';
-import Sorry from './staticPages/Sorry';
-import Support from './staticPages/Support';
+import FourZeroFour from './components/staticPages/FourZeroFour';
+import FiveHundred from './components/staticPages/FiveHundred';
+import About from './components/staticPages/About';
+import Begin from './components/staticPages/Begin';
+import CareAct from './components/staticPages/CareAct';
+import Help from './components/staticPages/Help';
+import Home from './components/staticPages/Home';
+import HowTo from './components/staticPages/HowTo';
+import KeyRights from './components/staticPages/KeyRights';
+import Sorry from './components/staticPages/Sorry';
+import Support from './components/staticPages/Support';
 
 // DYNAMIC PAGE IMPORTS
-import InitialChecks from './dynamicPages/InitialChecks';
-import Consent from './dynamicPages/Consent';
-import Contact from './dynamicPages/Contact';
-import Nutrition from './dynamicPages/Nutrition';
-import Hygiene from './dynamicPages/Hygiene';
-import Toilet from './dynamicPages/Toilet';
-import Clothing from './dynamicPages/Clothing';
-import Safety from './dynamicPages/Safety';
-import Environment from './dynamicPages/Environment';
-import Relationships from './dynamicPages/Relationships';
-import Work from './dynamicPages/Work';
-import Transport from './dynamicPages/Transport';
-import Responsibilities from './dynamicPages/Responsibilities';
-import Eligibility from './dynamicPages/Eligibility';
-import Wellbeing from './dynamicPages/Wellbeing';
-import Complete from './dynamicPages/Complete';
-import Duty from './staticPages/Duty';
-import Overview from './staticPages/Overview';
+import InitialChecks from './components/dynamicPages/InitialChecks';
+import Consent from './components/dynamicPages/Consent';
+import Contact from './components/dynamicPages/Contact';
+import Nutrition from './components/dynamicPages/Nutrition';
+import Hygiene from './components/dynamicPages/Hygiene';
+import Toilet from './components/dynamicPages/Toilet';
+import Clothing from './components/dynamicPages/Clothing';
+import Safety from './components/dynamicPages/Safety';
+import Environment from './components/dynamicPages/Environment';
+import Relationships from './components/dynamicPages/Relationships';
+import Work from './components/dynamicPages/Work';
+import Transport from './components/dynamicPages/Transport';
+import Responsibilities from './components/dynamicPages/Responsibilities';
+import Eligibility from './components/dynamicPages/Eligibility';
+import Wellbeing from './components/dynamicPages/Wellbeing';
+import Complete from './components/dynamicPages/Complete';
+import Duty from './components/dynamicPages/Duty';
+import Overview from './components/dynamicPages/Overview';
 
 class App extends Component {
-    state = {};
+state = {};
 
 render(){
   
     return (
-        <BrowerRouter>
+        <BrowserRouter>
         <Switch>
-            {/* Static Page routing */}
-            <Route path='/404' component={ FourZeroFour }/> 
-            <Route path='/500' component={ FiveHundred }/>
+
+            <Route path='/four-zero-four' component={ FourZeroFour }/> 
+            <Route path='/five-hundred' component={ FiveHundred }/>
             <Route path='/about' component={ About }/>
             <Route path='/begin' component={ Begin }/>
             <Route path='/care-act' component={ CareAct }/>
@@ -61,13 +61,11 @@ render(){
             <Route path='/key-rights' component={ KeyRights }/>
             <Route path='/sorry' component={ Sorry }/>
             <Route path='/support' component={ Support }/>
-
-            
-            {/* Dynamic Page routing */}
             <Route path='/initial-checks' component={ InitialChecks }/>
             <Route path='/consent' component={ Consent }/>
             <Route path='/contact' component={ Contact }/>
             <Route path='/nutrition' component={ Nutrition }/>
+            <Route path='/hygiene' component={ Hygiene } />
             <Route path='/toilet' component={ Toilet }/>
             <Route path='/clothing' component={ Clothing }/>
             <Route path='/safety' component={ Safety }/>
@@ -82,7 +80,7 @@ render(){
             <Route path='/duty' component={ Duty }/>  
             <Route path='/overview' component={ Overview }/>         
         </Switch>
-        </BrowerRouter>
+        </BrowserRouter>
         )
     }
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Hygeine(props) {
+function Hygiene(props) {
     return (
         <div>
-            <h1>Hygeine</h1>
+            <h1>Hygiene</h1>
         </div>
     );
 }
 
-export default Hygeine;
+export default Hygiene;
