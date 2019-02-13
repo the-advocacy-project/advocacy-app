@@ -3,6 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 
 import BeginButton from './components/buttons/beginButton';
 import YourConsent from './components/dynamicPages/yourConsent';
+import Nutrition from './components/dynamicPages/nutrition';
+import Education from './components/dynamicPages/education';
 import Home from './components/pages/Home';
 import List from './components/pages/List';
 
@@ -14,13 +16,36 @@ class App extends Component {
         consent: false,
         sendMail: false,
         consentInput: "",
+        nutrition: {
+            food : {
+                question: "Do you need help eating, drinking, shopping or cooking?" ,
+                agree: false
+            },
+            diet: {
+                question: "Do you need help maintaining a balanced diet?",
+                agree: false,
+            },
+            more: ""
+        },
+        education: {
+            read : {
+                question: "Can you read?" ,
+                agree: false
+            },
+            write: {
+                question: "Can you write?",
+                agree: false,
+            },
+            more: ""
+        }
     }
 
-    toggleChange = (event) => {
+    toggleChange = (event, qs) => {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
+        const newNutrition = {...this.state.nutrition[qs], agree:value}
         this.setState({
-            [target.name]: value
+            nutrition: {...this.state.nutrition, [qs]:newNutrition}
         })
     }
 
@@ -28,7 +53,6 @@ class App extends Component {
         const target = el.target;
         const value = target.type === 'text' ?  null : target.value;
         this.setState({
-        // consentInput: el.target.value
             [target.name]: value
         })
     }
@@ -65,9 +89,14 @@ class App extends Component {
                 <YourConsent
                     consent={this.state.consent}
                     sendMail={this.state.sendMail}
-                    toggleChange={this.toggleChange}
                     handleChangeInput={this.handleChangeInput}
                     handleSubmitInput={this.handleSubmitInput}/>
+                <Nutrition
+                    info={this.state.nutrition}
+                    toggleChange={this.toggleChange}/>
+                <Education
+                    info={this.state.education}
+                    toggleChange={this.toggleChange}/>
                 {/*<Switch>
                     <Route exact path="/" component={Home} />
                     <Route path="/list" component={List} />
@@ -85,9 +114,7 @@ class App extends Component {
                     <input type="submit" value="Submit" />
                 </form>
             </div>
-            // <Switch>
-            //     <App />
-            // </Switch>
+
         );
     }
 }
