@@ -42,130 +42,140 @@ import Duty from './components/dynamicPages/Duty';
 import Overview from './components/dynamicPages/Overview';
 
 class App extends Component {
-state = {};
+    state = {};
 
-render(){
-  
-    return (
-        <BrowserRouter>
-        <Switch>
+    render() {
+        return (
+            <BrowserRouter>
+                <div>
+                    <Switch>
+                        <Route exact path="/" component={Home} />
 
-            <Route path='/four-zero-four' component={ FourZeroFour }/> 
-            <Route path='/five-hundred' component={ FiveHundred }/>
-            <Route path='/about' component={ About }/>
-            <Route path='/begin' component={ Begin }/>
-            <Route path='/care-act' component={ CareAct }/>
-            <Route path='/help' component= { Help }/> 
-            <Route path='/home' component={ Home }/>
-            <Route path='/how-to' component={ HowTo }/>
-            <Route path='/key-rights' component={ KeyRights }/>
-            <Route path='/sorry' component={ Sorry }/>
-            <Route path='/support' component={ Support }/>
-            <Route path='/initial-checks' component={ InitialChecks }/>
-            <Route path='/consent' component={ Consent }/>
-            <Route path='/contact' component={ Contact }/>
-            <Route path='/nutrition' component={ Nutrition }/>
-            <Route path='/hygiene' component={ Hygiene } />
-            <Route path='/toilet' component={ Toilet }/>
-            <Route path='/clothing' component={ Clothing }/>
-            <Route path='/safety' component={ Safety }/>
-            <Route path='/environment' component={ Environment }/>
-            <Route path='/relationships' component={ Relationships }/>
-            <Route path='/work' component={ Work }/>
-            <Route path='/transport' component={ Transport }/>
-            <Route path='/responsibilites' component={ Responsibilities }/>
-            <Route path='/eligibility' component={ Eligibility }/>
-            <Route path='/wellbeing' component={ Wellbeing }/>
-            <Route path='/complete' component={ Complete }/> 
-            <Route path='/duty' component={ Duty }/>  
-            <Route path='/overview' component={ Overview }/>         
-        </Switch>
-        </BrowserRouter>
-        )
+                        <Route exact path="/about" component={About} />
+                        <Route path="/begin" component={Begin} />
+                        <Route path="/care-act" component={CareAct} />
+                        <Route path="/help" component={Help} />
+
+                        <Route path="/how-to" component={HowTo} />
+                        <Route path="/key-rights" component={KeyRights} />
+                        <Route path="/sorry" component={Sorry} />
+                        <Route path="/support" component={Support} />
+                        <Route
+                            path="/initial-checks"
+                            component={InitialChecks}
+                        />
+                        <Route path="/consent" component={Consent} />
+                        <Route path="/contact" component={Contact} />
+                        <Route path="/nutrition" component={Nutrition} />
+                        <Route path="/hygiene" component={Hygiene} />
+                        <Route path="/toilet" component={Toilet} />
+                        <Route path="/clothing" component={Clothing} />
+                        <Route path="/safety" component={Safety} />
+                        <Route path="/environment" component={Environment} />
+                        <Route
+                            path="/relationships"
+                            component={Relationships}
+                        />
+                        <Route path="/work" component={Work} />
+                        <Route path="/transport" component={Transport} />
+                        <Route
+                            path="/responsibilites"
+                            component={Responsibilities}
+                        />
+                        <Route path="/eligibility" component={Eligibility} />
+                        <Route path="/wellbeing" component={Wellbeing} />
+                        <Route path="/complete" component={Complete} />
+                        <Route path="/duty" component={Duty} />
+                        <Route path="/overview" component={Overview} />
+                        <Route component={FourZeroFour} />
+                    </Switch>
+                </div>
+            </BrowserRouter>
+        );
     }
 }
 // class App extends Component {
-    // state = {
-    //     value: '',
-    //     consent: false,
-    //     sendMail: false,
-    //     consentInput: "",
-    // }
+// state = {
+//     value: '',
+//     consent: false,
+//     sendMail: false,
+//     consentInput: "",
+// }
 
-    // toggleChange = (event) => {
-    //     const target = event.target;
-    //     const value = target.type === 'checkbox' ? target.checked : target.value;
-    //     this.setState({
-    //         [target.name]: value
-    //     })
-    // }
+// toggleChange = (event) => {
+//     const target = event.target;
+//     const value = target.type === 'checkbox' ? target.checked : target.value;
+//     this.setState({
+//         [target.name]: value
+//     })
+// }
 
-    // handleChangeInput = (el) => {
-    //     const target = el.target;
-    //     const value = target.type === 'text' ?  null : target.value;
-    //     this.setState({
-    //     // consentInput: el.target.value
-    //         [target.name]: value
-    //     })
-    // }
+// handleChangeInput = (el) => {
+//     const target = el.target;
+//     const value = target.type === 'text' ?  null : target.value;
+//     this.setState({
+//     // consentInput: el.target.value
+//         [target.name]: value
+//     })
+// }
 
-    // handleSubmitInput = (e) => {
-    //     alert('Advocacy ' + this.state.consentInput)
-    //     e.preventDefault();
-    // }
+// handleSubmitInput = (e) => {
+//     alert('Advocacy ' + this.state.consentInput)
+//     e.preventDefault();
+// }
 
-    // handleChange = event => {
-    //     this.setState({
-    //         value: event.target.value
-    //     });
-    // };
+// handleChange = event => {
+//     this.setState({
+//         value: event.target.value
+//     });
+// };
 
-    // handleSubmit = event => {
-    //     event.preventDefault();
-    //     const { value } = this.state;
-    //     axios.post('/', { value }).then(result => {
-    //         console.log(value);
-    //     });
-    // };
-    // render() {
+// handleSubmit = event => {
+//     event.preventDefault();
+//     const { value } = this.state;
+//     axios.post('/', { value }).then(result => {
+//         console.log(value);
+//     });
+// };
+// render() {
 
-    //     return (
-    //         <div>
-    //             <header className="App-header">
-    //                 <h1>The Advocacy Project</h1>
-    //                 <h2>Your voice. Your rights. Your choice.</h2>
-    //             </header>
-    //             <h2>Need help with day to day tasks?
-    //         See if you can get the help you need.</h2>
-    //             <BeginButton/>
-    //             <YourConsent
-    //                 consent={this.state.consent}
-    //                 sendMail={this.state.sendMail}
-    //                 toggleChange={this.toggleChange}
-    //                 handleChangeInput={this.handleChangeInput}
-    //                 handleSubmitInput={this.handleSubmitInput}/>
-    //             {/*<Switch>
-    //                 <Route exact path="/" component={Home} />
-    //                 <Route path="/list" component={List} />
-    //                 {' '}
-    //             </Switch>*/}
-    //             <form onSubmit={this.handleSubmit} method="POST" action="/">
-    //                 <label>
-    //                     Name:
-    //                     <input
-    //                         type="text"
-    //                         value={this.state.value}
-    //                         onChange={this.handleChange}
-    //                     />
-    //                 </label>
-    //                 <input type="submit" value="Submit" />
-    //             </form>
-    //         </div>
-    //         // <Switch>
-    //         //     <App />
-    //         // </Switch>
-    //     );
-    // }
+//     return (
+//         <div>
+//             <header className="App-header">
+//                 <h1>The Advocacy Project</h1>
+//                 <h2>Your voice. Your rights. Your choice.</h2>
+//             </header>
+//             <h2>Need help with day to day tasks?
+//         See if you can get the help you need.</h2>
+//             <BeginButton/>
+//             <YourConsent
+//                 consent={this.state.consent}
+//                 sendMail={this.state.sendMail}
+//                 toggleChange={this.toggleChange}
+//                 handleChangeInput={this.handleChangeInput}
+//                 handleSubmitInput={this.handleSubmitInput}/>
+//             {/*<Switch>
+//                 <Route exact path="/" component={Home} />
+//                 <Route path="/list" component={List} />
+//                 {' '}
+//             </Switch>*/}
+//             <form onSubmit={this.handleSubmit} method="POST" action="/">
+//                 <label>
+//                     Name:
+//                     <input
+//                         type="text"
+//                         value={this.state.value}
+//                         onChange={this.handleChange}
+//                     />
+//                 </label>
+//                 <input type="submit" value="Submit" />
+//             </form>
+//         </div>
+//         // <Switch>
+//         //     <App />
+//         // </Switch>
+//     );
+// }
 // }
 
 export default App;
