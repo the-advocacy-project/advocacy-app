@@ -60,3 +60,6 @@ typings/
 
 # dist
 dist
+
+#Package-lock
+package-lock.json

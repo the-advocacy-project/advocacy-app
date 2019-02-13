@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-// import './App.css';
-import BeginButton from './components/beginButton';
+
+import BeginButton from './components/buttons/beginButton';
 import YourConsent from './components/dynamicPages/yourConsent';
-import Home from './pages/Home';
-import List from './pages/List';
+import Home from './components/pages/Home';
+import List from './components/pages/List';
 
 import axios from 'axios';
 
@@ -17,25 +17,25 @@ class App extends Component {
     }
 
     toggleChange = (event) => {
-      const target = event.target;
-      const value = target.type === 'checkbox' ? target.checked : target.value;
-      this.setState({
-        [target.name]: value
-      })
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        this.setState({
+            [target.name]: value
+        })
     }
 
     handleChangeInput = (el) => {
-      const target = el.target;
-      const value = target.type === 'text' ?  null : target.value;
-      this.setState({
+        const target = el.target;
+        const value = target.type === 'text' ?  null : target.value;
+        this.setState({
         // consentInput: el.target.value
-        [target.name]: value
-      })
+            [target.name]: value
+        })
     }
 
     handleSubmitInput = (e) => {
-      alert('Advocacy ' + this.state.consentInput)
-      e.preventDefault();
+        alert('Advocacy ' + this.state.consentInput)
+        e.preventDefault();
     }
 
     handleChange = event => {
@@ -55,24 +55,24 @@ class App extends Component {
 
         return (
             <div>
-            <header className="App-header">
-              <h1>The Advocacy Project</h1>
-              <h2>Your voice. Your rights. Your choice.</h2>
-            </header>
-            <h2>Need help with day to day tasks?
+                <header className="App-header">
+                    <h1>The Advocacy Project</h1>
+                    <h2>Your voice. Your rights. Your choice.</h2>
+                </header>
+                <h2>Need help with day to day tasks?
             See if you can get the help you need.</h2>
-            <BeginButton/>
-            <YourConsent
-            consent={this.state.consent}
-            sendMail={this.state.sendMail}
-            toggleChange={this.toggleChange}
-            handleChangeInput={this.handleChangeInput}
-            handleSubmitInput={this.handleSubmitInput}/>
-                // <Switch>
-                    // <Route exact path="/" component={Home} />
-                    // <Route path="/list" component={List} />
-                    //{' '}
-                // </Switch>
+                <BeginButton/>
+                <YourConsent
+                    consent={this.state.consent}
+                    sendMail={this.state.sendMail}
+                    toggleChange={this.toggleChange}
+                    handleChangeInput={this.handleChangeInput}
+                    handleSubmitInput={this.handleSubmitInput}/>
+                {/*<Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/list" component={List} />
+                    {' '}
+                </Switch>*/}
                 <form onSubmit={this.handleSubmit} method="POST" action="/">
                     <label>
                         Name:
