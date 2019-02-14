@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import BeginButton from './components/buttons/beginButton';
+import { Button } from './components/buttons/button';
 import YourConsent from './components/dynamicPages/yourConsent';
 import Nutrition from './components/dynamicPages/nutrition';
-
 
 import axios from 'axios';
 
@@ -15,13 +14,12 @@ class App extends Component {
         sendMail: false,
         consentInput: "",
         nutrition: {
+        eating: {
             eating: {
-            answer: "",
-           },
-//             [Question]: {
-//                 question: String,
-//                 answer: boolean/string/
-//             }    
+                question: "This is the string",
+                answer: ""
+            }  
+        }
         }
         
     }
@@ -53,11 +51,7 @@ class App extends Component {
         e.preventDefault();
     }
 
-    handleChange = event => {
-        this.setState({
-            value: event.target.value
-        });
-    };
+    
 
     handleSubmit = event => {
         event.preventDefault();
@@ -82,6 +76,13 @@ class App extends Component {
                     toggleChange={this.toggleChange}
                     handleChangeInput={this.handleChangeInput}
                     handleSubmitInput={this.handleSubmitInput}/>
+                    
+                   
+                    <Button 
+                    text='next' 
+                    type='submit' 
+                    name="placeholder"
+                    onClick={() => {}} />
 
                     <Nutrition nutrition={this.state.nutrition}
                       handleChangeInput={this.handleChangeInput} answer={this.state.nutrition.answer}/>
@@ -92,7 +93,7 @@ class App extends Component {
                      Submite email:
                      <input
                          type="text"
-                         value={this.state.value}
+                        
                          onChange={this.handleChange}
                      />
                  </label>

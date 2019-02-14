@@ -38,6 +38,7 @@
     "dependencies": {
         "axios": "^0.18.0",
         "body-parser": "^1.18.3",
+        "classnames": "^2.2.6",
         "express": "^4.16.4",
         "greeting": "^1.0.6",
         "nodemailer": "^5.1.1",
