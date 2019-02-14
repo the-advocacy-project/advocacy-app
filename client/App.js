@@ -27,6 +27,7 @@ import KeyRights from './components/staticPages/KeyRights';
 import Sorry from './components/staticPages/Sorry';
 import Support from './components/staticPages/Support';
 import Advocacy from './components/staticPages/Advocacy';
+import Menu from './components/staticPages/Menu';
 
 // DYNAMIC PAGE IMPORTS
 import InitialChecks from './components/dynamicPages/InitialChecks';
@@ -173,6 +174,7 @@ class App extends Component {
                         <Route path="/duty" component={Duty} />
                         <Route path="/overview" component={Overview} />
                         <Route path="/complete" component={Complete} />
+                        <Route path="/menu" component={Menu} />
                         {/* NAV COMPONENTS */}
                         <Route path="/about" component={About} />
                         <Route path="/advocacy" component={Advocacy} />

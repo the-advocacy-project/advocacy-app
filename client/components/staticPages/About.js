@@ -4,6 +4,10 @@ import logo from '../../images/logo.png';
 function About() {
     return (
         <div>
+            <h1>About</h1>
+            <Link to={'./menu'}>
+                <button>Menu</button>
+            </Link>
             <img src={ logo } class="logo"></img>
             <h1>About us</h1>
             <p>The Advocacy Project has developed this app to help people 
