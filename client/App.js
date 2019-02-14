@@ -4,11 +4,10 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
 
 import BeginButton from './components/buttons/beginButton';
-import YourConsent from './components/dynamicPages/yourConsent';
+// import YourConsent from './components/dynamicPages/yourConsent';
 import QuizOne from './components/dynamicPages/nutrition';
 import QuizTwo from './components/dynamicPages/education';
-import Home from './components/pages/Home';
-import List from './components/pages/List';
+// import List from './components/pages/List';
 
 // Old pages
 // import BeginButton from './components/buttons/beginButton';
@@ -18,13 +17,12 @@ import List from './components/pages/List';
 
 // STATIC PAGE IMPORTS
 import FourZeroFour from './components/staticPages/FourZeroFour';
-import FiveHundred from './components/staticPages/FiveHundred';
 import About from './components/staticPages/About';
 import Begin from './components/staticPages/Begin';
 import CareAct from './components/staticPages/CareAct';
 import Help from './components/staticPages/Help';
 import Home from './components/staticPages/Home';
-import HowTo from './components/staticPages/HowTo';
+import How from './components/staticPages/How';
 import KeyRights from './components/staticPages/KeyRights';
 import Sorry from './components/staticPages/Sorry';
 import Support from './components/staticPages/Support';
@@ -155,11 +153,8 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route path="/help" component={Help} />
-                        <Route path="/how-to" component={HowTo} />
-                        <Route
-                            path="/initial-checks"
-                            component={InitialChecks}
-                        />
+                        <Route path="/how" component={How} />
+                        <Route path="/initial-checks" component={InitialChecks}/>
                         <Route path="/consent" component={Consent} />
                         <Route path="/sorry" component={Sorry} />
                         <Route path="/contact" component={Contact} />
@@ -170,16 +165,10 @@ class App extends Component {
                         <Route path="/clothing" component={Clothing} />
                         <Route path="/safety" component={Safety} />
                         <Route path="/environment" component={Environment} />
-                        <Route
-                            path="/relationships"
-                            component={Relationships}
-                        />
+                        <Route path="/relationships" component={Relationships}/>
                         <Route path="/work" component={Work} />
                         <Route path="/transport" component={Transport} />
-                        <Route
-                            path="/responsibilites"
-                            component={Responsibilities}
-                        />
+                        <Route path="/responsibilites" component={Responsibilities}/>
                         <Route path="/eligibility" component={Eligibility} />
                         <Route path="/wellbeing" component={Wellbeing} />
                         <Route path="/duty" component={Duty} />
@@ -187,8 +176,8 @@ class App extends Component {
                         <Route path="/complete" component={Complete} />
                         <Route path="/menu" component={Menu} />
                         {/* NAV COMPONENTS */}
-                        <Route exact path="/about" component={About} />
-                        <Route exact path="/advocacy" component={Advocacy} />
+                        <Route path="/about" component={About} />
+                        <Route path="/advocacy" component={Advocacy} />
                         <Route path="/care-act" component={CareAct} />
                         <Route path="/support" component={Support} />
                         <Route path="/key-rights" component={KeyRights} />
