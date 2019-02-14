@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Nutrition(props) {
+function Quiz(props) {
 
     const displayNutrition = Object.keys(props.info).map((qs, i) =>
     {if(qs === "more") {
@@ -13,7 +13,7 @@ function Nutrition(props) {
                     checked={qs.agree}
                     name="agree"
                     key={`question${i}`}
-                    onChange={(event) => props.toggleChange(event, qs)}
+                    onChange={(event) => props.toggleChange(event, qs, props.section)}
                 />
             </div>
         )
@@ -30,4 +30,4 @@ function Nutrition(props) {
     )
 }
 
-export default Nutrition;
+export default Quiz;

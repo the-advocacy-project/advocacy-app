@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import BeginButton from './components/buttons/beginButton';
 import YourConsent from './components/dynamicPages/yourConsent';
-import Nutrition from './components/dynamicPages/nutrition';
+import Quiz from './components/dynamicPages/nutrition';
 import Education from './components/dynamicPages/education';
 import Home from './components/pages/Home';
 import List from './components/pages/List';
@@ -40,12 +40,12 @@ class App extends Component {
         }
     }
 
-    toggleChange = (event, qs) => {
+    toggleChange = (event, qs, section) => {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
-        const newNutrition = {...this.state.nutrition[qs], agree:value}
+        const newSection = {...this.state[section][qs], agree:value}
         this.setState({
-            nutrition: {...this.state.nutrition, [qs]:newNutrition}
+            [section]: {...this.state[section], [qs]:newSection}
         })
     }
 
@@ -91,11 +91,13 @@ class App extends Component {
                     sendMail={this.state.sendMail}
                     handleChangeInput={this.handleChangeInput}
                     handleSubmitInput={this.handleSubmitInput}/>
-                <Nutrition
+                <Quiz
                     info={this.state.nutrition}
+                    section="nutrition"
                     toggleChange={this.toggleChange}/>
-                <Education
+                <Quiz
                     info={this.state.education}
+                    section="education"
                     toggleChange={this.toggleChange}/>
                 {/*<Switch>
                     <Route exact path="/" component={Home} />
