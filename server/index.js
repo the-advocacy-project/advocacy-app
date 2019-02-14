@@ -49,10 +49,5 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/../dist/index.html'));
 });
 
-// app.get('/about', (req, res) => {
-//     res.sendFile(
-//         path.join(__dirname + '/../client/components/staticPages/About.js')
-//     );
-// });
 
 app.listen(3000, () => console.log('Listening on port 3000!'));

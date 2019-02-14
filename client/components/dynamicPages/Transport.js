@@ -3,7 +3,23 @@ import React from 'react';
 function Transport(props) {
     return (
         <div>
-            <h1>Transport</h1>
+            <h1>Making use of necessary facilities or services in the local community</h1>
+            <h3>including public transport, and recreational facilities or services</h3>
+            <h2>Please check what applies to you</h2>
+            <ul>
+                <li>
+                    <label>Do you need help to access your local shops or park?</label>
+                    <input type="checkbox"></input></li>
+                <li>
+                    <label>Do you need help to get to your GP or the pharmacy?</label>
+                    <input type="checkbox"></input></li>
+                <li>
+                    <label>Do you need help to use public transport or arrange a taxi?</label>
+                    <input type="checkbox"></input></li>
+            </ul>
+            <label>The questions above are examples of how you may meet this requirement. Please expand and / or let us know other ways that you need help making use of necessary facilities or services in the local community, including public transport, and recreational facilities or services</label>
+            <textarea placeholder="Tell us more..."></textarea>
+
         </div>
     );
 }
