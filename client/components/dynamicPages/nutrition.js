@@ -13,7 +13,7 @@ function QuizOne(props) {
                 />
             </div>
         )
-    }else {
+    } else {
         return (
             <div>
                 <h2>{props.info[qs].question}</h2>
