@@ -9,7 +9,7 @@ function About() {
             <Link to={'./menu'}>
                 <button>Menu</button>
             </Link>
-            <img src={logo} class="logo" />
+            <img src={logo} className="logo" />
             <h1>About us</h1>
             <p>
                 The Advocacy Project has developed this app to help people with
