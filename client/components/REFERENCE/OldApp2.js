@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import BeginButton from './components/buttons/beginButton';
-import YourConsent from './components/dynamicPages/yourConsent';
-import Home from './components/pages/Home';
-import List from './components/pages/List';
+import BeginButton from '../buttons/beginButton';
+import YourConsent from '../dynamicPages/yourConsent';
+import Home from '../pages/Home';
+import List from '../pages/List';
 
 import axios from 'axios';
 

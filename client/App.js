@@ -63,9 +63,7 @@ class App extends Component {
                         <Route path="/clothing" component={Clothing} />
                         <Route path="/safety" component={Safety} />
                         <Route path="/environment" component={Environment} />
-                        <Route
-                            path="/relationships"
-                            component={Relationships}
+                        <Route path="/relationships" component={Relationships}
                         />
                         <Route path="/work" component={Work} />
                         <Route path="/transport" component={Transport} />
