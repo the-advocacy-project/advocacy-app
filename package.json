@@ -11,6 +11,7 @@
         "start": "npm run build && node server/index.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
+    "proxy": "http://localhost:5000",
     "babel": {
         "presets": [
             "@babel/preset-env",
