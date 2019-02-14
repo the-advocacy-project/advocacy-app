@@ -51,10 +51,29 @@ import Overview from './components/dynamicPages/Overview';
 
 class App extends Component {
     state = {
-        value: '',
-        consent: false,
-        sendMail: false,
-        consentInput: "",
+        initialChecks: {
+            resident: {
+                question: "I am a resident of Hackney.",
+                agree: false
+            },
+            over18: {
+                question: "I am 18 years old or older.",
+                agree: false
+            }
+        },
+        consent: {
+            sendToEmail: {
+                question: "Send to me via email",
+                agree: false
+            }
+        },
+        contact: {
+            fullName: '',
+            address: '',
+            postCode: '',
+            email: '',
+            phoneNumber: ''
+        },
         nutrition: {
             food : {
                 question: "Do you need help eating, drinking, shopping or cooking?" ,
@@ -66,16 +85,191 @@ class App extends Component {
             },
             more: ""
         },
-        education: {
-            read : {
-                question: "Can you read?" ,
+        hygiene: {
+            toiletries : {
+                question: "Do you need help buying toiletries like soap and shampoo?" ,
                 agree: false
             },
-            write: {
-                question: "Can you write?",
+            washing: {
+                question: "Do you need help washing your hair and body?",
+                agree: false,
+            },
+            laundry: {
+                question: "Do you need help doing your laundry and cleaning your clothes?",
                 agree: false,
             },
             more: ""
+        },
+        toilet: {
+            access: {
+                question: "Do you need help to access the toilet?" ,
+                agree: false
+            },
+            toiletUse: {
+                question: "Do you need help to use the toilet?",
+                agree: false,
+            },
+            nightAccess: {
+                question: "Do you need help to go to the toilet at night",
+                agree: false
+            },
+            more: ""
+        },
+        clothing: {
+            gettingDressed: {
+                question: "Do you need help to put your clothes and shoes on in the morning?",
+                agree: false
+            },
+            gettingUndressed: {
+                question: "Do you need help to take your clothes and shoes off?",
+                agree: false
+            },
+            buyingClothes: {
+                question: "Do you need help to buy new clothes for different occasions such as work?",
+                agree: false
+            },
+            more: ""
+        },
+        safety: {
+            accessToHome: {
+                question: "Do you need help to get into your home?",
+                agree: false
+            },
+            movingAround: {
+                question: "Do you need help to move around your home?",
+                agree: false
+            },
+            usingKitchen: {
+                question: "Do you need help to help to use your cooker or heater?",
+                agree: false
+            },
+            more: ""
+        },
+        environment: {
+            bills: {
+                question: "Do you need help to make sure all your bills are paid?",
+                agree: false
+            },
+            clean: {
+                question: "Do you need help to make sure your home is clean?",
+                agree: false
+            },
+            damp: {
+                question: "Do you need help to make sure your home is free from damp?",
+                agree: false
+            },
+            more: ""
+        },
+        relationships: {
+            family: {
+                question: "Do you need help to stay in touch with your family?",
+                agree: false
+            },
+            newPeople: {
+                question: "Do you need help to meet new people?",
+                agree: false
+            },
+            children: {
+                question: "Do you need help to stay maintain your relationship with your children?",
+                agree: false
+            },
+            more: ""
+        },
+        work: {
+            opportunities: {
+                question: "Do you need help to look for new opportunities?",
+                agree: false
+            },
+            apply: {
+                question: "Do you need help to apply for things?",
+                agree: false
+            },
+            community: {
+                question: "Do you need help to get somewhere or take part in something you are interested in?",
+                agree: false
+            },
+            more: ""
+        },
+        transport: {
+            access: {
+                question: "Do you need help to access your local shops or park?",
+                agree: false
+            },
+            gp: {
+                question: "Do you need help to get to your GP or the pharmacy?",
+                agree: false
+            },
+            transport: {
+                question: "Do you need help to use public transport or arrange a taxi?",
+                agree: false
+            },
+            more: ""
+        },
+        responsibilites: {
+            parent: {
+                question: "Are you a parent, a step parent or grandparent?",
+                agree: false
+            },
+            childrensNeeds: {
+                question: "Do need help to understand all your children’s needs?",
+                agree: false
+            },
+            caring:{
+                question: "Do you need help to carry out caring responsibilities for your children?",
+                agree: false
+            },
+            more: ""
+        },
+        eligibility: {
+            elig: {
+                question: "Does your need for support arise from a physical or mental impairment or illness?",
+                agree: false
+            },
+            more: ""
+        },
+        wellbeing: {
+            safe: {
+                question: "If you don’t get support to do the above will you feel safe?",
+                more: ""
+            },
+            relaxed: {
+                question: "If you don’t get support to do the above will you feel safe?",
+                more: ""
+            },
+            happy: {
+                question: "If you don’t get support to do the above will you feel happy",
+                more: ""
+            },
+            friends: {
+                question: "If you don’t get support to do the above will you be able to see your friends",
+                more: ""
+            },
+            feelValued: {
+                question: "If you don’t get support to do the above will you feel valued in society",
+                more: ""
+            },
+            family: {
+                question: "If you don’t get support to do the above will you be able to keep you family together",
+                more: ""
+            },
+            other: {
+                question: "Other: (please state below)",
+                more: ""
+            }
+        },
+        duty: {
+            advocate: {
+                question: "Would you like free support from an advocate?",
+                agree: false
+            },
+            communicationAdvocate: {
+                question: "Is there anything you want to tell the advocate about your communication needs?",
+                more: ""
+            },
+            communicationCouncil: {
+                question: "Is there anything you want the local authority to know about your communication needs?",
+                more: ""
+            }
         }
     }
 

@@ -21,31 +21,31 @@ function Wellbeing(props) {
             <ul>
                 <li>
                     <label>Feel safe</label>
-                    <input type="checkbox"></input>
+                    <textarea placeholder="Yes/No..."></textarea>
                 </li>
                 <li>
                     <label>Feel relaxed </label>
-                    <input type="checkbox"></input>
+                    <textarea placeholder="Yes/No..."></textarea>
                 </li>
                 <li>
                     <label>Feel happy</label> 
-                    <input type="checkbox"></input>
+                    <textarea placeholder="Yes/No..."></textarea>
                 </li>
                 <li>
                     <label>Be able to see your friends</label> 
-                    <input type="checkbox"></input>
+                    <textarea placeholder="Yes/No..."></textarea>
                 </li>
                 <li>
                     <label>Feel valued in society</label> 
-                    <input type="checkbox"></input>
+                    <textarea placeholder="Yes/No..."></textarea>
                 </li>
                 <li>
                     <label>Keep your family together </label>
-                    <input type="checkbox"></input>
+                    <textarea placeholder="Yes/No..."></textarea>
                 </li>
                 <li>
                     <label>Other: (please state below)</label> 
-                    <input type="checkbox"></input>
+                    <textarea placeholder="Yes/No..."></textarea>
                 </li>
             </ul>
             <textarea placeholder="Tell us more..."></textarea>
