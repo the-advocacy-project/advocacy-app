@@ -88,6 +88,14 @@ class App extends Component {
         })
     }
 
+    toggleChangeConsent = (event) => {
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        this.setState({
+            [target.name]: value
+        })
+    }
+
     handleChangeInput = (el) => {
         const target = el.target;
         const value = target.type === 'text' ?  null : target.value;
@@ -95,7 +103,7 @@ class App extends Component {
             [target.name]: value
         })
     }
-    
+
     handleSubmit = event => {
         event.preventDefault();
         // const { value } = this.state;
@@ -103,49 +111,49 @@ class App extends Component {
             console.log(value);
         });
     };
-    
+
     render() {
         return (
 
-//             <div>
-//                 <header className="App-header">
-//                     <h1>The Advocacy Project</h1>
-//                     <h2>Your voice. Your rights. Your choice.</h2>
-//                 </header>
-//                 <h2>Need help with day to day tasks?
-//             See if you can get the help you need.</h2>
-//                 <BeginButton/>
-//                 <YourConsent
-//                     consent={this.state.consent}
-//                     sendMail={this.state.sendMail}
-//                     handleChangeInput={this.handleChangeInput}
-//                     handleSubmitInput={this.handleSubmitInput}/>
-//                 <QuizOne
-//                     info={this.state.nutrition}
-//                     section="nutrition"
-//                     handleChangeInput={this.handleChangeInput}
-//                     toggleChange={this.toggleChange}/>
-//                 <QuizTwo
-//                     info={this.state.education}
-//                     section="education"
-//                     toggleChange={this.toggleChange}/>
-//                 {/*<Switch>
-//                     <Route exact path="/" component={Home} />
-//                     <Route path="/list" component={List} />
-//                     {' '}
-//                 </Switch>*/}
-//                 <form onSubmit={this.handleSubmit} method="POST" action="/">
-//                     <label>
-//                         Name:
-//                         <input
-//                             type="text"
-//                             value={this.state.value}
-//                             onChange={this.handleChange}
-//                         />
-//                     </label>
-//                     <input type="submit" value="Submit" />
-//                 </form>
-//             </div>
+        //             <div>
+        //                 <header className="App-header">
+        //                     <h1>The Advocacy Project</h1>
+        //                     <h2>Your voice. Your rights. Your choice.</h2>
+        //                 </header>
+        //                 <h2>Need help with day to day tasks?
+        //             See if you can get the help you need.</h2>
+        //                 <BeginButton/>
+        //                 <YourConsent
+        //                     consent={this.state.consent}
+        //                     sendMail={this.state.sendMail}
+        //                     handleChangeInput={this.handleChangeInput}
+        //                     handleSubmitInput={this.handleSubmitInput}/>
+        //                 <QuizOne
+        //                     info={this.state.nutrition}
+        //                     section="nutrition"
+        //                     handleChangeInput={this.handleChangeInput}
+        //                     toggleChange={this.toggleChange}/>
+        //                 <QuizTwo
+        //                     info={this.state.education}
+        //                     section="education"
+        //                     toggleChange={this.toggleChange}/>
+        //                 {/*<Switch>
+        //                     <Route exact path="/" component={Home} />
+        //                     <Route path="/list" component={List} />
+        //                     {' '}
+        //                 </Switch>*/}
+        //                 <form onSubmit={this.handleSubmit} method="POST" action="/">
+        //                     <label>
+        //                         Name:
+        //                         <input
+        //                             type="text"
+        //                             value={this.state.value}
+        //                             onChange={this.handleChange}
+        //                         />
+        //                     </label>
+        //                     <input type="submit" value="Submit" />
+        //                 </form>
+        //             </div>
 
 
             <BrowserRouter>
@@ -189,15 +197,6 @@ class App extends Component {
 
         );
     }
-}
-
-
-// toggleChange = (event) => {
-//     const target = event.target;
-//     const value = target.type === 'checkbox' ? target.checked : target.value;
-//     this.setState({
-//         [target.name]: value
-//     })
-// }
+};
 
 export default App;
