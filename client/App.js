@@ -3,8 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 
 import BeginButton from './components/buttons/beginButton';
 import YourConsent from './components/dynamicPages/yourConsent';
-import Quiz from './components/dynamicPages/nutrition';
-import Education from './components/dynamicPages/education';
+import QuizOne from './components/dynamicPages/nutrition';
+import QuizTwo from './components/dynamicPages/education';
 import Home from './components/pages/Home';
 import List from './components/pages/List';
 
@@ -70,8 +70,8 @@ class App extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        const { value } = this.state;
-        axios.post('/', { value }).then(result => {
+        // const { value } = this.state;
+        axios.post('/', this.state ).then(result => {
             console.log(value);
         });
     };
@@ -91,11 +91,12 @@ class App extends Component {
                     sendMail={this.state.sendMail}
                     handleChangeInput={this.handleChangeInput}
                     handleSubmitInput={this.handleSubmitInput}/>
-                <Quiz
+                <QuizOne
                     info={this.state.nutrition}
                     section="nutrition"
+                    handleChangeInput={this.handleChangeInput}
                     toggleChange={this.toggleChange}/>
-                <Quiz
+                <QuizTwo
                     info={this.state.education}
                     section="education"
                     toggleChange={this.toggleChange}/>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Education(props) {
+function QuizTwo(props) {
     console.log('what am i ' + props.info)
 
     const displayEducation = Object.keys(props.info).map((qs, i) =>
@@ -14,7 +14,7 @@ function Education(props) {
                     checked={qs.agree}
                     name="agree"
                     key={`question${i}`}
-                    onChange={(event) => props.toggleChange(event, qs)}
+                    onChange={(event) => props.toggleChange(event, qs, props.section)}
                 />
             </div>
         )
@@ -31,4 +31,4 @@ function Education(props) {
     )
 }
 
-export default Education;
+export default QuizTwo;

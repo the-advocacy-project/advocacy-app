@@ -1,10 +1,18 @@
 import React from 'react';
 
-function Quiz(props) {
+function QuizOne(props) {
 
     const displayNutrition = Object.keys(props.info).map((qs, i) =>
     {if(qs === "more") {
-        return null
+        return (
+            <div>
+                <p>Tell us more</p>
+                <textarea type="text"
+                    name="more"
+                    onChange={(event) => props.handleChangeInput(event, qs, props.section)}
+                />
+            </div>
+        )
     }else {
         return (
             <div>
@@ -30,4 +38,4 @@ function Quiz(props) {
     )
 }
 
-export default Quiz;
+export default QuizOne;
