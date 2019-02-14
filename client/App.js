@@ -4,11 +4,10 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
 
 import BeginButton from './components/buttons/beginButton';
-import YourConsent from './components/dynamicPages/yourConsent';
+// import YourConsent from './components/dynamicPages/yourConsent';
 import QuizOne from './components/dynamicPages/nutrition';
 import QuizTwo from './components/dynamicPages/education';
-import Home from './components/pages/Home';
-import List from './components/pages/List';
+// import List from './components/pages/List';
 
 // Old pages
 // import BeginButton from './components/buttons/beginButton';
@@ -165,14 +164,10 @@ class App extends Component {
                         <Route path="/clothing" component={Clothing} />
                         <Route path="/safety" component={Safety} />
                         <Route path="/environment" component={Environment} />
-                        <Route path="/relationships" component={Relationships}
-                        />
+                        <Route path="/relationships" component={Relationships}/>
                         <Route path="/work" component={Work} />
                         <Route path="/transport" component={Transport} />
-                        <Route
-                            path="/responsibilites"
-                            component={Responsibilities}
-                        />
+                        <Route path="/responsibilites" component={Responsibilities}/>
                         <Route path="/eligibility" component={Eligibility} />
                         <Route path="/wellbeing" component={Wellbeing} />
                         <Route path="/duty" component={Duty} />
