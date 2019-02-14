@@ -3,7 +3,7 @@ import React from 'react';
 function How(){
     return(
         <div>
-            <H1>How this works</H1>
+            <h1>How this works</h1>
             <ul>
                 <li>Answer a set of questions about what you can and cannot do</li>
                 <li>With your consent, the app will send this information to the 
