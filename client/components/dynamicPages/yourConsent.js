@@ -10,13 +10,13 @@ function YourConsent(props) {
                 id="consent-1"
                 name="consent"
                 checked={props.consent}
-                onChange={props.toggleChange}
+                onChange={props.toggleChangeConsent}
             />
             <input type="checkbox"
                 id="consent-2"
                 name="sendMail"
                 checked={props.sendMail}
-                onChange={props.toggleChange}
+                onChange={props.toggleChangeConsent}
             />
             <form>
                 <label>Input Field
