@@ -13,23 +13,23 @@ app.use(
 app.use(bodyParser.json());
 
 app.post('/', (req, res) => {
-    const name = req.body.value;
-    console.log('tis is form data', name);
+    const {nutrition: {food: {question, agree}}} = req.body;
+    console.log('tis is form data', question, agree);
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'jasoncharnley@gmail.com',
-            pass: 'Cumbria792111'
+            user: 'theadvocacyfac@gmail.com',
+            pass: '2password$'
         }
     });
 
     const mailOptions = {
-        from: 'jasoncharnley@gmail.com',
-        to: 'jasoncharnley@gmail.com',
+        from: 'theadvocacyfac@gmail.com',
+        to: 'theadvocacyfac@gmail.com',
         subject: 'test',
-        html: `This is the question: ${name}`,
-        replyTo: 'jasoncharnley@gmail.com'
+        html: `This is the question: ${question}${agree}`,
+        replyTo: 'theadvocacyfac@gmail.com'
     };
 
     transporter.sendMail(mailOptions, function(err, res) {
