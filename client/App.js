@@ -3,17 +3,10 @@ import React, { Component } from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
 
-import BeginButton from './components/buttons/beginButton';
-// import YourConsent from './components/dynamicPages/yourConsent';
 import QuizOne from './components/dynamicPages/nutrition';
 import QuizTwo from './components/dynamicPages/education';
 // import List from './components/pages/List';
 
-// Old pages
-// import BeginButton from './components/buttons/beginButton';
-// import YourConsent from './components/dynamicPages/yourConsent';
-// import Home from './components/pages/Home';
-// import List from './components/pages/List';
 
 // STATIC PAGE IMPORTS
 import FourZeroFour from './components/staticPages/FourZeroFour';
@@ -68,11 +61,26 @@ class App extends Component {
             }
         },
         contact: {
-            fullName: '',
-            address: '',
-            postCode: '',
-            email: '',
-            phoneNumber: ''
+            name: {
+                question: "Full name:",
+                more: ""
+            },
+            address: {
+                question: "Address:",
+                more: ""
+            },
+            postCode: {
+                question: "Post code:",
+                more: ""
+            },
+            email: {
+                question: "Email",
+                more: ""
+            },
+            phoneNumber: {
+                question: "Phone number:",
+                more: ""
+            }
         },
         nutrition: {
             food : {
@@ -275,80 +283,36 @@ class App extends Component {
 
     toggleChange = (event, qs, section) => {
         const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const newSection = {...this.state[section][qs], agree:value}
+        const value =
+            target.type === 'checkbox' ? target.checked : target.value;
+        const newSection = { ...this.state[section][qs], agree: value };
         this.setState({
-            [section]: {...this.state[section], [qs]:newSection}
-        })
-    }
+            [section]: {
+                ...this.state[section],
+                [qs]: { ...this.state[section][qs], agree: value }
+            }
+        });
+    };
 
-    toggleChangeConsent = (event) => {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        this.setState({
-            [target.name]: value
-        })
-    }
 
-    handleChangeInput = (el) => {
+    handleChangeInput = el => {
         const target = el.target;
-        const value = target.type === 'text' ?  null : target.value;
+        const value = target.type === 'text' ? null : target.value;
         this.setState({
             [target.name]: value
-        })
-    }
+        });
+    };
 
     handleSubmit = event => {
         event.preventDefault();
         // const { value } = this.state;
-        axios.post('/', this.state ).then(result => {
+        axios.post('/', this.state).then(result => {
             console.log(value);
         });
     };
 
     render() {
         return (
-
-        //             <div>
-        //                 <header className="App-header">
-        //                     <h1>The Advocacy Project</h1>
-        //                     <h2>Your voice. Your rights. Your choice.</h2>
-        //                 </header>
-        //                 <h2>Need help with day to day tasks?
-        //             See if you can get the help you need.</h2>
-        //                 <BeginButton/>
-        //                 <YourConsent
-        //                     consent={this.state.consent}
-        //                     sendMail={this.state.sendMail}
-        //                     handleChangeInput={this.handleChangeInput}
-        //                     handleSubmitInput={this.handleSubmitInput}/>
-        //                 <QuizOne
-        //                     info={this.state.nutrition}
-        //                     section="nutrition"
-        //                     handleChangeInput={this.handleChangeInput}
-        //                     toggleChange={this.toggleChange}/>
-        //                 <QuizTwo
-        //                     info={this.state.education}
-        //                     section="education"
-        //                     toggleChange={this.toggleChange}/>
-        //                 {/*<Switch>
-        //                     <Route exact path="/" component={Home} />
-        //                     <Route path="/list" component={List} />
-        //                     {' '}
-        //                 </Switch>*/}
-        //                 <form onSubmit={this.handleSubmit} method="POST" action="/">
-        //                     <label>
-        //                         Name:
-        //                         <input
-        //                             type="text"
-        //                             value={this.state.value}
-        //                             onChange={this.handleChange}
-        //                         />
-        //                     </label>
-        //                     <input type="submit" value="Submit" />
-        //                 </form>
-        //             </div>
-
 
             <BrowserRouter>
                 <div>
@@ -361,7 +325,15 @@ class App extends Component {
                         <Route path="/sorry" component={Sorry} />
                         <Route path="/contact" component={Contact} />
                         <Route path="/begin" component={Begin} />
-                        <Route path="/nutrition" component={Nutrition} />
+                        <Route path="/nutrition"
+                            component={props => (
+                                <Nutrition
+                                    info={this.state.nutrition}
+                                    section="nutrition"
+                                    handleChangeInput={this.handleChangeInput}
+                                    toggleChange={this.toggleChange}
+                                />
+                            )} />
                         <Route path="/hygiene" component={Hygiene} />
                         <Route path="/toilet" component={Toilet} />
                         <Route path="/clothing" component={Clothing} />
