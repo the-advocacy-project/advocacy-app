@@ -1,46 +1,51 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {Button} from "../buttons/Button";
+
 import {Home, About, Care, Eligibility, Key, Application, Advocacy} from '../../images/MenuImages';
+
+import "../../styles/css/menustyle.css";
 
 
 function Menu() {
 
 
+
     return (
-        <div>
-            <Link to={'./'}>
+
+        <div className="wrapper">
+            <Link to={'./'} >
                 <Home />
-                <button>Home</button>
+                <p>Home</p>
             </Link>
-            <Link to={'./about'}>
+            <Link to={'./about'} >
                 <About />
-                <button>About</button>
+                <p>About</p>
             </Link>
-            <Link to={'./care-act'}>
+            <Link to={'./care-act'} >
                 <Care />
-                <button>The Care Act</button>
+                <p>The Care Act</p>
 
             </Link>
-            <Link to={'./eligibility'}>
+            <Link to={'./eligibility'} >
                 <Eligibility />
-                <button>Eligibility Criteria</button>
+                <p>Eligibility Criteria</p>
             </Link>
-            <Link to={'./key-rights'}>
+            <Link to={'./key-rights'} >
                 <Key />
-                <button>Key Rights</button>
+                <p>Key Rights</p>
             </Link>
-            <Link to={'./initial-checks'}>
+            <Link to={'./initial-checks'} >
                 <Application />
-                <button>Your Application</button>
+                <p>Initial Checks</p>
             </Link>
-            <Link to={'./advocacy'}>
+            <Link to={'./advocacy'} >
                 <Advocacy />
-                <button>Advocacy</button>
+                <p>Your Application</p>
             </Link>
+
         </div>
     );
 }
 
 export default Menu;
-
-
