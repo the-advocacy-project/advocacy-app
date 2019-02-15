@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
 
-import QuizOne from './components/dynamicPages/nutrition';
-import QuizTwo from './components/dynamicPages/education';
 // import List from './components/pages/List';
 
 

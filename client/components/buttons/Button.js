@@ -7,16 +7,16 @@ import React from 'react';
 //   SUCCESS: 'success',
 // }
 
-export const Button = ({ 
-  text, 
-  onClick, 
-  disabled, 
-  className 
+export const Button = ({
+    text, 
+    onClick,
+    disabled,
+    className
 }) => (
-  <button
-    disabled={disabled}
-    onClick={onClick}
-    classnames={className} >
-    {text}
-  </button>
+    <button
+        disabled={disabled}
+        onClick={onClick}
+        classnames={className} >
+        {text}
+    </button>
 );
