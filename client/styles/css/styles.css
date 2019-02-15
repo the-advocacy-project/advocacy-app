@@ -1,16 +1,4 @@
 body {
-  background-color: white; }
-
-button {
-  position: absolute;
-  width: 104px;
-  height: 38px;
-  left: 108px;
-  top: 482px;
-  background: #132F58;
-  border-radius: 13px; }
-
-.wrapper {
-  width: 80%;
-  margin: 0 auto;
-  max-width: 600px; }
+  background-color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 4%; }

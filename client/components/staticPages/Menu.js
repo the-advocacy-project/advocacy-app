@@ -11,33 +11,34 @@ function Menu() {
  
 
     return (
+        
         <div className="wrapper">
-            <Link to={'./'}>
+            <Link to={'./'} >
                 <Home />
                 <p>Home</p>
             </Link>
-            <Link to={'./about'}>
+            <Link to={'./about'} >
                 <About />
                 <p>About</p>
             </Link>
-            <Link to={'./care-act'}>
+            <Link to={'./care-act'} >
                 <Care />
                 <p>The Care Act</p>
 
             </Link>
-            <Link to={'./eligibility'}>
+            <Link to={'./eligibility'} >
                 <Eligibility />
                 <p>Eligibility Criteria</p>
             </Link>
-            <Link to={'./key-rights'}>
+            <Link to={'./key-rights'} >
                 <Key />
                 <p>Key Rights</p>
             </Link>
-            <Link to={'./initial-checks'}>
+            <Link to={'./initial-checks'} >
                 <Application />
                 <p>Initial Checks</p>
             </Link>
-            <Link to={'./advocacy'}>
+            <Link to={'./advocacy'} >
                 <Advocacy />
                 <p>Your Application</p>
             </Link>
