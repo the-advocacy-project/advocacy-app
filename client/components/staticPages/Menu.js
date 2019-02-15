@@ -2,16 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {Button} from "../buttons/Button";
 
-
 import {Home, About, Care, Eligibility, Key, Application, Advocacy} from '../../images/MenuImages';
+
+import "../../styles/css/menustyle.css";
 
 
 function Menu() {
 
- 
+
 
     return (
-        
+
         <div className="wrapper">
             <Link to={'./'} >
                 <Home />
@@ -42,11 +43,9 @@ function Menu() {
                 <Advocacy />
                 <p>Your Application</p>
             </Link>
-          
+
         </div>
     );
 }
 
 export default Menu;
-
-
