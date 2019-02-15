@@ -9,7 +9,8 @@
         "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
         "build": "parcel build ./client/index.html",
         "start": "npm run build && node server/index.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "scss": "node-sass --watch client/styles/scss/styles.scss -o client/styles/css"
     },
     "proxy": "http://localhost:5000",
     "babel": {
@@ -33,6 +34,7 @@
         "babel-plugin-transform-class-properties": "^6.24.1",
         "concurrently": "^4.1.0",
         "eslint": "^4.19.1",
+        "node-sass": "^4.11.0",
         "nodemon": "^1.18.10",
         "parcel-bundler": "^1.11.0"
     },
