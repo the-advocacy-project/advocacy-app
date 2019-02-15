@@ -1,0 +1,24 @@
+.wrapper {
+  width: 100%;
+  margin: 0 auto; }
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 4%;
+  margin-top: 10%; }
+
+h2 {
+  font-size: 3rem;
+  color: #0080ba; }
+
+p {
+  color: #132f58;
+  text-align: left;
+  padding-top: 5%;
+  font-size: 2rem; }
+
+.logo {
+  width: 70%; }
+
+.people {
+  width: 100%; }
