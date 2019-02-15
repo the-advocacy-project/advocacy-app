@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../../images/logo.png'
 import people from '../../images/people.png'
 
+
 function Home(){
     return(
         <div>
