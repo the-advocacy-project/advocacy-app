@@ -1,5 +1,4 @@
 import React from 'react';
-
 // function QuizOne(props) {
 
 //     const displayNutrition = Object.keys(props.info).map((qs, i) =>
