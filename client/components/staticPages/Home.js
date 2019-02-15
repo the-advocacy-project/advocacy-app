@@ -3,6 +3,7 @@ import logo from '../../images/logo.png';
 import people from '../../images/people.png';
 import '../../styles/css/home.css';
 
+
 function Home(){
     return(
         <div className="wrapper">

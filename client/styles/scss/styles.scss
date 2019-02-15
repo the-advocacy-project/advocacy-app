@@ -1,10 +1,7 @@
 @import "./vars.scss";
-@import "./navigation.scss";
 
 body {
     background-color: $white;
-}
-
-.nav-container {
-    background-color: $green;
+    font-family: $font-stack;
+    letter-spacing: 4%
 }
