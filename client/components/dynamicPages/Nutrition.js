@@ -1,4 +1,5 @@
 import React from 'react';
+import NavHeader from '../navigation/NavHeader'
 // function QuizOne(props) {
 
 //     const displayNutrition = Object.keys(props.info).map((qs, i) =>
@@ -70,6 +71,7 @@ function Nutrition(props) {
 
     return (
         <div>
+            <NavHeader />
             <h1>Managing and Maintaining Nutrition</h1>
             <h2>Please check what applies to you</h2>
             {/* <ul>
