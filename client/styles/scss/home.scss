@@ -1,0 +1,33 @@
+@import "./vars.scss";
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+body {
+    font-family: $font-stack;
+    letter-spacing: 4%;
+    margin-top: 10%;
+}
+
+h2 {
+    font-size: 3rem;
+    color: $light-blue;
+}
+
+p {
+    color: $dark-blue;
+    text-align: left;
+    padding-top: 5%;
+    font-size: 2rem;
+}
+
+.logo { 
+    width: 70%;
+}
+
+.people {
+    width: 100%;
+}
