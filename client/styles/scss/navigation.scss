@@ -1,5 +1,19 @@
 @import "./vars.scss";
 
+.nav-container {
+    background-color: $green;
+    height: 100px;
+    padding-top: 110px;
+
+    &--white {
+        background-color: $white;
+        height: 100px;
+        border-top-right-radius: 200px;
+    }
+}
+
+
+
 p {
-    color: black;
+    margin: 0;
 }

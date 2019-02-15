@@ -1,8 +1,10 @@
+
 @import "./vars.scss";
-@import "./navigation.scss";
 
 body {
-    background-color: white;
+
+    background-color: $white;
     font-family: $font-stack;
     letter-spacing: 4%
+
 }
