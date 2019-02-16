@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
-
-// import List from './components/pages/List';
-
 
 // STATIC PAGE IMPORTS
 import FourZeroFour from './components/staticPages/FourZeroFour';
@@ -53,6 +49,14 @@ class App extends Component {
             }
         },
         consent: {
+            consentToCouncil: {
+                question: "I consent to sharing my information and contact details with the Hackney Council to see if I am eligible for a Care Act assessment",
+                agree: false
+            },
+            consentToAdvocacy: {
+                question: "I consent to sharing my information and contact details with the Advocacy Project to get continued support.",
+                agree: false
+            },
             sendToEmail: {
                 question: "Send to me via email",
                 agree: false
@@ -318,8 +322,22 @@ class App extends Component {
                         <Route exact path="/" component={Home} />
                         <Route path="/help" component={Help} />
                         <Route path="/how" component={How} />
-                        <Route path="/initial-checks" component={InitialChecks}/>
-                        <Route path="/consent" component={Consent} />
+                        <Route path="/initial-checks" component={props => (
+                            <InitialChecks
+                                info={this.state.initialChecks}
+                                section="initialChecks"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/consent" component={props => (
+                            <Consent
+                                info={this.state.consent}
+                                section="consent"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
                         <Route path="/sorry" component={Sorry} />
                         <Route path="/contact" component={Contact} />
                         <Route path="/begin" component={Begin} />
