@@ -46,14 +46,13 @@ function Consent(props) {
             console.log('checked: ', props.info[qs].agree);
             return (
                 <div>
-                    <h2>{props.info[qs].question}</h2>
-                    <input
-                        type="checkbox"
-                        checked={props.info[qs].agree}
-                        name="agree"
+                    <p>Tell us more</p>
+                    <textarea
+                        type="text"
+                        name="more"
                         key={i}
                         onChange={event =>
-                            props.toggleChange(event, qs, props.section)
+                            props.handleChangeInput(event, qs, props.section)
                         }
                     />
                 </div>

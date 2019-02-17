@@ -297,9 +297,10 @@ class App extends Component {
     };
 
 
-    handleChangeInput = el => {
-        const target = el.target;
+    handleChangeInput = event => {
+        const target = event.target;
         const value = target.type === 'text' ? null : target.value;
+        // let value = event.target.value;
         this.setState({
             [target.name]: value
         });
@@ -339,7 +340,13 @@ class App extends Component {
                             />
                         )} />
                         <Route path="/sorry" component={Sorry} />
-                        <Route path="/contact" component={Contact} />
+                        <Route path="/contact" component={props => (
+                            <Contact
+                                info={this.state.contact}
+                                section="contact"
+                                handleChangeInput={this.handleChangeInput}
+                            />
+                        )} />
                         <Route path="/begin" component={Begin} />
                         <Route path="/nutrition"
                             component={props => (
