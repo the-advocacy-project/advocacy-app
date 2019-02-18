@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 
 
 function Nutrition(props) {
-    console.log('I am props: ', props);
+    console.log('I am props: ', props.info.more);
+
     const displayNutrition = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
             console.log('I am textarea');
@@ -61,6 +62,7 @@ function Nutrition(props) {
                 requirement. Please expand and / or let us know other ways that
                 you need help maintaining and managing nutritrion below.
             </label>
+
             <div className="navButtons">
                 <Link to={'./begin'}>
                     <Button
