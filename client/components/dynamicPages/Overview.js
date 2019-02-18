@@ -15,7 +15,7 @@ function Overview(){
                 className="buttons"
                 onClick={() => {}}/>
             </Link>
-            <Link to={'./completes'} >
+            <Link to={'./complete'} >
                 <Button 
                 text='Next' 
                 type='submit' 

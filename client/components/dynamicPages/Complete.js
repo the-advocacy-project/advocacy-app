@@ -18,7 +18,7 @@ function Complete(){
             </Link>
             <Link to={'./'} >
                 <Button 
-                text='Next' 
+                text='Back to start' 
                 type='submit' 
                 className="buttons"
                 onClick={() => {}}/>
