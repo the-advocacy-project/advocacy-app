@@ -10,7 +10,7 @@
   color: #00a06e;
   padding: 0 5vw 5vh 5vw;
   border-bottom: 1px solid #132f58;
-  margin-bottom: 30px; }
+  padding-bottom: 150px; }
 
 .help-h1 {
   margin: 5% 5% 0 5%;
@@ -20,3 +20,8 @@
 .advocacy-section {
   margin: 150px 0 150px 0;
   text-align: left; }
+
+.help-section {
+  border-top: 1px solid #132f58;
+  padding-top: 150px;
+  margin-top: 150px; }

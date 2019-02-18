@@ -65,6 +65,7 @@ function Help() {
                     </a>
                     <br />
                     <br />
+                    <div className="help-section">
                     Need help with this app?
                     <br />
                     <br />
@@ -90,6 +91,7 @@ function Help() {
                             info@advocacyproject.org.uk
                         </a>
                     </div>
+                </div>
                 </p>
                 <div className="advocacy-section">
                     <p>For more information on advocacy, <a href="/advocacy">click here.</a>
