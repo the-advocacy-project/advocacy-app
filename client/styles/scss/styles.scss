@@ -7,6 +7,10 @@ body {
     font-size: 16px;
 }
 
+.wrapper {
+    width: 100%;
+}
+
 .margin50{
     margin-bottom: 50px;
 }
@@ -69,4 +73,22 @@ ul li::before{
 a {
     color: $light-blue;
     text-decoration: underline;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .nav-container {
+        background-color: $green;
+        height: 50px;
+        padding-top: 55px;
+        width: 100%;
+    
+        &--white {
+            background-color: $white;
+            height: 55px;
+            border-top-right-radius: 100px;
+        }
+    }
+    
+    
 }

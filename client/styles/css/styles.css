@@ -4,6 +4,9 @@ body {
   letter-spacing: 0.04em;
   font-size: 16px; }
 
+.wrapper {
+  width: 100%; }
+
 .margin50 {
   margin-bottom: 50px; }
 
@@ -58,3 +61,14 @@ ul li::before {
 a {
   color: #0080ba;
   text-decoration: underline; }
+
+@media only screen and (min-width: 1024px) {
+  .nav-container {
+    background-color: #00a06e;
+    height: 50px;
+    padding-top: 55px;
+    width: 100%; }
+    .nav-container--white {
+      background-color: #f9f9f9;
+      height: 55px;
+      border-top-right-radius: 100px; } }

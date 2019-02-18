@@ -12,12 +12,12 @@ function Home(){
 
     return(
         <div>
-            <NavHeader />
+            <NavHeader className="nav-desktop"/>
             <div className="wrapper">
                 <img src={logo} className='logo' alt="The Advocacy Project logo"></img>
-                <h2>Your voice. Your rights. Your choice.</h2>
+                <h2 className="tag-line1">Your voice. Your rights. Your choice.</h2>
                 <img src={people} className='people' alt="line drawing of people's faces"></img>
-                <p className='tag-line'>Need help with day to day tasks?<br/>
+                <p className="tag-line2">Need help with day to day tasks?<br/>
             See if you can get the help you need.</p>
            
             <Link to={'./help'} className="beginButtonContainer" >
