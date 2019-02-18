@@ -3,15 +3,36 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 0.04em; }
 
+.margin50 {
+  margin-bottom: 50px; }
+
 h1 {
-  font-size: 8rem;
+  font-size: 6rem;
   color: #132f58;
   position: relative;
-  top: -100px;
-  padding-left: 10vw;
-  padding-right: 5vw; }
+  padding-top: 20px; }
 
 p {
   font-size: 4rem;
   color: #202020;
   padding: 0 5vw 0 10vw; }
+
+.input-align {
+  width: 100%; }
+  .input-align p {
+    color: #132f58;
+    font-size: 2rem;
+    margin: 10px 0;
+    padding-left: 10px; }
+  .input-align input {
+    width: 90%;
+    height: 80px;
+    padding: 5px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    border-color: #E5E5E5;
+    background-color: #E5E5E5; }
+    .input-align input:hover, .input-align input:focus {
+      background-color: #7BBDA8;
+      border-color: #00a06e; }
