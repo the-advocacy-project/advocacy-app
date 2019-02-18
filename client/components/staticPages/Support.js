@@ -1,8 +1,10 @@
 import React from 'react';
+import NavHeader from '../navigation/navHeader';
 
 function Support(){
     return(
         <div>
+            <NavHeader />>
             <h1>Am I eligible for support?</h1>
             <p>To be eligible for a package of care and support, you must meet three requirements: </p>
             <ol>

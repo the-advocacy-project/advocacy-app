@@ -1,10 +1,12 @@
 import React from 'react';
 import {Button} from '../buttons/Button';
 import { Link } from 'react-router-dom';
+import NavHeader from '../navigation/navHeader';
 
 function Duty(){
     return(
         <div>
+            <NavHeader />
             <h1>Duty to provide an Advocate</h1>
             <p>The Care Act puts people in control of their care and support. 
                 It gives people the right to be involved.

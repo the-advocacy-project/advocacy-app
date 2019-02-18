@@ -1,8 +1,10 @@
 import React from 'react';
+import NavHeader from '../navigation/navHeader';
 
 function Advocacy(props) {
     return (
         <div>
+            <NavHeader />
             <h1>What's advocacy?</h1>
             <p>Advocacy is taking action to help people say what they want, secure their rights, 
                 represent their interests and obtain services they need. 

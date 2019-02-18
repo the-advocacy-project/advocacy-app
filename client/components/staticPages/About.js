@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavHeader from '../navigation/navHeader';
 import logo from '../../images/logo.png';
 
 function About() {
     return (
         <div>
-            <h1>About</h1>
-            <Link to={'./menu'}>
-                <button>Menu</button>
-            </Link>
+            <NavHeader />
             <img src={logo} className="logo" />
             <h1>About us</h1>
             <p>

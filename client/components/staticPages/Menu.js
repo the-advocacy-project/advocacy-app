@@ -12,7 +12,7 @@ function Menu() {
 
 
     return (
-
+        <NavHeader />
         <div className="wrapper" className="menuList">
             <Link to={'./'} >
                 <Home />

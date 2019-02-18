@@ -1,8 +1,10 @@
 import React from 'react';
+import NavHeader from '../navigation/navHeader';
 
 function KeyRights(){
     return(
         <div>
+            <NavHeader />
             <h1>Key Rights & Duties</h1>
             <h2>The Care Act 2014</h2>
             <ol>

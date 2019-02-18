@@ -1,10 +1,12 @@
 import React from 'react';
 import {Button} from '../buttons/Button';
 import { Link } from 'react-router-dom';
+import NavHeaderForm from '../navigation/NavHeaderForm';
 
 function Wellbeing(props) {
     return (
         <div>
+            <NavHeaderForm />
             <h1>Your Wellbeing</h1>
             <p>Wellbeing is all the things that are important to someone to have a good life, in particular:</p>
             <ul>
