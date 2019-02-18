@@ -1,6 +1,8 @@
 import React from 'react';
 import houses from '../../images/houses.png';
 import NavHeader from '../navigation/NavHeader';
+import {Button} from '../buttons/Button';
+import { Link } from 'react-router-dom';
 
 // function Contact(props) {
 //     return (
@@ -50,6 +52,21 @@ function Contact(props) {
             <img src={ houses } alt="line drawing of houses" ></img>
             <h1>Please enter your contact details:</h1>
             { displayContact }
+            <div className="navButtons"><Link to={'./consent'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./begin'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            </div>
         </div>
     );
 }

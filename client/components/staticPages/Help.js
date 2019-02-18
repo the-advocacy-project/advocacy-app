@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import {Button} from '../buttons/Button';
 
 function Help(){
     return(
@@ -41,6 +43,22 @@ function Help(){
                 <br/>
                 Email: <a href = "mailto: info@advocacyproject.org.uk">info@advocacyproject.org.uk</a>
                 </p>
+                
+           <div className="navButtons"><Link to={'./'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./how'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            </div>
         </div>
     )
 }

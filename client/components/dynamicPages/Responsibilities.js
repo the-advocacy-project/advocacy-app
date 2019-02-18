@@ -1,4 +1,6 @@
 import React from 'react';
+import {Button} from '../buttons/Button';
+import { Link } from 'react-router-dom';
 
 function Responsibilities(props) {
     return (
@@ -21,6 +23,21 @@ function Responsibilities(props) {
             </ul>
             <label>The questions above are examples of how you may meet this requirement. Please expand and / or let us know other ways that you need help carrying out caring responsibilities for a child.</label>
             <textarea placeholder="Tell us more..."></textarea>
+            <div className="navButtons"><Link to={'./transport'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./eligibility'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+        </div>
         </div>
     );
 }

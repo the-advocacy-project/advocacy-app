@@ -1,0 +1,25 @@
+.navButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+.buttons {
+  width: 25rem;
+  height: 5rem;
+  left: 108px;
+  top: 482px;
+  background: #132F58;
+  border-radius: 13px;
+  color: white;
+  font-size: 3rem; }
+
+.begin {
+  position: initial;
+  width: 35rem;
+  height: 5rem;
+  left: 45px;
+  top: 497px;
+  background: #132F58;
+  border-radius: 13px;
+  font-size: 3rem;
+  color: white; }

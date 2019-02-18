@@ -1,4 +1,6 @@
 import React from 'react';
+import {Button} from '../buttons/Button';
+import { Link } from 'react-router-dom';
 
 function Duty(){
     return(
@@ -21,7 +23,23 @@ function Duty(){
             <label>Is there anything you want the local authority to know about your communication needs?</label>
             <textarea placeholder="Tell us more..."></textarea>
             <a href="../key-rights">Click here for more information on your right to a Care Act advocate </a>
+            <div className="navButtons"><Link to={'./wellbeing'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./overview'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
         </div>
+        </div>
+        
     )
 }
 

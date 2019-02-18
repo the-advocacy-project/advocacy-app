@@ -1,4 +1,6 @@
 import React from 'react';
+import {Button} from '../buttons/Button';
+import { Link } from 'react-router-dom';
 
 function Begin(){
     return(
@@ -20,6 +22,21 @@ function Begin(){
                 <p>Gathering evidence about your need for an advocate to help with the process 
                     of receiving support under the Care Act.</p>
             </ol>
+            <div className="navButtons"><Link to={'./contact'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./nutrition'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            </div>
         </div>
     )
 }

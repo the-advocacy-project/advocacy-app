@@ -1,5 +1,8 @@
 import React from 'react';
 import NavHeader from '../navigation/NavHeader';
+import {Button} from '../buttons/Button';
+import { Link } from 'react-router-dom';
+
 
 // function Consent(props) {
 //     return (
@@ -71,6 +74,22 @@ function Consent(props) {
             </p>
             <br/>
             { displayConsent }
+
+            <div className="navButtons"><Link to={'./initial-checks'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./contact'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            </div>
         </div>
     );
 }

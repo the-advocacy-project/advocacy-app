@@ -1,5 +1,4 @@
 button {
-    position: absolute;
     width: 104px;
     height: 38px;
     left: 108px;
@@ -18,8 +17,7 @@ button {
         padding-top: 10%;
       }
 
-        a {
-
+   .menuList{
           display: inline-flex;
           justify-content: space-between;
           padding-bottom: 5%;
