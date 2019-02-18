@@ -64,15 +64,15 @@ class App extends Component {
         },
         contact: {
             name: {
-                question: "Full name:",
+                question: "Full name",
                 more: ""
             },
             address: {
-                question: "Address:",
+                question: "Address",
                 more: ""
             },
             postCode: {
-                question: "Post code:",
+                question: "Post code",
                 more: ""
             },
             email: {
@@ -80,7 +80,7 @@ class App extends Component {
                 more: ""
             },
             phoneNumber: {
-                question: "Phone number:",
+                question: "Phone number",
                 more: ""
             }
         },

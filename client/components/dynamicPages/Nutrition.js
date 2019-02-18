@@ -4,36 +4,7 @@ import '../../styles/css/nutrition.css';
 import { Button } from '../buttons/Button';
 import { Link } from 'react-router-dom';
 
-// function QuizOne(props) {
 
-//     const displayNutrition = Object.keys(props.info).map((qs, i) =>
-//     {if(qs === "more") {
-//         return (
-//             <div>
-//                 <p>Tell us more</p>
-//                 <textarea type="text"
-//                     name="more"
-//                     onChange={(event) => props.handleChangeInput(event, qs, props.section)}
-//                 />
-//             </div>
-//         )
-//     } else {
-//         return (
-//             <div>
-//                 <h2>{props.info[qs].question}</h2>
-//                 <input type="checkbox"
-//                     checked={qs.agree}
-//                     name="agree"
-//                     key={`question${i}`}
-//                     onChange={(event) => props.toggleChange(event, qs, props.section)}
-//                 />
-//             </div>
-//         )
-//     }}
-
-//     )
-
-//     return(
 
 function Nutrition(props) {
     console.log('I am props: ', props.info.more);

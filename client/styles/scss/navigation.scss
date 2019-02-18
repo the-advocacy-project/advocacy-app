@@ -4,10 +4,11 @@
     background-color: $green;
     height: 200px;
     padding-top: 210px;
+    width: 100%;
 
     &--white {
         background-color: $white;
-        height: 200px;
+        height: 210px;
         border-top-right-radius: 400px;
     }
 }

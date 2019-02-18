@@ -1,10 +1,13 @@
 import React from 'react';
 import {Button} from '../buttons/Button';
 import { Link } from 'react-router-dom';
+import NavHeader from '../navigation/navHeader';
+import '../../styles/css/home.css';
 
 function Complete(){
     return(
         <div>
+            <NavHeader />
             <h1>Complete the application</h1>
             <p>Please check the email addresses below before submitting your application. Click button to send.</p>
             <div className="navButtons"><Link to={'./overview'} >
@@ -16,7 +19,7 @@ function Complete(){
             </Link>
             <Link to={'./'} >
                 <Button 
-                text='Next' 
+                text='Back to start' 
                 type='submit' 
                 className="buttons"
                 onClick={() => {}}/>

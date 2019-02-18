@@ -12,36 +12,36 @@ function Menu() {
 
 
     return (
-
         <div className="wrapper" className="menuList">
+        <NavHeader />
             <Link to={'./'} >
                 <Home />
-                <p>Home</p>
+                <p className="menuText">Home</p>
             </Link>
             <Link to={'./about'} className="menuList">
                 <About />
-                <p>About</p>
+                <p className="menuText">About</p>
             </Link>
             <Link to={'./care-act'} className="menuList" >
                 <Care />
-                <p>The Care Act</p>
+                <p className="menuText">The Care Act</p>
 
             </Link>
             <Link to={'./eligibility'} className="menuList">
                 <Eligibility />
-                <p>Eligibility Criteria</p>
+                <p className="menuText">Eligibility Criteria</p>
             </Link>
             <Link to={'./key-rights'} className="menuList">
                 <Key />
-                <p>Key Rights</p>
+                <p className="menuText">Key Rights</p>
             </Link>
             <Link to={'./initial-checks'} className="menuList" >
                 <Application />
-                <p>Initial Checks</p>
+                <p className="menuText">Initial Checks</p>
             </Link>
             <Link to={'./advocacy'} className="menuList">
                 <Advocacy />
-                <p>Your Application</p>
+                <p className="menuText">Your Application</p>
             </Link>
             
         </div>
