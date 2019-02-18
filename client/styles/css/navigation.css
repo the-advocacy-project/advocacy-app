@@ -1,11 +1,14 @@
 .nav-container {
-  background-color: #00a06e;
-  height: 200px;
-  padding-top: 210px; }
-  .nav-container--white {
+    background-color: #00a06e;
+    height: 200px;
+    padding-top: 210px;
+}
+.nav-container--white {
     background-color: #f9f9f9;
     height: 200px;
-    border-top-right-radius: 400px; }
+    border-top-right-radius: 400px;
+}
 
 p {
-  margin: 0; }
+    margin: 0;
+}

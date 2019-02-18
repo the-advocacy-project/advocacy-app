@@ -1,0 +1,18 @@
+.nav-containerForm {
+  background-color: #00a06e;
+  height: 350px;
+  padding-top: 110px; }
+  .nav-containerForm--white {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 400px;
+    background-color: #f9f9f9;
+    height: 100px;
+    border-radius: 200px; }
+
+p {
+  margin: 0; }
+
+.nutritionH1 {
+  color: red; }
