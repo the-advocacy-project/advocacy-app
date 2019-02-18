@@ -8,9 +8,7 @@ import '../../styles/css/home.css';
 function Help() {
     return (
         <div>
-            <div className="help-nav-container">
-                <NavHeader />
-            </div>
+            <NavHeader className="nav-container"/>
 
             <div className="help-wrapper">
                 <h1 className="help-h1">
@@ -26,8 +24,6 @@ function Help() {
                     <br />
                     This app will help you:
                 </p>
-                <br />
-                <br />
 
                 <ul className="help-list">
                     <li className="help-list">
@@ -84,19 +80,21 @@ function Help() {
                         W10 6EJ
                         <br />
                         <br />
-                        <br />
                         020 8969 3000
                         <br />
                         <br />
                         Email:{' '}
                         <a
                             href="mailto: info@advocacyproject.org.uk"
-                            className="link"
                         >
                             info@advocacyproject.org.uk
                         </a>
                     </div>
                 </p>
+                <div className="advocacy-section">
+                    <p>For more information on advocacy, <a href="/advocacy">click here.</a>
+                    </p>
+                </div>
 
                 <div className="navButtons">
                     <Link to={'./'}>
