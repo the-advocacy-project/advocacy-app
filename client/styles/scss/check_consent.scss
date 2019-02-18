@@ -1,11 +1,5 @@
 @import "./vars.scss";
 
-body {
-    background-color: $white;
-    font-family: $font-stack;
-    letter-spacing: 0.04em;
-}
-
 
 h1 {
     font-size: 8rem;
@@ -21,5 +15,3 @@ h1 {
         color: $black;
         padding: 0 5vw 0 10vw;
         }
-
-   

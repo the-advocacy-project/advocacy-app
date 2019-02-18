@@ -1,5 +1,8 @@
 import React from 'react';
 import NavHeader from '../navigation/NavHeader';
+import { Link } from 'react-router-dom';
+import {Button} from '../buttons/Button';
+import "../../styles/scss/styles.scss"
 
 function InitialChecks(props) {
     const displayInitialChecks = Object.keys(props.info).map((qs, i) => {
@@ -42,7 +45,26 @@ function InitialChecks(props) {
             <h1>Let’s get started...</h1>
             <p>Please check the box below to confirm that:</p>
             { displayInitialChecks }
+            
+            
+            <div className="navButtons"><Link to={'./how'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./consent'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            </div>
+
         </div>
+     
     );
 }
 

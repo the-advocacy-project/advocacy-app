@@ -1,4 +1,6 @@
 import React from 'react';
+import {Button} from '../buttons/Button';
+import { Link } from 'react-router-dom';
 
 function Wellbeing(props) {
     return (
@@ -49,6 +51,21 @@ function Wellbeing(props) {
                 </li>
             </ul>
             <textarea placeholder="Tell us more..."></textarea>
+            <div className="navButtons"><Link to={'./eligibility'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./duty'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+        </div>
         </div>
     );
 }
