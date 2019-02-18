@@ -1,8 +1,11 @@
 import React from 'react';
+import NavHeader from '../navigation/navHeader';
+import '../../styles/css/home.css';
 
 function CareAct(){
     return(
         <div>
+            <NavHeader />
             <h1>The Care Act</h1>
             <blockquote>
             The Care Act puts people in control of their care and support. 

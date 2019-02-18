@@ -1,10 +1,13 @@
 import React from 'react';
 import {Button} from '../buttons/Button';
 import { Link } from 'react-router-dom';
+import NavHeader from '../navigation/NavHeaderForm';
+import '../../styles/css/home.css';
 
 function Wellbeing(props) {
     return (
         <div>
+            <NavHeader />
             <h1>Your Wellbeing</h1>
             <p>Wellbeing is all the things that are important to someone to have a good life, in particular:</p>
             <ul>

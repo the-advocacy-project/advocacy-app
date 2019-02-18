@@ -1,10 +1,12 @@
 import {Button} from '../buttons/Button';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import NavHeaderForm from '../navigation/NavHeaderForm';
 
 function Hygiene(props) {
     return (
         <div>
+            <NavHeaderForm />
             <h1>Maintaining personal hygiene</h1>
             <h2>Please check what applies to you</h2>
             <ul>
