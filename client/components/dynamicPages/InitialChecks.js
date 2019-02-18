@@ -2,6 +2,7 @@ import React from 'react';
 import NavHeader from '../navigation/NavHeader';
 import { Link } from 'react-router-dom';
 import {Button} from '../buttons/Button';
+import "../../styles/scss/styles.scss"
 
 function InitialChecks(props) {
     const displayInitialChecks = Object.keys(props.info).map((qs, i) => {
