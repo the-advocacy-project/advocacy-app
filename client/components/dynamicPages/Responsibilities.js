@@ -1,10 +1,12 @@
 import React from 'react';
 import {Button} from '../buttons/Button';
 import { Link } from 'react-router-dom';
+import NavHeaderForm from '../navigation/NavHeaderForm';
 
 function Responsibilities(props) {
     return (
         <div>
+            <NavHeaderForm />
             <h1>Carrying out any caring responsibilities for a child.</h1>
             <h2>Please check what applies to you</h2>
             <ul>

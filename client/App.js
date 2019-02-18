@@ -64,15 +64,15 @@ class App extends Component {
         },
         contact: {
             name: {
-                question: "Full name:",
+                question: "Full name",
                 more: ""
             },
             address: {
-                question: "Address:",
+                question: "Address",
                 more: ""
             },
             postCode: {
-                question: "Post code:",
+                question: "Post code",
                 more: ""
             },
             email: {
@@ -80,7 +80,7 @@ class App extends Component {
                 more: ""
             },
             phoneNumber: {
-                question: "Phone number:",
+                question: "Phone number",
                 more: ""
             }
         },
@@ -320,11 +320,7 @@ class App extends Component {
             <BrowserRouter>
                 <div>
                     <Switch>
-                        <Route exact path="/" component={props => (
-                            <Home
-                                allprops={this.state}
-                            />
-                        )}/>
+                        <Route exact path="/" component={Home} />
                         <Route path="/help" component={Help} />
                         <Route path="/how" component={How} />
                         <Route path="/initial-checks" component={props => (

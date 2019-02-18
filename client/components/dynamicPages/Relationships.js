@@ -1,10 +1,12 @@
 import React from 'react';
 import {Button} from '../buttons/Button';
 import { Link } from 'react-router-dom';
+import NavHeaderForm from '../navigation/NavHeaderForm';
 
 function Relationships(props) {
     return (
         <div>
+            <NavHeaderForm />
             <h1>Developing and maintaining family or other personal relationships</h1>
             <h2>Please check what applies to you</h2>
             <ul>

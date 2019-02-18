@@ -1,17 +1,60 @@
 body {
   background-color: #f9f9f9;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 0.04em; }
+  letter-spacing: 0.04em;
+  font-size: 16px; }
+
+.margin50 {
+  margin-bottom: 50px; }
 
 h1 {
-  font-size: 7rem;
+  font-size: 6rem;
   color: #132f58;
   position: relative;
-  top: -100px;
-  padding-left: 10vw;
-  padding-right: 5vw; }
+  padding-top: 20px; }
 
 p {
   font-size: 3rem;
   color: #202020;
   padding: 0 5vw 0 10vw; }
+
+.input-align {
+  width: 100%; }
+  .input-align p {
+    color: #132f58;
+    font-size: 2rem;
+    margin: 10px 0;
+    padding-left: 10px; }
+  .input-align input {
+    width: 90%;
+    height: 80px;
+    padding: 5px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    border-color: #E5E5E5;
+    background-color: #E5E5E5; }
+    .input-align input:hover, .input-align input:focus {
+      background-color: #7BBDA8;
+      border-color: #00a06e; }
+
+ul {
+  font-size: 4rem;
+  color: #202020;
+  list-style: none; }
+
+ul li::before {
+  content: "\2022";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #00a06e;
+  /* Change the color of the bullet */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */ }
+
+a {
+  color: #0080ba;
+  text-decoration: underline; }

@@ -12,8 +12,8 @@ function Menu() {
 
 
     return (
-
         <div className="wrapper" className="menuList">
+        <NavHeader />
             <Link to={'./'} >
                 <Home />
                 <p className="menuText">Home</p>
