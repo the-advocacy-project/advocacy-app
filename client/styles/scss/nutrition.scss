@@ -9,61 +9,63 @@
 }
 
 input[type='checkbox'] {
-    width: 70px;
-    height: 55px;
-    margin: 10px 80px;
-    padding: 1em;
-    position: relative;
-    bottom: 120px;
-    border-radius: 3px;
-    float: right;
-    width: 15%;
+    // width: 70px;
+    // height: 55px;
+    // margin: 10px 80px;
+    // padding: 1em;
+    // position: relative;
+    // bottom: 120px;
+    // border-radius: 3px;
+    // float: right;
+    // width: 15%;
+    width: 30%;
+    height: 7vw;
 }
 
-input[type='textarea'] {
-    width: 70px;
-    height: 55px;
-    background: #555;
-    margin: 10px 80px;
-    padding: 1em;
-    position: relative;
-    bottom: 120px;
-    border-radius: 3px;
-    float: right;
-    width: 15%;
-    background-color: blue;
-}
+// input[type='textarea'] {
+//     width: 15%;
+//     height: 55px;
+//     background: #555;
+//     margin: 10px 80px;
+//     padding: 1em;
+//     position: relative;
+//     bottom: 120px;
+//     border-radius: 3px;
+//     float: right;
+// }
 
 h2 {
     color: $black;
     text-align: center;
     font-weight: 900;
 }
+.checkboxInput {
+    display: flex;
+    padding-bottom: 10%;
+    margin: 0 auto;
+    align-items: center;
+}
 
 .checkboxText {
     margin: 1.5em;
-    text-align: left;
+    text-align: center;
     color: $black;
-    float: left;
-    width: 70%;
+
     font-weight: 500;
 }
 
 .textAreaInput {
     clear: both;
     margin: auto;
-    width: 50%;
-    border: 3px solid green;
     padding: 10px;
     position: relative;
-    top: 200px;
+    top: 150px;
 }
 
 .textAreaText {
     text-align: center;
     font-size: 1em;
     position: relative;
-    bottom: 20px;
 }
 
 label {
@@ -79,6 +81,9 @@ label {
 textarea {
     display: block;
     width: 80%;
-    height: 100px;
+    height: 25vw;
     margin: auto;
+    position: relative;
+    top: 170px;
+    background-color: $gray;
 }
