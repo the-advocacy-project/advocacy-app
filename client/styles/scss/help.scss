@@ -1,0 +1,48 @@
+@import "./vars.scss";
+
+.help-wrapper{
+    width: auto;
+}
+
+.help-h1 { 
+    font-size: 8rem;
+    color: $dark-blue;
+    position: relative;
+    top: -100px;
+    padding-left: 10vw;
+    padding-right: 5vw;
+}
+
+.help-p {
+    font-size: 4rem;
+    color: $black;
+    padding: 0 5vw 0 10vw; 
+}
+
+.help-list{
+    font-size: 4rem;
+    color: $black;
+    padding: 0 5vw 0 10vw; 
+    list-style: none    
+}
+
+.help-list li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: $green; /* Change the color of the bullet */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+
+.link {
+    color: $light-blue;
+    text-decoration: underline;
+}
+
+.contact-p{
+    font-size: 3rem;
+    color: $green;
+    padding: 0 5vw 0 5vw; 
+    border-bottom: 1px solid $dark-blue;
+
+}
