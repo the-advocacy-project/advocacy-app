@@ -320,11 +320,7 @@ class App extends Component {
             <BrowserRouter>
                 <div>
                     <Switch>
-                        <Route exact path="/" component={props => (
-                            <Home
-                                allprops={this.state}
-                            />
-                        )}/>
+                        <Route exact path="/" component={Home} />
                         <Route path="/help" component={Help} />
                         <Route path="/how" component={How} />
                         <Route path="/initial-checks" component={props => (
