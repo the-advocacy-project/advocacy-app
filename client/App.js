@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
-
-// import List from './components/pages/List';
-
 
 // STATIC PAGE IMPORTS
 import FourZeroFour from './components/staticPages/FourZeroFour';
@@ -53,6 +49,14 @@ class App extends Component {
             }
         },
         consent: {
+            consentToCouncil: {
+                question: "I consent to sharing my information and contact details with the Hackney Council to see if I am eligible for a Care Act assessment",
+                agree: false
+            },
+            consentToAdvocacy: {
+                question: "I consent to sharing my information and contact details with the Advocacy Project to get continued support.",
+                agree: false
+            },
             sendToEmail: {
                 question: "Send to me via email",
                 agree: false
@@ -293,9 +297,10 @@ class App extends Component {
     };
 
 
-    handleChangeInput = el => {
-        const target = el.target;
+    handleChangeInput = event => {
+        const target = event.target;
         const value = target.type === 'text' ? null : target.value;
+        // let value = event.target.value;
         this.setState({
             [target.name]: value
         });
@@ -318,10 +323,30 @@ class App extends Component {
                         <Route exact path="/" component={Home} />
                         <Route path="/help" component={Help} />
                         <Route path="/how" component={How} />
-                        <Route path="/initial-checks" component={InitialChecks}/>
-                        <Route path="/consent" component={Consent} />
+                        <Route path="/initial-checks" component={props => (
+                            <InitialChecks
+                                info={this.state.initialChecks}
+                                section="initialChecks"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/consent" component={props => (
+                            <Consent
+                                info={this.state.consent}
+                                section="consent"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
                         <Route path="/sorry" component={Sorry} />
-                        <Route path="/contact" component={Contact} />
+                        <Route path="/contact" component={props => (
+                            <Contact
+                                info={this.state.contact}
+                                section="contact"
+                                handleChangeInput={this.handleChangeInput}
+                            />
+                        )} />
                         <Route path="/begin" component={Begin} />
                         <Route path="/nutrition"
                             component={props => (
@@ -332,22 +357,120 @@ class App extends Component {
                                     toggleChange={this.toggleChange}
                                 />
                             )} />
-                        <Route path="/hygiene" component={Hygiene} />
-                        <Route path="/toilet" component={Toilet} />
-                        <Route path="/clothing" component={Clothing} />
-                        <Route path="/safety" component={Safety} />
-                        <Route path="/environment" component={Environment} />
-                        <Route path="/relationships" component={Relationships}/>
-                        <Route path="/work" component={Work} />
-                        <Route path="/transport" component={Transport} />
-                        <Route path="/responsibilites" component={Responsibilities}/>
-                        <Route path="/eligibility" component={Eligibility} />
-                        <Route path="/wellbeing" component={Wellbeing} />
-                        <Route path="/duty" component={Duty} />
-                        <Route path="/overview" component={Overview} />
-                        <Route path="/complete" component={Complete} />
-                        <Route path="/menu" component={Menu} />
+                        <Route path="/hygiene" component={props => (
+                            <Hygiene
+                                info={this.state.hygiene}
+                                section="hygiene"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/toilet" component={props => (
+                            <Toilet
+                                info={this.state.toilet}
+                                section="toilet"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/clothing" component={props => (
+                            <Clothing
+                                info={this.state.clothing}
+                                section="clothing"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/safety" component={props => (
+                            <Safety
+                                info={this.state.safety}
+                                section="safety"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/environment" component={props => (
+                            <Environment
+                                info={this.state.environment}
+                                section="environment"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/relationships" component={props => (
+                            <Relationships
+                                info={this.state.relationships}
+                                section="relationships"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/work" component={props => (
+                            <Work
+                                info={this.state.work}
+                                section="work"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/transport" component={props => (
+                            <Transport
+                                info={this.state.transport}
+                                section="transport"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/responsibilites" component={props => (
+                            <Responsibilities
+                                info={this.state.responsibilities}
+                                section="responsibilities"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/eligibility" component={props => (
+                            <Eligibility
+                                info={this.state.eligibility}
+                                section="eligibility"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/wellbeing" component={props => (
+                            <Wellbeing
+                                info={this.state.wellbeing}
+                                section="wellbeing"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/duty" component={props => (
+                            <Duty
+                                info={this.state.duty}
+                                section="duty"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/overview" component={props => (
+                            <Overview
+                                info={this.state}
+                                section="overview"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
+                        <Route path="/complete" component={props => (
+                            <Complete
+                                info={this.state.complete}
+                                section="complete"
+                                handleChangeInput={this.handleChangeInput}
+                                toggleChange={this.toggleChange}
+                            />
+                        )} />
                         {/* NAV COMPONENTS */}
+                        <Route path="/menu" component={Menu} />
                         <Route path="/about" component={About} />
                         <Route path="/advocacy" component={Advocacy} />
                         <Route path="/care-act" component={CareAct} />

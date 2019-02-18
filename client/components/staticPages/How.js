@@ -1,8 +1,12 @@
 import React from 'react';
+import '../../styles/css/how.css';
+import NavHeader from '../navigation/navHeader';
 
 function How(){
     return(
         <div>
+            <NavHeader />
+            <div>
             <h1>How this works</h1>
             <ul>
                 <li>Answer a set of questions about what you can and cannot do</li>
@@ -16,6 +20,7 @@ function How(){
                     to a Care Act Advocate. </li>
             </ul>
             <p>Using this app does not guarantee you are eligible for support under the Care Act. </p>
+            </div>
         </div>
     )
 }
