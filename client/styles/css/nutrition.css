@@ -1,0 +1,73 @@
+.nutritionH1 {
+  color: #f9f9f9;
+  margin: 0 auto;
+  width: 90%;
+  font-size: 4.4em;
+  text-align: center; }
+
+input[type='checkbox'] {
+  width: 70px;
+  height: 55px;
+  margin: 10px 80px;
+  padding: 1em;
+  position: relative;
+  bottom: 120px;
+  border-radius: 3px;
+  float: right;
+  width: 15%; }
+
+input[type='textarea'] {
+  width: 70px;
+  height: 55px;
+  background: #555;
+  margin: 10px 80px;
+  padding: 1em;
+  position: relative;
+  bottom: 120px;
+  border-radius: 3px;
+  float: right;
+  width: 15%;
+  background-color: blue; }
+
+h2 {
+  color: #202020;
+  text-align: center;
+  font-weight: 900; }
+
+.checkboxText {
+  margin: 1.5em;
+  text-align: left;
+  color: #202020;
+  float: left;
+  width: 70%;
+  font-weight: 500; }
+
+.textAreaInput {
+  clear: both;
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  position: relative;
+  top: 200px; }
+
+.textAreaText {
+  text-align: center;
+  font-size: 1em;
+  position: relative;
+  bottom: 20px; }
+
+label {
+  display: block;
+  width: 80%;
+  margin: auto;
+  color: #202020;
+  font-size: 2em;
+  position: relative;
+  bottom: 200px; }
+
+textarea {
+  display: block;
+  width: 80%;
+  height: 100px;
+  margin: auto; }
