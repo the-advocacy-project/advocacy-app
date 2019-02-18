@@ -3,6 +3,7 @@ import '../../styles/css/help.css';
 import NavHeader from '../navigation/navHeader';
 import { Link } from 'react-router-dom';
 import { Button } from '../buttons/Button';
+import '../../styles/css/home.css';
 
 function Help() {
     return (

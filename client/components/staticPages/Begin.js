@@ -1,10 +1,13 @@
 import React from 'react';
 import {Button} from '../buttons/Button';
 import { Link } from 'react-router-dom';
+import NavHeader from '../navigation/navHeader';
+import '../../styles/css/home.css';
 
 function Begin(){
     return(
         <div>
+            <NavHeader />
             <h1>Let's begin</h1>
             <p>We will now ask you a series of questions to gather evidence of your right to 
                 a Care Act assessment, eligibility for support and an advocate to help you 
