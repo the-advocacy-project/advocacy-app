@@ -14,9 +14,10 @@ function Home(){
                 <img src={logo} className='logo' alt="The Advocacy Project logo"></img>
                 <h2>Your voice. Your rights. Your choice.</h2>
                 <img src={people} className='people' alt="line drawing of people's faces"></img>
-                <p className='tag-line'>Need help with day to day tasks?<br/>
-            See if you can get the help you need.</p>
-
+                <p className='tag-line'>
+                    Need help with day to day tasks?<br/>
+                    See if you can get the help you need.
+                </p>
             </div>
         </div>
     )
