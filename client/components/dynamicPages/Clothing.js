@@ -1,4 +1,6 @@
 import React from 'react';
+import {Button} from '../buttons/Button';
+import { Link } from 'react-router-dom';
 
 function Clothing(props) {
     return (
@@ -12,6 +14,21 @@ function Clothing(props) {
             </ul>
             <label>The questions above are examples of how you may meet this requirement. Please expand and / or let us know other ways that you need help being appropriately clothed.</label>
             <textarea placeholder="Tell us more..."></textarea>
+            <div className="navButtons"><Link to={'./toilet'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./safety'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+        </div>
         </div>
     );
 }

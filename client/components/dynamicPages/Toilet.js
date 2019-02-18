@@ -1,4 +1,6 @@
 import React from 'react';
+import {Button} from '../buttons/Button';
+import { Link } from 'react-router-dom';
 
 function Toilet(props) {
     return (
@@ -18,6 +20,21 @@ function Toilet(props) {
             </ul>
             <label>The questions above are examples of how you may meet this requirement. Please expand and / or let us know other ways that you need help managing toilet needs.</label>
             <textarea placeholder="Tell us more..."></textarea>
+            <div className="navButtons"><Link to={'./hygiene'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./clothing'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+        </div>
         </div>
     );
 }

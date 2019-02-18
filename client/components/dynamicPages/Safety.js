@@ -1,4 +1,7 @@
 import React from 'react';
+import {Button} from '../buttons/Button';
+import { Link } from 'react-router-dom';
+
 
 function Safety(props) {
     return (
@@ -20,6 +23,21 @@ function Safety(props) {
             </ul>
             <label>The questions above are examples of how you may meet this requirement. Please expand and / or let us know other ways that you need help using your home safely.</label>
             <textarea placeholder="Tell us more..."></textarea>
+            <div className="navButtons"><Link to={'./clothing'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./environment'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+        </div>
         </div>
     );
 }

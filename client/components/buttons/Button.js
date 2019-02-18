@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../styles/scss/styles.scss"
+import "../../styles/css/button.css"
 // export const Text = {
 //   NEXT: 'pimary',
 //   WARNING: 'warning',
@@ -8,17 +8,35 @@ import "../../styles/scss/styles.scss"
 // }
 
 export const Button = ({ 
-  text, 
-  onClick, 
-  disabled, 
+    text, 
+    onClick, 
+    disabled, 
  
 }) => (
 
-  <button
-    disabled={disabled}
-    onClick={onClick}
+    <button
+        disabled={disabled}
+        onClick={onClick}
+        className="buttons"
     >
-    {text}
-  </button>
+        {text}
+    </button>
 
 );
+
+
+export const Begin = ({
+
+    text, 
+    onClick, 
+    disabled, 
+
+}) => (
+
+    <button
+        disabled={disabled}
+        onClick={onClick}
+        className="begin"
+    > 
+        {text}
+    </button>  );

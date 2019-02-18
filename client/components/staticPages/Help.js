@@ -1,6 +1,9 @@
 import React from 'react';
 import '../../styles/css/help.css';
 import NavHeader from '../navigation/navHeader';
+import { Link } from 'react-router-dom';
+import {Button} from '../buttons/Button';
+
 
 function Help(){
     return(
@@ -56,7 +59,21 @@ function Help(){
                 Email: <a href = "mailto: info@advocacyproject.org.uk" className="link">info@advocacyproject.org.uk</a>
                 </div>
                 </p>
-                
+
+           <div className="navButtons"><Link to={'./'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./how'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
             </div>
         </div>
     )
