@@ -8,16 +8,49 @@ body {
     font-size: 16px; 
 }
 
+.margin50{
+    margin-bottom: 50px;
+}
+
 h1 {
-    font-size: 8rem;
+    font-size: 6rem;
     color: $dark-blue;
     position: relative;
-    top: -100px;
-}
+    padding-top: 20px;
+    }
 
 p {
     font-size: 4rem;
     color: $black;
+    padding: 0 5vw 0 10vw;
+ }
+
+.input-align {
+    width: 100%;
+
+    p {
+        color: $dark-blue;
+        font-size: 2rem;
+        margin: 10px 0;
+        padding-left: 10px;
+    }
+
+    input {
+        width: 90%;
+        height: 80px;
+        padding: 5px;
+        margin: 0 auto;
+        display: block;
+        border-radius: 10px;
+        border-color: $gray;
+        background-color: $gray;
+
+        &:hover, &:focus {
+            background-color: $light-green;
+            border-color: $green;
+        }
+    }
+}
 }
 
 ul {
@@ -38,3 +71,4 @@ a {
     color: $light-blue;
     text-decoration: underline;
 }
+
