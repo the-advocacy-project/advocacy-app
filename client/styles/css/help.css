@@ -8,7 +8,7 @@
 .contact-p {
   font-size: 3rem;
   color: #00a06e;
-  padding: 0 5vw 5vh 5vw;
+  padding: 0 5vw 0 5vw;
   border-bottom: 1px solid #132f58;
   padding-bottom: 150px; }
 
@@ -25,3 +25,7 @@
   border-top: 1px solid #132f58;
   padding-top: 150px;
   margin-top: 150px; }
+
+@media only screen and (min-width: 1024px) {
+  .help-h1 {
+    padding: 200px 0 0 0; } }

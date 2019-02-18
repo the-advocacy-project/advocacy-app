@@ -23,6 +23,8 @@ function Help() {
                     <br />
                     <br />
                     This app will help you:
+                    <br />
+                    <br />
                 </p>
 
                 <ul className="help-list">
@@ -46,13 +48,17 @@ function Help() {
                     <li className="help-list">
                         Secure the support you need if you are eligible
                     </li>
+                    <br />
                 </ul>
+                <br />
+                <br />
                 <p className="help-p">
                     The Care Act is about helping and protecting people aged 18
                     and over who need care and support. The local authority has
                     a duty under the Care Act to make sure people have the
                     support they need to improve their independence and
                     wellbeing and be safe.
+                    <br />
                     <br />
                     <br />
                     Click here to find out more about{' '}
@@ -66,10 +72,7 @@ function Help() {
                     <br />
                     <br />
                     <div className="help-section">
-                    Need help with this app?
-                    <br />
-                    <br />
-                    Please contact us at:
+                    Need help with this app? Please contact us at:
                     <br />
                     <br />
                     <div className="contact-p">
