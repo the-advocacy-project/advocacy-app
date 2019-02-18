@@ -4,7 +4,7 @@ body {
   letter-spacing: 0.04em; }
 
 h1 {
-  font-size: 8rem;
+  font-size: 7rem;
   color: #132f58;
   position: relative;
   top: -100px;
@@ -12,6 +12,6 @@ h1 {
   padding-right: 5vw; }
 
 p {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #202020;
   padding: 0 5vw 0 10vw; }

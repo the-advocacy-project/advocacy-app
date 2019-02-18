@@ -2,7 +2,7 @@ import React from 'react';
 import NavHeader from '../navigation/NavHeader';
 import { Link } from 'react-router-dom';
 import {Button} from '../buttons/Button';
-import "../../styles/scss/styles.scss"
+import "../../styles/scss/check_consent.scss"
 
 function InitialChecks(props) {
     const displayInitialChecks = Object.keys(props.info).map((qs, i) => {
@@ -23,7 +23,7 @@ function InitialChecks(props) {
             );
         } else {
             return (
-                <div>
+                <div className="styling">
                     <h2>{props.info[qs].question}</h2>
                     <input
                         type="checkbox"
