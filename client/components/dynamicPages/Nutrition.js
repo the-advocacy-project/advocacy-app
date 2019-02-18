@@ -1,5 +1,7 @@
 import React from 'react';
 import NavHeader from '../navigation/NavHeader'
+import {Button} from '../buttons/Button';
+import { Link } from 'react-router-dom';
 // function QuizOne(props) {
 
 //     const displayNutrition = Object.keys(props.info).map((qs, i) =>
@@ -77,6 +79,21 @@ function Nutrition(props) {
             { displayNutrition }
             <label>The questions above are examples of how you may meet this requirement. Please expand and / or let us know other ways that you need help maintaining and managing nutritrion below.</label>
             <textarea placeholder="Tell us more..."></textarea>
+            <div className="navButtons"><Link to={'./begin'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./hygiene'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            </div>
         </div>
     );
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../styles/css/how.css';
 import NavHeader from '../navigation/navHeader';
+import { Link } from 'react-router-dom';
+import {Button} from '../buttons/Button';
 
 function How(){
     return(
@@ -20,6 +22,21 @@ function How(){
                     to a Care Act Advocate. </li>
             </ul>
             <p>Using this app does not guarantee you are eligible for support under the Care Act. </p>
+            </div>
+            <div className="navButtons"><Link to={'./help'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./initial-checks'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
             </div>
         </div>
     )

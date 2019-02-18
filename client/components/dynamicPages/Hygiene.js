@@ -1,3 +1,5 @@
+import {Button} from '../buttons/Button';
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 function Hygiene(props) {
@@ -21,6 +23,21 @@ function Hygiene(props) {
             </ul>
             <label>The questions above are examples of how you may meet this requirement. Please expand and / or let us know other ways that you need help maintaining personal hygiene below.</label>
             <textarea placeholder="Tell us more..."></textarea>
+            <div className="navButtons"><Link to={'./nutrition'} >
+                <Button 
+                text='Back' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./toilet'} >
+                <Button 
+                text='Next' 
+                type='submit' 
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            </div>
         </div>
     );
 }

@@ -13,37 +13,37 @@ function Menu() {
 
     return (
 
-        <div className="wrapper">
+        <div className="wrapper" className="menuList">
             <Link to={'./'} >
                 <Home />
                 <p>Home</p>
             </Link>
-            <Link to={'./about'} >
+            <Link to={'./about'} className="menuList">
                 <About />
                 <p>About</p>
             </Link>
-            <Link to={'./care-act'} >
+            <Link to={'./care-act'} className="menuList" >
                 <Care />
                 <p>The Care Act</p>
 
             </Link>
-            <Link to={'./eligibility'} >
+            <Link to={'./eligibility'} className="menuList">
                 <Eligibility />
                 <p>Eligibility Criteria</p>
             </Link>
-            <Link to={'./key-rights'} >
+            <Link to={'./key-rights'} className="menuList">
                 <Key />
                 <p>Key Rights</p>
             </Link>
-            <Link to={'./initial-checks'} >
+            <Link to={'./initial-checks'} className="menuList" >
                 <Application />
                 <p>Initial Checks</p>
             </Link>
-            <Link to={'./advocacy'} >
+            <Link to={'./advocacy'} className="menuList">
                 <Advocacy />
                 <p>Your Application</p>
             </Link>
-
+            
         </div>
     );
 }
