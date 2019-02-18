@@ -1,17 +1,37 @@
 body {
   background-color: #f9f9f9;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 0.04em; }
+  letter-spacing: 0.04em;
+  margin: 0 10vw 0 10vw;
+  font-size: 16px; }
 
 h1 {
   font-size: 8rem;
   color: #132f58;
   position: relative;
-  top: -100px;
-  padding-left: 10vw;
-  padding-right: 5vw; }
+  top: -100px; }
 
 p {
   font-size: 4rem;
+  color: #202020; }
+
+ul {
+  font-size: 4rem;
   color: #202020;
-  padding: 0 5vw 0 10vw; }
+  list-style: none; }
+
+ul li::before {
+  content: "\2022";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #00a06e;
+  /* Change the color of the bullet */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */ }
+
+a {
+  color: #0080ba;
+  text-decoration: underline; }

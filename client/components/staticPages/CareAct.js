@@ -1,5 +1,6 @@
 import React from 'react';
 import NavHeader from '../navigation/navHeader';
+import '../../styles/css/home.css';
 
 function CareAct(){
     return(

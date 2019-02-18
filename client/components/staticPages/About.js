@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavHeader from '../navigation/navHeader';
 import logo from '../../images/logo.png';
+import '../../styles/css/styles.css';
 
 function About() {
     return (

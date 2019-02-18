@@ -2,6 +2,7 @@ import React from 'react';
 import {Button} from '../buttons/Button';
 import { Link } from 'react-router-dom';
 import NavHeader from '../navigation/NavHeaderForm';
+import '../../styles/css/home.css';
 
 function Wellbeing(props) {
     return (
