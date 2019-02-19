@@ -24,21 +24,20 @@ import { Link } from 'react-router-dom';
 // }
 
 
-function Contact(props) {
-
+const Contact = props => {
 
     const displayContact = Object.keys(props.info).map((qs, index) => {
-        console.log(`props`, props)
-        console.log(`props.info`, props.info)
+        console.log("index",index);
         return (
-            <div className="input-align margin50">
+            <div className="input-align margin50" key={`container-${index}`}>
                 <p>{props.info[qs].question}</p>
                 <input
                     type="text"
-                    key={index}
-                    name={props.info.name.more}
+                    key={`input-${index}`}
+                    value={props.info[qs].more}
+                    name="more"
                     onChange={event => {
-                        props.handleChangeInput(event)
+                        props.handleChangeInput(event, qs, props.section)
                     }}
                 />
             </div>
@@ -70,6 +69,38 @@ function Contact(props) {
             </div>
         </div>
     );
+
+
+
+
+
+
+
+    // return (
+    //     <div>
+    //         <NavHeader />
+    //         <div className="wrapper">
+    //             <img src={ houses }  className="people" alt="line drawing of houses" ></img>
+    //             <h1>Please enter your contact details:</h1>
+    //             { displayContact }
+    //             <div className="navButtons"><Link to={'./consent'} >
+    //                 <Button
+    //                 text='Back'
+    //                 type='submit'
+    //                 className="buttons"
+    //                 onClick={() => {}}/>
+    //             </Link>
+    //             <Link to={'./begin'} >
+    //                 <Button
+    //                 text='Next'
+    //                 type='submit'
+    //                 className="buttons"
+    //                 onClick={() => {}}/>
+    //             </Link>
+    //         </div>
+    //         </div>
+    //     </div>
+    // );
 }
 
 

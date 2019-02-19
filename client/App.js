@@ -298,9 +298,10 @@ class App extends Component {
 
 
     handleChangeInput = (event, qs, section) => {
-        const target = event.target;
-        const value = target.type === 'text' ? null : target.value;
-        const newSection = { ...this.state[section][qs], more: value };
+        // const target = event.target;
+        // console.log("target", target)
+        const value = target.type === 'text' ? event.target.value : null;
+        console.log("value", value)
         this.setState({
             [section]: {
                 ...this.state[section],
