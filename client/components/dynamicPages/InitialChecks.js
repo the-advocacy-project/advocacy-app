@@ -23,8 +23,8 @@ function InitialChecks(props) {
             );
         } else {
             return (
-                <div className="styling">
-                    <h2>{props.info[qs].question}</h2>
+                <div className="checkboxInput">
+                    <h2 className="checkboxText title--green margin50">{props.info[qs].question}</h2>
                     <input
                         type="checkbox"
                         checked={props.info[qs].agree}
@@ -42,32 +42,34 @@ function InitialChecks(props) {
     return (
         <div>
             <NavHeader />
-            <h1>Let’s get started...</h1>
-            <p>Please check the box below to confirm that:</p>
-            { displayInitialChecks }
-            
-            
+            <div className="wrapper">
+                <h1>Let’s get started...</h1>
+                <p>Please check the box below to confirm that:</p>
+                <div className="margin50 clear"></div>
+                { displayInitialChecks }
+            </div>
+
+
             <div className="navButtons"><Link to={'./how'} >
-                <Button 
-                text='Back' 
-                type='submit' 
+                <Button
+                text='Back'
+                type='submit'
                 className="buttons"
                 onClick={() => {}}/>
             </Link>
             <Link to={'./consent'} >
-                <Button 
-                text='Next' 
-                type='submit' 
+                <Button
+                text='Next'
+                type='submit'
                 className="buttons"
                 onClick={() => {}}/>
             </Link>
             </div>
 
         </div>
-     
+
     );
 }
 
 
 export default InitialChecks;
-

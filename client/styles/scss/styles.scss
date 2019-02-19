@@ -14,9 +14,29 @@ body {
 .clear {
     clear: both;
 }
+
+.li-title--green {
+    color: $green;
+    padding: 100px 0;
+    font-size: 4em;
+    margin-left: 100px;
+}
+
+.align-center {
+    align-items: center;
+}
 .wrapper {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    // padding-top: 10%;
+}
+
+.wrapper__contact {
+    .people {
+        top: 0;
+    }
 }
 
 .img-top {
@@ -31,9 +51,13 @@ h1 {
     }
 
 p {
-    font-size: 4rem;
+    font-size: 3rem;
     color: $black;
     // padding: 0 5vw 0 10vw;
+ }
+
+ li {
+     font-size: 3rem;
  }
 
 .input-align {

@@ -1,3 +1,5 @@
+@import "./vars.scss";
+
 .navButtons {
     display: flex;
     flex-direction: row;
@@ -7,7 +9,7 @@
 
 .buttons {
     width: 25rem;
-    height: 5rem;
+    height: 8rem;
     left: 108px;
     top: 482px;
     background: #132f58;
@@ -17,15 +19,15 @@
 }
 
 .begin {
-    position: initial;
     width: 35rem;
-    height: 5rem;
+    height: 8rem;
     left: 45px;
-    top: 497px;
+    margin-top: 100px;
     background: #132f58;
     border-radius: 13px;
     font-size: 3rem;
     color: white;
+    box-shadow: 6px 10px 5px $gray;
 }
 
 // .beginButtonContainer {
