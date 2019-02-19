@@ -11,9 +11,9 @@ h2 {
   margin: 0;
   font-weight: 400; }
 
-input[type="checkbox"], [type="radio"] {
+input[type="checkbox"] {
   box-sizing: border-box;
   padding: 0;
-  width: 30%;
+  width: 4em;
   height: 80px;
   padding-top: 30; }

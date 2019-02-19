@@ -12,7 +12,7 @@ function Menu() {
 
 
     return (
-        <div className="wrapper" className="menuList">
+        <div className="wrapper_menu" className="menuList">
         <NavHeader />
             <Link to={'./'} >
                 <Home />
@@ -43,7 +43,7 @@ function Menu() {
                 <Advocacy />
                 <p className="menuText">Your Application</p>
             </Link>
-            
+
         </div>
     );
 }

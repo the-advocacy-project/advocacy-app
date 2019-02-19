@@ -1,6 +1,3 @@
-.wrapper {
-  width: 100%; }
-
 .logo {
   width: 60%;
   position: relative;
@@ -14,7 +11,7 @@ h2 {
   text-align: left; }
 
 .people {
-  width: 125%;
+  width: 100%;
   padding-top: 1%; }
 
 .tag-line {

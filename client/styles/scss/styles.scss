@@ -7,6 +7,19 @@ body {
     font-size: 16px;
 }
 
+.clear {
+    clear: both;
+}
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    // padding-top: 10%;
+}
+
+.img-top {
+    margin-top: -50px;
+}
 .margin50{
     margin-bottom: 50px;
 }
@@ -21,7 +34,7 @@ h1 {
 p {
     font-size: 4rem;
     color: $black;
-    padding: 0 5vw 0 10vw;
+    // padding: 0 5vw 0 10vw;
  }
 
 .input-align {
@@ -50,7 +63,34 @@ p {
         }
     }
 }
+.h2__questions {
+    color: $black;
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
 
+.more__questions {
+    border: 2px solid $dark-blue;
+    display: block;
+    width: 80%;
+    height: 200px;
+    margin: auto;
+}
+.checkboxText {
+    grid-column: 1/5;
+    color: $black;
+}
+.checkboxInput {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.checkBox {
+    margin: 0 auto;
+    width: 4em;
+}
 
 ul {
     font-size: 4rem;

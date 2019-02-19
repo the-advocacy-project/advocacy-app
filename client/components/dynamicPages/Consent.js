@@ -8,15 +8,15 @@ import { Link } from 'react-router-dom';
 //     return (
 //         <div>
 //             <h1>Your consent</h1>
-//             <p>Select the relevant options below to consent to sharing your 
-//                 information with the local authority, with us and sending a 
+//             <p>Select the relevant options below to consent to sharing your
+//                 information with the local authority, with us and sending a
 //                 copy to yourself. </p>
 //             <br/>
-//             <label>I consent to sharing my information and contact details with the 
+//             <label>I consent to sharing my information and contact details with the
 //                 Hackney Council to see if I am eligible for a Care Act assessment</label>
 //             <input type="checkbox"></input>
 //             <br/>
-//             <label>I consent to sharing my information and contact details with 
+//             <label>I consent to sharing my information and contact details with
 //                 the Advocacy Project to get continued support.</label>
 //             <input type="checkbox"></input>
 //             <br/>
@@ -66,26 +66,28 @@ function Consent(props) {
     return (
         <div>
             <NavHeader />
-            <h1>Your consent</h1>
-            <p>
-                Select the relevant options below to consent to sharing your 
-                information with the local authority, with us and sending a 
-                copy to yourself. 
-            </p>
-            <br/>
-            { displayConsent }
+            <div className="wrapper">
+                <h1>Your consent</h1>
+                <p>
+                    Select the relevant options below to consent to sharing your
+                    information with the local authority, with us and sending a
+                    copy to yourself.
+                </p>
+                <br/>
+                { displayConsent }
+            </div>
 
             <div className="navButtons"><Link to={'./initial-checks'} >
-                <Button 
-                text='Back' 
-                type='submit' 
+                <Button
+                text='Back'
+                type='submit'
                 className="buttons"
                 onClick={() => {}}/>
             </Link>
             <Link to={'./contact'} >
-                <Button 
-                text='Next' 
-                type='submit' 
+                <Button
+                text='Next'
+                type='submit'
                 className="buttons"
                 onClick={() => {}}/>
             </Link>

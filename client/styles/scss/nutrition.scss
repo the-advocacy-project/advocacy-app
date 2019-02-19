@@ -1,24 +1,5 @@
 @import './vars.scss';
 
-.nutritionH1 {
-    color: $white;
-    margin: 0 auto;
-    width: 90%;
-    font-size: 4.4em;
-    text-align: center;
-}
-
-input[type='checkbox'] {
-    width: 70px;
-    height: 55px;
-    margin: 10px 80px;
-    padding: 1em;
-    position: relative;
-    bottom: 120px;
-    border-radius: 3px;
-    float: right;
-    width: 15%;
-}
 
 input[type='textarea'] {
     width: 70px;
@@ -34,51 +15,25 @@ input[type='textarea'] {
     background-color: blue;
 }
 
-h2 {
-    color: $black;
-    text-align: center;
-    font-weight: 900;
-}
-
-.checkboxText {
-    margin: 1.5em;
-    text-align: left;
-    color: $black;
-    float: left;
-    width: 70%;
-    font-weight: 500;
-}
 
 .textAreaInput {
     clear: both;
-    margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
-    position: relative;
-    top: 200px;
+    margin: 52px auto 0;
+    width: 100%;
+    padding: 22px 10px;
 }
 
 .textAreaText {
     text-align: center;
-    font-size: 1em;
+    font-size: 2em;
     position: relative;
     bottom: 20px;
 }
 
 label {
     display: block;
-    width: 80%;
+    width: 90%;
     margin: auto;
-    color: $black;
+    color: $dark-gray;
     font-size: 2em;
-    position: relative;
-    bottom: 200px;
-}
-
-textarea {
-    display: block;
-    width: 80%;
-    height: 100px;
-    margin: auto;
 }
