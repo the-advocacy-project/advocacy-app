@@ -27,6 +27,37 @@ p {
   font-size: 4rem;
   color: #202020; }
 
+input[type='textarea'] {
+  width: 70px;
+  height: 55px;
+  background: #555;
+  margin: 10px 80px;
+  padding: 1em;
+  position: relative;
+  bottom: 120px;
+  border-radius: 3px;
+  float: right;
+  width: 15%;
+  background-color: blue; }
+
+.textAreaInput {
+  clear: both;
+  margin: 52px auto 0;
+  width: 100%;
+  padding: 22px 10px; }
+
+.textAreaText {
+  text-align: center;
+  font-size: 2em;
+  position: relative; }
+
+label {
+  display: block;
+  width: 90%;
+  margin: auto;
+  color: #646C70;
+  font-size: 2em; }
+
 .input-align {
   width: 100%; }
   .input-align p {
@@ -81,7 +112,7 @@ ul {
   padding: 0 5vw 0 10vw; }
 
 ul li::before {
-  content: "\2022";
+  content: '\2022';
   /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: #00a06e;
   /* Change the color of the bullet */
