@@ -30,16 +30,17 @@ const Contact = props => {
         console.log("index",index);
         return (
             <div className="input-align margin50" key={`container-${index}`}>
-                <p>{props.info[qs].question}</p>
-                <input
-                    type="text"
-                    key={`input-${index}`}
-                    value={props.info[qs].more}
-                    name="more"
-                    onChange={event => {
-                        props.handleChangeInput(event, qs, props.section)
-                    }}
-                />
+                    <p>{props.info[qs].question}</p>
+                    <input
+                        type="text"
+                        key={`input-${index}`}
+                        value={props.info[qs].more}
+                        name="more"
+                        onChange={event => {
+                            event.preventDefault();
+                            props.handleChangeInput(event, qs, props.section)
+                        }}
+                    />
             </div>
         );
     });
@@ -55,54 +56,24 @@ const Contact = props => {
                 </div>
                 <div className="navButtons"><Link to={'./consent'} >
                     <Button
-                    text='Back'
-                    type='submit'
-                    className="buttons"
-                    onClick={() => {}}/>
+                        text='Back'
+                        type='submit'
+                        className="buttons"
+                        onClick={() => {}}/>
                 </Link>
                 <Link to={'./begin'} >
                     <Button
-                    text='Next'
-                    type='submit'
-                    className="buttons"
-                    onClick={() => {}}/>
+                        text='Next'
+                        type='submit'
+                        className="buttons"
+                        onClick={() => {}}/>
                 </Link>
-            </div>
+                </div>
             </div>
         </div>
     );
 
 
-
-
-
-
-
-    // return (
-    //     <div>
-    //         <NavHeader />
-    //         <div className="wrapper">
-    //             <img src={ houses }  className="people" alt="line drawing of houses" ></img>
-    //             <h1>Please enter your contact details:</h1>
-    //             { displayContact }
-    //             <div className="navButtons"><Link to={'./consent'} >
-    //                 <Button
-    //                 text='Back'
-    //                 type='submit'
-    //                 className="buttons"
-    //                 onClick={() => {}}/>
-    //             </Link>
-    //             <Link to={'./begin'} >
-    //                 <Button
-    //                 text='Next'
-    //                 type='submit'
-    //                 className="buttons"
-    //                 onClick={() => {}}/>
-    //             </Link>
-    //         </div>
-    //         </div>
-    //     </div>
-    // );
 }
 
 

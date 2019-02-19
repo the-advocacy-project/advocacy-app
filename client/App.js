@@ -326,7 +326,7 @@ class App extends Component {
     handleChangeInput = (event, qs, section) => {
         const target = event.target;
         // console.log("target", target)
-        const value = target.type === 'text' ? target.value : null;
+        const value = target.name === 'more' ? target.value : null;
         console.log("value", value)
         this.setState({
             [section]: {
@@ -335,6 +335,7 @@ class App extends Component {
             }
         });
     };
+
 
     handleSubmit = event => {
         event.preventDefault();
@@ -354,7 +355,7 @@ class App extends Component {
                         <Route path="/how" component={How} />
                         <Route
                             path="/initial-checks"
-                            component={props => (
+                            render={props => (
                                 <InitialChecks
                                     info={this.state.initialChecks}
                                     section="initialChecks"
@@ -365,7 +366,7 @@ class App extends Component {
                         />
                         <Route
                             path="/consent"
-                            component={props => (
+                            render={props => (
                                 <Consent
                                     info={this.state.consent}
                                     section="consent"
@@ -377,7 +378,7 @@ class App extends Component {
                         <Route path="/sorry" component={Sorry} />
                         <Route
                             path="/contact"
-                            component={props => (
+                            render={props => (
                                 <Contact
                                     info={this.state.contact}
                                     section="contact"
@@ -388,7 +389,7 @@ class App extends Component {
                         <Route path="/begin" component={Begin} />
                         <Route
                             path="/nutrition"
-                            component={props => (
+                            render={props => (
                                 <Nutrition
                                     info={this.state.nutrition}
                                     section="nutrition"
@@ -399,7 +400,7 @@ class App extends Component {
                         />
                         <Route
                             path="/hygiene"
-                            component={props => (
+                            render={props => (
                                 <Hygiene
                                     info={this.state.hygiene}
                                     section="hygiene"
@@ -410,7 +411,7 @@ class App extends Component {
                         />
                         <Route
                             path="/toilet"
-                            component={props => (
+                            render={props => (
                                 <Toilet
                                     info={this.state.toilet}
                                     section="toilet"
@@ -421,7 +422,7 @@ class App extends Component {
                         />
                         <Route
                             path="/clothing"
-                            component={props => (
+                            render={props => (
                                 <Clothing
                                     info={this.state.clothing}
                                     section="clothing"
@@ -432,7 +433,7 @@ class App extends Component {
                         />
                         <Route
                             path="/safety"
-                            component={props => (
+                            render={props => (
                                 <Safety
                                     info={this.state.safety}
                                     section="safety"
@@ -443,7 +444,7 @@ class App extends Component {
                         />
                         <Route
                             path="/environment"
-                            component={props => (
+                            render={props => (
                                 <Environment
                                     info={this.state.environment}
                                     section="environment"
@@ -454,7 +455,7 @@ class App extends Component {
                         />
                         <Route
                             path="/relationships"
-                            component={props => (
+                            render={props => (
                                 <Relationships
                                     info={this.state.relationships}
                                     section="relationships"
@@ -465,7 +466,7 @@ class App extends Component {
                         />
                         <Route
                             path="/work"
-                            component={props => (
+                            render={props => (
                                 <Work
                                     info={this.state.work}
                                     section="work"
@@ -476,7 +477,7 @@ class App extends Component {
                         />
                         <Route
                             path="/transport"
-                            component={props => (
+                            render={props => (
                                 <Transport
                                     info={this.state.transport}
                                     section="transport"
@@ -487,7 +488,7 @@ class App extends Component {
                         />
                         <Route
                             path="/responsibilites"
-                            component={props => (
+                            render={props => (
                                 <Responsibilities
                                     info={this.state.responsibilities}
                                     section="responsibilities"
@@ -498,7 +499,7 @@ class App extends Component {
                         />
                         <Route
                             path="/eligibility"
-                            component={props => (
+                            render={props => (
                                 <Eligibility
                                     info={this.state.eligibility}
                                     section="eligibility"
@@ -509,7 +510,7 @@ class App extends Component {
                         />
                         <Route
                             path="/wellbeing"
-                            component={props => (
+                            render={props => (
                                 <Wellbeing
                                     info={this.state.wellbeing}
                                     section="wellbeing"
@@ -520,7 +521,7 @@ class App extends Component {
                         />
                         <Route
                             path="/duty"
-                            component={props => (
+                            render={props => (
                                 <Duty
                                     info={this.state.duty}
                                     section="duty"
@@ -531,7 +532,7 @@ class App extends Component {
                         />
                         <Route
                             path="/overview"
-                            component={props => (
+                            render={props => (
                                 <Overview
                                     info={this.state}
                                     section="overview"
@@ -542,7 +543,7 @@ class App extends Component {
                         />
                         <Route
                             path="/complete"
-                            component={props => (
+                            render={props => (
                                 <Complete
                                     info={this.state.complete}
                                     section="complete"

@@ -17,20 +17,18 @@ function Nutrition(props) {
                         Please expand and / or let us know other ways that you need help maintaining and managing
                         nutritrion below.
                     </label>
-                    <div className="textAreaInput">
+                    <div className="textAreaInput" key={`nutrition-${i}`}>
                         <p className="textAreaText">Tell us more</p>
                         <textarea
                             className="textArea more__questions"
                             type="text"
                             name="more"
-                            key={i}
-                            onChange={event =>
-                                props.handleChangeInput(
-                                    event,
-                                    qs,
-                                    props.section
-                                )
-                            }
+                            value={props.info[qs].more}
+                            key={`input-${i}`}
+                            onChange={event => {
+                                event.preventDefault();
+                                props.handleChangeInput(event, qs, props.section)
+                            }}
                         />
                     </div>
                 </div>

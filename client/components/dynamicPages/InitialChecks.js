@@ -6,37 +6,21 @@ import "../../styles/scss/check_consent.scss"
 
 function InitialChecks(props) {
     const displayInitialChecks = Object.keys(props.info).map((qs, i) => {
-        if (qs === 'more') {
-            console.log('I am textarea');
-            return (
-                <div>
-                    <p>Tell us more</p>
-                    <textarea
-                        type="text"
-                        name="more"
-                        key={i}
-                        onChange={event =>
-                            props.handleChangeInput(event, qs, props.section)
-                        }
-                    />
-                </div>
-            );
-        } else {
-            return (
-                <div className="checkboxInput">
-                    <h2 className="checkboxText title--green margin50">{props.info[qs].question}</h2>
-                    <input
-                        type="checkbox"
-                        checked={props.info[qs].agree}
-                        name="agree"
-                        key={i}
-                        onChange={event =>
-                            props.toggleChange(event, qs, props.section)
-                        }
-                    />
-                </div>
-            );
-        }
+
+        return (
+            <div className="checkboxInput">
+                <h2 className="checkboxText title--green margin50">{props.info[qs].question}</h2>
+                <input
+                    type="checkbox"
+                    checked={props.info[qs].agree}
+                    name="agree"
+                    key={i}
+                    onChange={event =>
+                        props.toggleChange(event, qs, props.section)
+                    }
+                />
+            </div>
+        );
     });
 
     return (
@@ -52,17 +36,17 @@ function InitialChecks(props) {
 
             <div className="navButtons"><Link to={'./how'} >
                 <Button
-                text='Back'
-                type='submit'
-                className="buttons"
-                onClick={() => {}}/>
+                    text='Back'
+                    type='submit'
+                    className="buttons"
+                    onClick={() => {}}/>
             </Link>
             <Link to={'./consent'} >
                 <Button
-                text='Next'
-                type='submit'
-                className="buttons"
-                onClick={() => {}}/>
+                    text='Next'
+                    type='submit'
+                    className="buttons"
+                    onClick={() => {}}/>
             </Link>
             </div>
 
