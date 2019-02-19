@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 
 
 function Nutrition(props) {
-    console.log('I am props: ', props);
+    console.log('I am props: ', props.info.more);
+
     const displayNutrition = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
             console.log('I am textarea');
@@ -65,8 +66,6 @@ function Nutrition(props) {
             <div className="wrapper">
                 <h2 className="margin50 h2__questions">Please check what applies to you</h2>
                 {displayNutrition}
-                <div className="clear"></div>
-
                 <div className="margin50 clear"></div>
             </div>
             <div className="navButtons">

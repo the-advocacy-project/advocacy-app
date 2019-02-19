@@ -20,8 +20,7 @@ input[type='textarea'] {
 .textAreaText {
   text-align: center;
   font-size: 2em;
-  position: relative;
-  bottom: 20px; }
+  position: relative; }
 
 label {
   display: block;

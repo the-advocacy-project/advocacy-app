@@ -4,22 +4,21 @@ body {
   letter-spacing: 0.04em;
   font-size: 16px; }
 
+.margin50 {
+  margin-bottom: 50px; }
+
 .clear {
   clear: both; }
 
 .wrapper {
   width: 80%;
-  margin: 0 auto;
-  align-items: center; }
+  margin: 0 auto; }
 
 .img-top {
   margin-top: -50px; }
 
-.margin50 {
-  margin-bottom: 50px; }
-
 h1 {
-  font-size: 6rem;
+  font-size: 7rem;
   color: #132f58;
   position: relative;
   padding-top: 20px; }
@@ -78,7 +77,8 @@ p {
 ul {
   font-size: 4rem;
   color: #202020;
-  list-style: none; }
+  list-style: none;
+  padding: 0 5vw 0 10vw; }
 
 ul li::before {
   content: "\2022";
@@ -95,3 +95,23 @@ ul li::before {
 a {
   color: #0080ba;
   text-decoration: underline; }
+
+.navButtons {
+  margin-bottom: 150px; }
+
+@media only screen and (min-width: 1024px) {
+  .nav-container {
+    background-color: #00a06e;
+    height: 50px;
+    padding-top: 55px;
+    width: 100%; }
+    .nav-container--white {
+      background-color: #f9f9f9;
+      height: 55px;
+      border-top-right-radius: 100px; }
+  h1 {
+    font-size: 5rem; }
+  p {
+    font-size: 2rem; }
+  ul {
+    font-size: 2rem; } }

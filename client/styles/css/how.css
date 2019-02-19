@@ -1,2 +1,17 @@
-h1 {
-  font-size: 5rem; }
+.how-h1 {
+  margin: 5% 5% 0 5%;
+  top: -200px;
+  left: 50px; }
+
+.how-list {
+  margin-top: -160px; }
+
+.disclaimer {
+  color: #00a06e;
+  font-size: 3rem;
+  margin-bottom: 150px; }
+
+@media only screen and (min-width: 1024px) {
+  .how-h1 {
+    text-align: left;
+    left: 0px; } }
