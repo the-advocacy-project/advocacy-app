@@ -5,7 +5,7 @@ import '../../styles/css/home.css';
 function Support(){
     return(
         <div>
-            <NavHeader />>
+            <NavHeader />
             <h1>Am I eligible for support?</h1>
             <p>To be eligible for a package of care and support, you must meet three requirements: </p>
             <ol>

@@ -22,30 +22,30 @@ function Wellbeing(props) {
                 <li>the individual’s contribution to society.</li>
             </ul>
             <blockquote>"Wellbeing is all the things that are important to someone to have a good life"</blockquote>
-            <p>If you don’t get support to do the above will you:</p>
+            <p></p>
             <ul>
                 <li>
-                    <label>Feel safe</label>
+                    <label>If you don’t get support will you feel safe?</label>
                     <textarea placeholder="Yes/No..."></textarea>
                 </li>
                 <li>
-                    <label>Feel relaxed </label>
+                    <label>If you don’t get support will you feel relaxed?</label>
                     <textarea placeholder="Yes/No..."></textarea>
                 </li>
                 <li>
-                    <label>Feel happy</label> 
+                    <label>If you don’t get support will you feel happy?</label> 
                     <textarea placeholder="Yes/No..."></textarea>
                 </li>
                 <li>
-                    <label>Be able to see your friends</label> 
+                    <label>If you don’t get support will you be able to see your friends?</label> 
                     <textarea placeholder="Yes/No..."></textarea>
                 </li>
                 <li>
-                    <label>Feel valued in society</label> 
+                    <label>If you don’t get support will you feel valued in society?</label> 
                     <textarea placeholder="Yes/No..."></textarea>
                 </li>
                 <li>
-                    <label>Keep your family together </label>
+                    <label>If you don’t get support will you keep your family together </label>
                     <textarea placeholder="Yes/No..."></textarea>
                 </li>
                 <li>

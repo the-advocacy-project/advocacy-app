@@ -17,14 +17,14 @@ function Help() {
                 </h1>
                 <p>
                     The Advocacy Project has developed this app to help people
-                    with the process of getting the help they need from the
+                    get the help they need from the
                     local authority.
                 </p>
                 <p>This app will help you:</p>
 
                 <ul className="help-list">
                     <li className="help-list margin50">
-                        Identify if you have a right to a Care Act assessment by
+                        Outline your right to a Care Act assessment by
                         the local authority
                     </li>
                     <li className="help-list margin50">

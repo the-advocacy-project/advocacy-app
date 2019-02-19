@@ -11,8 +11,9 @@ function Responsibilities(props) {
             return (
                 <div>
                     <label>
-                        The questions above are examples of how you may meet
-                        this you need help carrying out caring responsibilities
+                        The questions above are examples of how you may need help. 
+                        Please expand and / or let us know
+                        other ways that you need help carrying out caring responsibilities
                         for a child.
                     </label>
                     <div className="textAreaInput">

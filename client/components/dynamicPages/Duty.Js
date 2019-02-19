@@ -11,14 +11,14 @@ function Duty(){
             <h1>Duty to provide an Advocate</h1>
             <p>The Care Act puts people in control of their care and support. 
                 It gives people the right to be involved.
-                You might be entitled to free support help from an advocate to help you to: </p>
+                You might be entitled to free support from an advocate to help you to: </p>
             <ul>
                 <li>think about what you want</li>
                 <li>understand your rights</li>
                 <li>be fully involved in the assessment process</li>
                 <li>communicate with the local authority</li>
             </ul>
-            <label>Would you like free support from an advocate</label>
+            <label>Would you like to be considered for free support from an advocate?</label>
             <label>Yes</label><input type="checkbox"></input>
             <label>No</label><input type="checkbox"></input>
             <label>Is there anything you want to tell the advocate about your communication needs?</label>
