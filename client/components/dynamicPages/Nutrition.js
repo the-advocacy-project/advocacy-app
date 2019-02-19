@@ -13,10 +13,16 @@ function Nutrition(props) {
         if (qs === 'more') {
             console.log('I am textarea');
             return (
+                <div>
+                <label>
+                    The questions above are examples of how you may meet this
+                    requirement. Please expand and / or let us know other ways that
+                    you need help maintaining and managing nutritrion below.
+                </label>
                 <div className="textAreaInput">
                     <p className="textAreaText">Tell us more</p>
                     <textarea
-                        className="textArea"
+                        className="textArea more__questions"
                         type="text"
                         name="more"
                         key={i}
@@ -24,6 +30,7 @@ function Nutrition(props) {
                             props.handleChangeInput(event, qs, props.section)
                         }
                     />
+                </div>
                 </div>
             );
         } else {
@@ -42,6 +49,7 @@ function Nutrition(props) {
                             props.toggleChange(event, qs, props.section)
                         }
                     />
+                    <div className="margin50"></div>
                 </div>
             );
         }
@@ -50,19 +58,16 @@ function Nutrition(props) {
     return (
         <div>
             <NavHeaderForm>
-                <h1 className="nutritionH1">
+                <h1 className="h1__questions">
                     Managing and Maintaining Nutrition
                 </h1>
             </NavHeaderForm>
             {/* <h1 className="nutritionH1">Managing and Maintaining Nutrition</h1> */}
-            <h2>Please check what applies to you</h2>
-            {displayNutrition}
-            <label>
-                The questions above are examples of how you may meet this
-                requirement. Please expand and / or let us know other ways that
-                you need help maintaining and managing nutritrion below.
-            </label>
-
+            <div className="wrapper">
+                <h2 className="margin50 h2__questions">Please check what applies to you</h2>
+                {displayNutrition}
+                <div className="margin50 clear"></div>
+            </div>
             <div className="navButtons">
                 <Link to={'./begin'}>
                     <Button

@@ -50,7 +50,7 @@ function Contact(props) {
         <div>
             <NavHeader />
             <div className="wrapper">
-                <img src={ houses }  className="people" alt="line drawing of houses" ></img>
+                <img src={ houses }  className="people img-top" alt="line drawing of houses" ></img>
                 <h1>Please enter your contact details:</h1>
                 { displayContact }
                 <div className="navButtons"><Link to={'./consent'} >

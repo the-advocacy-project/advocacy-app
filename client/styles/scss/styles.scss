@@ -7,12 +7,20 @@ body {
     font-size: 16px;
 }
 
-.wrapper {
-    width: 100%;
-}
-
 .margin50{
     margin-bottom: 50px;
+}
+
+.clear {
+    clear: both;
+}
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.img-top {
+    margin-top: -50px;
 }
 
 h1 {
@@ -25,7 +33,7 @@ h1 {
 p {
     font-size: 4rem;
     color: $black;
-    padding: 0 5vw 0 10vw;
+    // padding: 0 5vw 0 10vw;
  }
 
 .input-align {
@@ -53,6 +61,34 @@ p {
             border-color: $green;
         }
     }
+}
+.h2__questions {
+    color: $black;
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.more__questions {
+    border: 2px solid $dark-blue;
+    display: block;
+    width: 80%;
+    height: 200px;
+    margin: auto;
+}
+.checkboxText {
+    grid-column: 1/5;
+    color: $black;
+}
+.checkboxInput {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.checkBox {
+    margin: 0 auto;
+    width: 4em;
 }
 
 ul {
@@ -86,7 +122,7 @@ a {
         height: 50px;
         padding-top: 55px;
         width: 100%;
-    
+
         &--white {
             background-color: $white;
             height: 55px;
@@ -97,7 +133,7 @@ a {
     h1{
         font-size: 5rem;
     }
-    
+
     p{
         font-size: 2rem;
     }
