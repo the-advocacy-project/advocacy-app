@@ -25,19 +25,18 @@ import { Link } from 'react-router-dom';
 
 
 function Contact(props) {
-    console.log('I am props: ', props);
-    console.log(`info`, props.info)
+
 
     const displayContact = Object.keys(props.info).map((qs, index) => {
-        console.log("more",props.info[qs].more.value)
-        console.log(`name`, props.info[qs])
+        console.log(`props`, props)
+        console.log(`props.info`, props.info)
         return (
-            <div class="input-align margin50">
+            <div className="input-align margin50">
                 <p>{props.info[qs].question}</p>
                 <input
                     type="text"
                     key={index}
-                    name={props.info[qs].more}
+                    name={props.info.name.more}
                     onChange={event => {
                         props.handleChangeInput(event)
                     }}
