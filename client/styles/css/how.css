@@ -1,0 +1,9 @@
+.disclaimer {
+  color: #00a06e;
+  font-size: 3rem;
+  margin-bottom: 150px; }
+
+@media only screen and (min-width: 1024px) {
+  .how-h1 {
+    text-align: left;
+    left: 0px; } }

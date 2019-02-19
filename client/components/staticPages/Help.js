@@ -1,0 +1,116 @@
+import React from 'react';
+import '../../styles/css/help.css';
+import NavHeader from '../navigation/navHeader';
+import { Link } from 'react-router-dom';
+import { Button } from '../buttons/Button';
+import '../../styles/css/home.css';
+
+function Help() {
+    return (
+        <div>
+            <NavHeader className="nav-container"/>
+
+            <div className="wrapper">
+                <h1 className="help-h1">
+                    How we <br />
+                    aim to help
+                </h1>
+                <p>
+                    The Advocacy Project has developed this app to help people
+                    with the process of getting the help they need from the
+                    local authority.
+                </p>
+                <p>This app will help you:</p>
+
+                <ul className="help-list">
+                    <li className="help-list margin50">
+                        Identify if you have a right to a Care Act assessment by
+                        the local authority
+                    </li>
+                    <li className="help-list margin50">
+                        Identify if you may have a right to a Care Act Advocate
+                    </li>
+                    <li className="help-list margin50">
+                        Identify if you may be eligible for support
+                    </li>
+                    <li className="help-list margin50">
+                        Be involved in the assessment process
+                    </li>
+                    <li className="help-list margin50">
+                        Secure the support you need if you are eligible
+                    </li>
+                    <br />
+                </ul>
+                <br />
+                <br />
+
+                <p className="help-p">
+                        The Care Act is about helping and protecting people aged 18
+                        and over who need care and support. The local authority has
+                        a duty under the Care Act to make sure people have the
+                        support they need to improve their independence and
+                        wellbeing and be safe. </p>
+                <br />
+                <br />
+                <br />
+                <p>Click here to find out more about{' '}
+                    <a href="./care-act" className="link">
+                            the Care Act{' '}
+                    </a>{' '}
+                        or{' '}
+                    <a href="./Support" className="link">
+                            the eligibility criteria.
+                    </a></p>
+                <br />
+                <br />
+                <p className="help-section">
+                            Need help with this app? Please contact us at:</p>
+                <br />
+                <br />
+
+                <section className="contact-p">
+                            The Advocacy Project
+                    <br />
+                            73 St Charles Square
+                    <br />
+                            London
+                    <br />
+                            W10 6EJ
+                    <br />
+                    <br />
+                            020 8969 3000
+                    <br />
+                    <br />
+                            Email:{' '}
+                    <a href="mailto: info@advocacyproject.org.uk">info@advocacyproject.org.uk</a>
+                </section>
+
+
+                <div className="advocacy-section">
+                    <p>For more information on advocacy, <a href="/advocacy">click here.</a>
+                    </p>
+                </div>
+            </div>
+            <div className="navButtons">
+                <Link to={'./'}>
+                    <Button
+                        text="Back"
+                        type="submit"
+                        className="buttons"
+                        onClick={() => {}}
+                    />
+                </Link>
+                <Link to={'./how'}>
+                    <Button
+                        text="Next"
+                        type="submit"
+                        className="buttons"
+                        onClick={() => {}}
+                    />
+                </Link>
+            </div>
+        </div>
+    );
+}
+
+export default Help;

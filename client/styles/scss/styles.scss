@@ -1,0 +1,202 @@
+@import './vars.scss';
+
+body {
+    background-color: $white;
+    font-family: $font-stack;
+    letter-spacing: 0.04em;
+    font-size: 16px;
+}
+
+.margin50 {
+    margin-bottom: 50px;
+}
+
+.clear {
+    clear: both;
+}
+
+.li-title--green {
+    color: $green;
+    padding: 100px 0;
+    font-size: 4em;
+    margin-left: 100px;
+}
+
+.align-center {
+    align-items: center;
+}
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    // padding-top: 10%;
+}
+
+.wrapper__contact {
+    .people {
+        top: 0;
+    }
+}
+
+.img-top {
+    margin-top: -50px;
+}
+
+h1 {
+    font-size: 7rem;
+    color: $dark-blue;
+    position: relative;
+    padding-top: 20px;
+}
+
+p {
+    font-size: 3rem;
+    color: $black;
+    /// padding: 0 5vw 0 10vw;
+}
+
+input[type='textarea'] {
+    width: 70px;
+    height: 55px;
+    background: #555;
+    margin: 10px 80px;
+    padding: 1em;
+    position: relative;
+    bottom: 120px;
+    border-radius: 3px;
+    float: right;
+    width: 15%;
+    background-color: blue;
+}
+.textAreaInput {
+    clear: both;
+    margin: 52px auto 0;
+    width: 100%;
+    padding: 22px 10px;
+}
+
+.textAreaText {
+    text-align: center;
+    font-size: 2em;
+    position: relative;
+}
+
+label {
+    display: block;
+    width: 90%;
+    margin: auto;
+    color: $dark-gray;
+    font-size: 2em;
+}
+
+li {
+    font-size: 3rem;
+}
+
+.input-align {
+    width: 100%;
+
+    p {
+        color: $dark-blue;
+        font-size: 2rem;
+        margin: 10px 0;
+        padding-left: 10px;
+    }
+
+    input {
+        width: 90%;
+        height: 80px;
+        padding: 5px;
+        margin: 0 auto;
+        display: block;
+        border-radius: 10px;
+        border-color: $gray;
+        background-color: $gray;
+
+        &:hover,
+        &:focus {
+            background-color: $light-green;
+            border-color: $green;
+        }
+    }
+}
+.h2__questions {
+    color: $black;
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.more__questions {
+    border: 2px solid $dark-blue;
+    display: block;
+    width: 80%;
+    height: 200px;
+    margin: auto;
+}
+.checkboxText {
+    grid-column: 1/5;
+    color: $black;
+}
+.checkboxInput {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.checkBox {
+    margin: 0 auto;
+    width: 4em;
+}
+
+ul {
+    font-size: 4rem;
+    color: $black;
+    list-style: none;
+    padding: 0 5vw 0 10vw;
+}
+
+ul li::before {
+    content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: $green; /* Change the color of the bullet */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+a {
+    color: $light-blue;
+    text-decoration: underline;
+}
+
+.navButtons {
+    margin-bottom: 150px;
+}
+
+@media only screen and (min-width: 1024px) {
+    .nav-container {
+        background-color: $green;
+        height: 50px;
+        padding-top: 55px;
+        width: 100%;
+
+        &--white {
+            background-color: $white;
+            height: 55px;
+            border-top-right-radius: 100px;
+        }
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    ul {
+        font-size: 2rem;
+    }
+}

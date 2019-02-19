@@ -1,0 +1,165 @@
+body {
+  background-color: #f9f9f9;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.04em;
+  font-size: 16px; }
+
+.margin50 {
+  margin-bottom: 50px; }
+
+.clear {
+  clear: both; }
+
+.li-title--green {
+  color: #00a06e;
+  padding: 100px 0;
+  font-size: 4em;
+  margin-left: 100px; }
+
+.align-center {
+  align-items: center; }
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+.wrapper__contact .people {
+  top: 0; }
+
+.img-top {
+  margin-top: -50px; }
+
+h1 {
+  font-size: 7rem;
+  color: #132f58;
+  position: relative;
+  padding-top: 20px; }
+
+p {
+  font-size: 3rem;
+  color: #202020; }
+
+input[type='textarea'] {
+  width: 70px;
+  height: 55px;
+  background: #555;
+  margin: 10px 80px;
+  padding: 1em;
+  position: relative;
+  bottom: 120px;
+  border-radius: 3px;
+  float: right;
+  width: 15%;
+  background-color: blue; }
+
+.textAreaInput {
+  clear: both;
+  margin: 52px auto 0;
+  width: 100%;
+  padding: 22px 10px; }
+
+.textAreaText {
+  text-align: center;
+  font-size: 2em;
+  position: relative; }
+
+label {
+  display: block;
+  width: 90%;
+  margin: auto;
+  color: #646C70;
+  font-size: 2em; }
+
+li {
+  font-size: 3rem; }
+
+.input-align {
+  width: 100%; }
+  .input-align p {
+    color: #132f58;
+    font-size: 2rem;
+    margin: 10px 0;
+    padding-left: 10px; }
+  .input-align input {
+    width: 90%;
+    height: 80px;
+    padding: 5px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    border-color: #E5E5E5;
+    background-color: #E5E5E5; }
+    .input-align input:hover, .input-align input:focus {
+      background-color: #7BBDA8;
+      border-color: #00a06e; }
+
+.h2__questions {
+  color: #202020;
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.5rem; }
+
+.more__questions {
+  border: 2px solid #132f58;
+  display: block;
+  width: 80%;
+  height: 200px;
+  margin: auto; }
+
+.checkboxText {
+  grid-column: 1/5;
+  color: #202020; }
+
+.checkboxInput {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto); }
+
+.checkBox {
+  margin: 0 auto;
+  width: 4em; }
+
+ul {
+  font-size: 4rem;
+  color: #202020;
+  list-style: none;
+  padding: 0 5vw 0 10vw; }
+
+ul li::before {
+  content: '\2022';
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #00a06e;
+  /* Change the color of the bullet */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */ }
+
+a {
+  color: #0080ba;
+  text-decoration: underline; }
+
+.navButtons {
+  margin-bottom: 150px; }
+
+@media only screen and (min-width: 1024px) {
+  .nav-container {
+    background-color: #00a06e;
+    height: 50px;
+    padding-top: 55px;
+    width: 100%; }
+    .nav-container--white {
+      background-color: #f9f9f9;
+      height: 55px;
+      border-top-right-radius: 100px; }
+  h1 {
+    font-size: 5rem; }
+  p {
+    font-size: 2rem; }
+  ul {
+    font-size: 2rem; } }

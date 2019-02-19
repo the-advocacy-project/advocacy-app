@@ -1,0 +1,25 @@
+.help-wrapper {
+  width: auto; }
+
+.link {
+  color: #0080ba;
+  text-decoration: underline; }
+
+.contact-p {
+  font-size: 3rem;
+  color: #00a06e;
+  border-bottom: 1px solid #132f58;
+  padding-bottom: 150px; }
+
+.advocacy-section {
+  margin: 150px 0 150px 0;
+  text-align: left; }
+
+.help-section {
+  border-top: 1px solid #132f58;
+  padding-top: 150px;
+  margin-top: 150px; }
+
+@media only screen and (min-width: 1024px) {
+  .help-h1 {
+    padding: 200px 0 0 0; } }

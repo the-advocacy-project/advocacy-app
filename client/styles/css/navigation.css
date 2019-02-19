@@ -1,0 +1,12 @@
+.nav-container {
+  background-color: #00a06e;
+  height: 200px;
+  padding-top: 210px;
+  width: 100%; }
+  .nav-container--white {
+    background-color: #f9f9f9;
+    height: 210px;
+    border-top-right-radius: 400px; }
+
+p {
+  margin: 0; }

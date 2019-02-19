@@ -1,6 +1,12 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "react-minimal"
+  parser: "babel-eslint",
+  rules: {
+    indent: "error"
+  },
+  overrides: [
+    {
+      files: ["files/transformed/by/babel/*.js"],
+      parser: "babel-eslint",
+    }
   ]
 }
