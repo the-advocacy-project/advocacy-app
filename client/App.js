@@ -56,11 +56,11 @@ class App extends Component {
             },
             consentToAdvocacy: {
                 question:
-                    'I consent to sharing my information and contact details with us, the Advocacy Project, to get continued support.',
+                    'I consent to sharing my information and contact details with us, the Advocacy Project, to get continued support',
                 agree: false
             },
             sendToEmail: {
-                question: 'Send me a copy of my application to my email',
+                question: 'Send a copy of my application to my email',
                 agree: false
             }
         },

@@ -7,13 +7,14 @@ import { Link } from 'react-router-dom';
 function Consent(props) {
     console.log('I am props: ', props);
     const displayConsent = Object.keys(props.info).map((qs, i) => {
-    
+
         console.log('I am a checkbox');
         console.log('checked: ', props.info[qs].agree);
         return (
-            <div>
-                <h2>{props.info[qs].question}</h2>
+            <div className="checkboxInput">
+                <h2 className="checkboxText title--green margin50">{props.info[qs].question}</h2>
                 <input
+                    className="checkBox"
                     type="checkbox"
                     checked={props.info[qs].agree}
                     name="agree"
@@ -32,10 +33,12 @@ function Consent(props) {
             <NavHeader />
             <div className="wrapper">
                 <h1>Your consent</h1>
+                <p className="margin50">
+                    Select the relevant options below to give consent to share your
+                    information with the Local Authority and The Advocacy Project.
+                </p>
                 <p>
-                    Select the relevant options below to consent to sharing your
-                    information with the local authority, with us and sending a
-                    copy to yourself.
+                    If you would like a copy of your application, please check the last box.
                 </p>
                 <div className="margin50 clear"></div>
                 { displayConsent }
