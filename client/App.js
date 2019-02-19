@@ -51,16 +51,16 @@ class App extends Component {
         consent: {
             consentToCouncil: {
                 question:
-                    'I consent to sharing my information and contact details with the Hackney Council to see if I am eligible for a Care Act assessment',
+                    'I consent to sharing my information and contact details with Hackney Council to see if I am eligible for a Care Act assessment',
                 agree: false
             },
             consentToAdvocacy: {
                 question:
-                    'I consent to sharing my information and contact details with the Advocacy Project to get continued support.',
+                    'I consent to sharing my information and contact details with us, the Advocacy Project, to get continued support.',
                 agree: false
             },
             sendToEmail: {
-                question: 'Send to me via email',
+                question: 'Send me a copy of my application to my email',
                 agree: false
             }
         },
@@ -159,7 +159,7 @@ class App extends Component {
             },
             usingKitchen: {
                 question:
-                    'Do you need help to help to use your cooker or heater?',
+                    'Do you need help to use your cooker or heater?',
                 agree: false
             },
             more: ''

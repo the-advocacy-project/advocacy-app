@@ -10,8 +10,8 @@ function Work(props) {
             return (
                 <div>
                     <label>
-                        The questions above are examples of how you may meet
-                        this requirement. Please expand and / or let us know
+                        The questions above are examples of how you may need help.
+                        Please expand and / or let us know
                         other ways that you need help developing and maintaining
                         accessing and engaging in work, training, education or
                         volunteering.

@@ -25,6 +25,8 @@ function CareAct(){
                     <li>involve the person in the assessment and, where appropriate, their carer or someone
                         else they nominate provide access to an independent advocate to support the person’s
                         involvement in the assessment if required.</li>
+                    <li>provide access to an independent advocate to support the person’s
+                        involvement in the assessment if required.</li>
                 </ul>
                 </p>
                 <h2>For more information:</h2>

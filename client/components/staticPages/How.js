@@ -15,7 +15,7 @@ function How(){
                         <li>Answer a set of questions about what you can and cannot do</li>
                         <br/>
                         <br/>
-                        <li>With your consent, the app will send this information to the
+                        <li>With your consent, the Advocacy Project will send this information to the
                     Adult Social Care team at your local authority</li>
                         <br/>
                         <br/>
