@@ -8,9 +8,7 @@ import '../../styles/css/home.css';
 function Help() {
     return (
         <div>
-            <div className="help-nav-container">
-                <NavHeader />
-            </div>
+            <NavHeader className="nav-container"/>
 
             <div className="help-wrapper">
                 <h1 className="help-h1">
@@ -25,9 +23,9 @@ function Help() {
                     <br />
                     <br />
                     This app will help you:
+                    <br />
+                    <br />
                 </p>
-                <br />
-                <br />
 
                 <ul className="help-list">
                     <li className="help-list">
@@ -50,13 +48,17 @@ function Help() {
                     <li className="help-list">
                         Secure the support you need if you are eligible
                     </li>
+                    <br />
                 </ul>
+                <br />
+                <br />
                 <p className="help-p">
                     The Care Act is about helping and protecting people aged 18
                     and over who need care and support. The local authority has
                     a duty under the Care Act to make sure people have the
                     support they need to improve their independence and
                     wellbeing and be safe.
+                    <br />
                     <br />
                     <br />
                     Click here to find out more about{' '}
@@ -69,10 +71,8 @@ function Help() {
                     </a>
                     <br />
                     <br />
-                    Need help with this app?
-                    <br />
-                    <br />
-                    Please contact us at:
+                    <div className="help-section">
+                    Need help with this app? Please contact us at:
                     <br />
                     <br />
                     <div className="contact-p">
@@ -84,19 +84,22 @@ function Help() {
                         W10 6EJ
                         <br />
                         <br />
-                        <br />
                         020 8969 3000
                         <br />
                         <br />
                         Email:{' '}
                         <a
                             href="mailto: info@advocacyproject.org.uk"
-                            className="link"
                         >
                             info@advocacyproject.org.uk
                         </a>
                     </div>
+                </div>
                 </p>
+                <div className="advocacy-section">
+                    <p>For more information on advocacy, <a href="/advocacy">click here.</a>
+                    </p>
+                </div>
 
                 <div className="navButtons">
                     <Link to={'./'}>

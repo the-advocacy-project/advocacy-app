@@ -7,12 +7,16 @@ body {
     font-size: 16px;
 }
 
+.wrapper {
+    width: 100%;
+}
+
 .margin50{
     margin-bottom: 50px;
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: 7rem;
     color: $dark-blue;
     position: relative;
     padding-top: 20px;
@@ -51,11 +55,11 @@ p {
     }
 }
 
-
 ul {
     font-size: 4rem;
     color: $black;
-    list-style: none
+    list-style: none;
+    padding: 0 5vw 0 10vw;
 }
 
 ul li::before{
@@ -69,4 +73,36 @@ ul li::before{
 a {
     color: $light-blue;
     text-decoration: underline;
+}
+
+.navButtons {
+    margin-bottom: 150px;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .nav-container {
+        background-color: $green;
+        height: 50px;
+        padding-top: 55px;
+        width: 100%;
+    
+        &--white {
+            background-color: $white;
+            height: 55px;
+            border-top-right-radius: 100px;
+        }
+    }
+
+    h1{
+        font-size: 5rem;
+    }
+    
+    p{
+        font-size: 2rem;
+    }
+
+    ul{
+        font-size: 2rem;
+    }
 }
