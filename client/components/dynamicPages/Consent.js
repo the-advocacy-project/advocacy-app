@@ -48,11 +48,12 @@ function Consent(props) {
             console.log('I am a checkbox');
             console.log('checked: ', props.info[qs].agree);
             return (
-                <div>
-                    <p>Tell us more</p>
-                    <textarea
-                        type="text"
-                        name="more"
+                <div className="checkboxInput">
+                    <h2 className="checkboxText title--green margin50">{props.info[qs].question}</h2>
+                    <input
+                        type="checkbox"
+                        checked={props.info[qs].agree}
+                        name="agree"
                         key={i}
                         onChange={event =>
                             props.handleChangeInput(event, qs, props.section)
@@ -73,7 +74,7 @@ function Consent(props) {
                     information with the local authority, with us and sending a
                     copy to yourself.
                 </p>
-                <br/>
+                <div className="margin50 clear"></div>
                 { displayConsent }
             </div>
 
