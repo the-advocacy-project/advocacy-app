@@ -10,9 +10,23 @@ body {
 .clear {
   clear: both; }
 
+.li-title--green {
+  color: #00a06e;
+  padding: 100px 0;
+  font-size: 4em;
+  margin-left: 100px; }
+
+.align-center {
+  align-items: center; }
+
 .wrapper {
   width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+.wrapper__contact .people {
+  top: 0; }
 
 .img-top {
   margin-top: -50px; }
@@ -24,7 +38,7 @@ h1 {
   padding-top: 20px; }
 
 p {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #202020; }
 
 input[type='textarea'] {
@@ -57,6 +71,9 @@ label {
   margin: auto;
   color: #646C70;
   font-size: 2em; }
+
+li {
+  font-size: 3rem; }
 
 .input-align {
   width: 100%; }

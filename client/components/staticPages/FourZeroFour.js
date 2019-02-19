@@ -7,10 +7,13 @@ function FourZeroFour(){
     return(
         <div>
             <NavHeader />
-            <h1>Whoops, there's been an error</h1>
-            <h2>404</h2>
-            <p>Return to the homepage.</p>
-            <img src={ people } alt="line drawing of people's faces"/>
+            <div className="wrapper">
+                <h1>Whoops, there's been an error</h1>
+                <h2>404</h2>
+                <p>Return to the homepage.</p>
+                <div className="clear"></div>
+                <img src={ people } className="people" alt="line drawing of people's faces"/>
+            </div>
         </div>
     )
 };
