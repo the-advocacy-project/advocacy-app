@@ -1,11 +1,15 @@
 @import "./vars.scss";
 
 
-.styling {
-    display: flex;
-    padding-bottom: 10%;
-    margin: 0 auto;
-    padding: 10vw 5vw 15vw 10vw;
+// .styling {
+//     display: flex;
+//     padding-bottom: 10%;
+//     margin: 0 auto;
+//     padding: 10vw 5vw 15vw 10vw;
+// }
+
+.title--green {
+    color: $green;
 }
 
 h2 {
@@ -16,10 +20,10 @@ h2 {
     font-weight: 400;
 }
 
-input[type="checkbox"], [type="radio"] {
+input[type="checkbox"] {
     box-sizing: border-box;
     padding: 0;
-    width: 30%;
+    width: 4em;
     height: 80px;
     padding-top: 30;
 }

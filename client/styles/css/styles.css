@@ -4,11 +4,32 @@ body {
   letter-spacing: 0.04em;
   font-size: 16px; }
 
-.wrapper {
-  width: 100%; }
-
 .margin50 {
   margin-bottom: 50px; }
+
+.clear {
+  clear: both; }
+
+.li-title--green {
+  color: #00a06e;
+  padding: 100px 0;
+  font-size: 4em;
+  margin-left: 100px; }
+
+.align-center {
+  align-items: center; }
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+.wrapper__contact .people {
+  top: 0; }
+
+.img-top {
+  margin-top: -50px; }
 
 h1 {
   font-size: 7rem;
@@ -18,8 +39,41 @@ h1 {
 
 p {
   font-size: 3rem;
-  color: #202020;
-  padding: 0 5vw 0 10vw; }
+  color: #202020; }
+
+input[type='textarea'] {
+  width: 70px;
+  height: 55px;
+  background: #555;
+  margin: 10px 80px;
+  padding: 1em;
+  position: relative;
+  bottom: 120px;
+  border-radius: 3px;
+  float: right;
+  width: 15%;
+  background-color: blue; }
+
+.textAreaInput {
+  clear: both;
+  margin: 52px auto 0;
+  width: 100%;
+  padding: 22px 10px; }
+
+.textAreaText {
+  text-align: center;
+  font-size: 2em;
+  position: relative; }
+
+label {
+  display: block;
+  width: 90%;
+  margin: auto;
+  color: #646C70;
+  font-size: 2em; }
+
+li {
+  font-size: 3rem; }
 
 .input-align {
   width: 100%; }
@@ -41,6 +95,33 @@ p {
       background-color: #7BBDA8;
       border-color: #00a06e; }
 
+.h2__questions {
+  color: #202020;
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.5rem; }
+
+.more__questions {
+  border: 2px solid #132f58;
+  display: block;
+  width: 80%;
+  height: 200px;
+  margin: auto; }
+
+.checkboxText {
+  grid-column: 1/5;
+  color: #202020; }
+
+.checkboxInput {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto); }
+
+.checkBox {
+  margin: 0 auto;
+  width: 4em; }
+
 ul {
   font-size: 4rem;
   color: #202020;
@@ -48,7 +129,7 @@ ul {
   padding: 0 5vw 0 10vw; }
 
 ul li::before {
-  content: "\2022";
+  content: '\2022';
   /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: #00a06e;
   /* Change the color of the bullet */

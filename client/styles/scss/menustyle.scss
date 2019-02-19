@@ -3,7 +3,7 @@ button {
     height: 38px;
     left: 108px;
     top: 482px;
-    background: 7BBDA8;
+    background: #7BBDA8;
     border-radius: 13px;
  }
 
@@ -13,8 +13,7 @@ button {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        padding-top: 10%;
+        // padding-top: 10%;
       }
 
    .menuList{

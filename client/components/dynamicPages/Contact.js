@@ -47,10 +47,12 @@ const Contact = props => {
     return (
         <div>
             <NavHeader />
-            <div className="wrapper">
-                <img src={ houses }  className="people" alt="line drawing of houses" ></img>
-                <h1>Please enter your contact details:</h1>
-                { displayContact }
+            <div>
+                <div className="wrapper wrapper__contact">
+                    <img src={ houses }  className="people img-top" alt="line drawing of houses" ></img>
+                    <h1>Please enter your contact details:</h1>
+                    { displayContact }
+                </div>
                 <div className="navButtons"><Link to={'./consent'} >
                     <Button
                     text='Back'

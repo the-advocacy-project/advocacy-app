@@ -1,12 +1,10 @@
-.wrapper {
-  width: 100%; }
-
 .logo {
   width: 55%;
   position: relative;
   right: 128px;
   top: -175px;
-  margin-bottom: 10%; }
+  margin-bottom: 10%;
+  padding-top: 20%; }
 
 .tag-line1 {
   font-size: 2.5rem;
