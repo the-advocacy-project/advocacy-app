@@ -1,4 +1,4 @@
-@import "./vars.scss";
+@import './vars.scss';
 
 body {
     background-color: $white;
@@ -7,7 +7,7 @@ body {
     font-size: 16px;
 }
 
-.margin50{
+.margin50 {
     margin-bottom: 50px;
 }
 
@@ -48,17 +48,51 @@ h1 {
     color: $dark-blue;
     position: relative;
     padding-top: 20px;
-    }
+}
 
 p {
     font-size: 3rem;
     color: $black;
-    // padding: 0 5vw 0 10vw;
- }
+    /// padding: 0 5vw 0 10vw;
+}
 
- li {
-     font-size: 3rem;
- }
+input[type='textarea'] {
+    width: 70px;
+    height: 55px;
+    background: #555;
+    margin: 10px 80px;
+    padding: 1em;
+    position: relative;
+    bottom: 120px;
+    border-radius: 3px;
+    float: right;
+    width: 15%;
+    background-color: blue;
+}
+.textAreaInput {
+    clear: both;
+    margin: 52px auto 0;
+    width: 100%;
+    padding: 22px 10px;
+}
+
+.textAreaText {
+    text-align: center;
+    font-size: 2em;
+    position: relative;
+}
+
+label {
+    display: block;
+    width: 90%;
+    margin: auto;
+    color: $dark-gray;
+    font-size: 2em;
+}
+
+li {
+    font-size: 3rem;
+}
 
 .input-align {
     width: 100%;
@@ -80,7 +114,8 @@ p {
         border-color: $gray;
         background-color: $gray;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             background-color: $light-green;
             border-color: $green;
         }
@@ -122,8 +157,8 @@ ul {
     padding: 0 5vw 0 10vw;
 }
 
-ul li::before{
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+ul li::before {
+    content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
     color: $green; /* Change the color of the bullet */
     display: inline-block; /* Needed to add space between the bullet and the text */
     width: 1em; /* Also needed for space (tweak if needed) */
@@ -140,7 +175,6 @@ a {
 }
 
 @media only screen and (min-width: 1024px) {
-
     .nav-container {
         background-color: $green;
         height: 50px;
@@ -154,15 +188,15 @@ a {
         }
     }
 
-    h1{
+    h1 {
         font-size: 5rem;
     }
 
-    p{
+    p {
         font-size: 2rem;
     }
 
-    ul{
+    ul {
         font-size: 2rem;
     }
 }

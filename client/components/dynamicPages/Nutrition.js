@@ -1,10 +1,8 @@
 import React from 'react';
 import NavHeaderForm from '../navigation/NavHeaderForm';
-import '../../styles/css/nutrition.css';
+import '../../styles/css/styles.css';
 import { Button } from '../buttons/Button';
 import { Link } from 'react-router-dom';
-
-
 
 function Nutrition(props) {
     console.log('I am props: ', props.info.more);
@@ -14,23 +12,28 @@ function Nutrition(props) {
             console.log('I am textarea');
             return (
                 <div>
-                <label>
-                    The questions above are examples of how you may meet this
-                    requirement. Please expand and / or let us know other ways that
-                    you need help maintaining and managing nutritrion below.
-                </label>
-                <div className="textAreaInput">
-                    <p className="textAreaText">Tell us more</p>
-                    <textarea
-                        className="textArea more__questions"
-                        type="text"
-                        name="more"
-                        key={i}
-                        onChange={event =>
-                            props.handleChangeInput(event, qs, props.section)
-                        }
-                    />
-                </div>
+                    <label>
+                        The questions above are examples of how you may meet
+                        this requirement. Please expand and / or let us know
+                        other ways that you need help maintaining and managing
+                        nutritrion below.
+                    </label>
+                    <div className="textAreaInput">
+                        <p className="textAreaText">Tell us more</p>
+                        <textarea
+                            className="textArea more__questions"
+                            type="text"
+                            name="more"
+                            key={i}
+                            onChange={event =>
+                                props.handleChangeInput(
+                                    event,
+                                    qs,
+                                    props.section
+                                )
+                            }
+                        />
+                    </div>
                 </div>
             );
         } else {
@@ -49,7 +52,7 @@ function Nutrition(props) {
                             props.toggleChange(event, qs, props.section)
                         }
                     />
-                    <div className="margin50"></div>
+                    <div className="margin50" />
                 </div>
             );
         }
@@ -64,9 +67,11 @@ function Nutrition(props) {
             </NavHeaderForm>
             {/* <h1 className="nutritionH1">Managing and Maintaining Nutrition</h1> */}
             <div className="wrapper">
-                <h2 className="margin50 h2__questions">Please check what applies to you</h2>
+                <h2 className="margin50 h2__questions">
+                    Please check what applies to you
+                </h2>
                 {displayNutrition}
-                <div className="margin50 clear"></div>
+                <div className="margin50 clear" />
             </div>
             <div className="navButtons">
                 <Link to={'./begin'}>
