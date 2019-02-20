@@ -293,17 +293,17 @@ class App extends Component {
         },
         duty: {
             advocate: {
-                question: 'Would you like free support from an advocate?',
+                question: 'Yes, I would like to be considered for free support from an advocate.',
                 agree: false
             },
-            communicationAdvocate: {
+            more: {
                 question:
-                    'Is there anything you want to tell the advocate about your communication needs?',
+                    'Is there anything that you want to tell the advocate about your communication needs?',
                 more: ''
             },
-            communicationCouncil: {
+            more2: {
                 question:
-                    'Is there anything you want the local authority to know about your communication needs?',
+                    'Is there anything that you want the Local Authority to know about your communication needs?',
                 more: ''
             }
         }

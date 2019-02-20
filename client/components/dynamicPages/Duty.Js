@@ -4,7 +4,67 @@ import { Link } from 'react-router-dom';
 import NavHeader from '../navigation/navHeader';
 import '../../styles/css/home.css';
 
-function Duty(){
+function Duty(props){
+
+    const displayDuty  = Object.keys(props.info).map((qs, i) => {
+        if (qs === 'more') {
+            return (
+                <div>
+                    <div className="textAreaInput" key={`duty-${i}`}>
+                        <h2 className="checkboxText">{props.info[qs].question}</h2>
+                        <textarea
+                            placeholder="Tell us more..."
+                            className="textArea more__questions"
+                            type="text"
+                            name="more"
+                            key={`input-${i}`}
+                            onChange={event => {
+                                event.preventDefault();
+                                props.handleChangeInput(event, qs, props.section)
+                            }}
+                        />
+                    </div>
+                </div>
+            );
+        } else if (qs === 'more2') {
+            return (
+                <div>
+                    <div className="textAreaInput" key={`duty-${i}`}>
+                        <h2 className="checkboxText">{props.info[qs].question}</h2>
+                        <textarea
+                            placeholder="Tell us more..."
+                            className="textArea more__questions"
+                            type="text"
+                            name="more"
+                            key={`input-${i}`}
+                            onChange={event => {
+                                event.preventDefault();
+                                props.handleChangeInput(event, qs, props.section)
+                            }}
+                        />
+                    </div>
+                </div>
+            );
+        } else if (qs == 'advocate') {
+            return (
+                <div className="checkboxInput">
+                    <h2 className="checkboxText">{props.info[qs].question}</h2>
+                    <input
+                        className="checkBox"
+                        type="checkbox"
+                        checked={props.info[qs].agree}
+                        name="agree"
+                        key={i}
+                        onChange={event =>
+                            props.toggleChange(event, qs, props.section)
+                        }
+                    />
+                    <div className="margin50" />
+                </div>
+            );
+        }
+    });
+    
     return(
         <div>
             <NavHeader />
@@ -18,13 +78,7 @@ function Duty(){
                 <li>be fully involved in the assessment process</li>
                 <li>communicate with the local authority</li>
             </ul>
-            <label>Would you like to be considered for free support from an advocate?</label>
-            <label>Yes</label><input type="checkbox"></input>
-            <label>No</label><input type="checkbox"></input>
-            <label>Is there anything you want to tell the advocate about your communication needs?</label>
-            <textarea placeholder="Tell us more..."></textarea>
-            <label>Is there anything you want the local authority to know about your communication needs?</label>
-            <textarea placeholder="Tell us more..."></textarea>
+            { displayDuty }
             <a href="../key-rights">Click here for more information on your right to a Care Act advocate </a>
             <div className="navButtons"><Link to={'./wellbeing'} >
                 <Button 
