@@ -13,9 +13,8 @@ app.use(
 app.use(bodyParser.json());
 
 app.post('/', (req, res) => {
-    const {contact, consent, initialCheck, nutrition, hygiene, toilet, clothing, safety, environment, relationships, work, transport, responsibilities, eligibility, wellbeing, duty  } = req.body;
-    
-    
+    const {contact, consent, initialChecks, nutrition, hygiene, toilet, clothing, safety, environment, relationships, work, transport, responsibilities, eligibility, wellbeing, duty  } = req.body;
+    console.log("check", initialChecks)
     
     const contactMap = Object.keys(contact).map((qs) => {
      return (
@@ -25,11 +24,58 @@ app.post('/', (req, res) => {
          </div>`
      )
     })
+   
+    const consentMap = Object.keys(consent).map((qs) => {
+        return (
+            `<div>
+            <h3> ${consent[qs].question} : </h3>
+           <p>${consent[qs].agree ? "Yes" : "No"} </p>
+            </div>`
+        )
+       })
+
+       const initialCheckMap = Object.keys(initialChecks).map((qs) => {
+        return (
+            `<div>
+            <h3> ${initialChecks[qs].question} : </h3>
+           <p>${initialChecks[qs].agree ? "Yes" : "No"} </p>
+            </div>`
+        )
+       })
 
 
+        // currently working on this function, displays undefined as the name of more
+       const nutritionMap = Object.keys(nutrition).map((qs) => {
+        if (qs=="more") {
+            return (
+                `<div>
+                <h3> ${nutrition[qs].question} : </h3>
+                <p>${nutrition[qs].agree ? "Yes" : "No"} </p>
+                <p>${nutrition[qs].more} </p>
+                </div>` 
+            )
+        } else {
+            return (
+                `<div>
+                <h3> ${nutrition[qs].question} : </h3>
+                <p>${nutrition[qs].agree ? "Yes" : "No"} </p>
+                </div>` 
+            )
+
+        }
 
 
-    
+        return (
+            `<div>
+            <h3> ${nutrition[qs].question} : </h3>
+            <p>${nutrition[qs].agree ? "Yes" : "No"} </p>
+            <p>${nutrition[qs].more == undefind ? nutrition[qs].more : ""} </p>
+            </div>` 
+        )
+       })
+
+
+      
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -54,7 +100,16 @@ app.post('/', (req, res) => {
         <h1>Application</h1>
         <h2>Contact Information</h2>
         ${contactMap}
-       
+
+        <h2>Consent Information</h2>
+        ${consentMap}
+
+        <h2>Initial Checks</h2>
+        ${initialCheckMap}
+
+        <h2>Nutrition</h2>
+        ${nutritionMap}
+
 
         
         
