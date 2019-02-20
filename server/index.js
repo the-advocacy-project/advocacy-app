@@ -14,10 +14,22 @@ app.use(bodyParser.json());
 
 app.post('/', (req, res) => {
     const {contact, consent, initialCheck, nutrition, hygiene, toilet, clothing, safety, environment, relationships, work, transport, responsibilities, eligibility, wellbeing, duty  } = req.body;
-    // const contactMap = contact.map((data) => {
-    //    return data;
-    // })
-    console.log('tis is form data', contact);
+    
+    
+    
+    const contactMap = Object.keys(contact).map((qs) => {
+     return (
+         `<div>
+         <h3> ${contact[qs].question} : </h3>
+        <p>${contact[qs].more} </p>
+         </div>`
+     )
+    })
+
+
+
+
+    
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -27,18 +39,22 @@ app.post('/', (req, res) => {
         }
     });
 
+//     <h3>${contact.name.question}</h3>
+//     <p>${contact.name.more}</p>
+    
+//     <h2>Consent</h2>
+//     <h3>${consent.consentToCouncil.question}</h3>
+//    <p>${consent.consentToCouncil.agreed ? "Yes" : "No" }</p>
+
     const mailOptions = {
         from: 'theadvocacyfac@gmail.com',
         to: 'theadvocacyfac@gmail.com',
         subject: 'test',
         html: `
-        <h1>Name intn</h1>
+        <h1>Application</h1>
         <h2>Contact Information</h2>
-        <h3>${contact.name.question}</h3>
-        <p>${contact.name.more}</p>
-        <h2>Consent</h2>
-        <h3>${consent.consentToCouncil.question}</h3>
-       <p>${consent.consentToCouncil.agreed ? "Yes" : "No" }</p>
+        ${contactMap}
+       
 
         
         
