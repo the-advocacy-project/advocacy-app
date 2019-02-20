@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import NavHeader from '../navigation/navHeader';
 import '../../styles/css/home.css';
 
-function Complete(){
+function Complete(props){
+    console.log("handlesubmit prop",props)
     return(
         <div>
             <NavHeader />
@@ -19,10 +20,13 @@ function Complete(){
             </Link>
             <Link to={'./'} >
                 <Button 
-                text='Back to start' 
+                text='Send' 
                 type='submit' 
                 className="buttons"
-                onClick={() => {}}/>
+                onClick={(event) => {
+                    console.log("this is the event",event)
+                    props.handleSubmit(event)
+                    }}/>
             </Link>
         </div>
         </div>
