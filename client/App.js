@@ -258,52 +258,52 @@ class App extends Component {
         wellbeing: {
             safe: {
                 question:
-                    'If you don’t get support to do the above will you feel safe?',
-                more: ''
+                    'If I don\'t get support, I will not feel safe.',
+                agree: false
             },
             relaxed: {
                 question:
-                    'If you don’t get support to do the above will you feel safe?',
-                more: ''
+                    'If I don\'t get support, I will not feel relaxed.',
+                agree: false
             },
             happy: {
                 question:
-                    'If you don’t get support to do the above will you feel happy',
-                more: ''
+                    'If I don\'t get support, I will not feel happy.',
+                agree: false
             },
             friends: {
                 question:
-                    'If you don’t get support to do the above will you be able to see your friends',
-                more: ''
+                    'If I don\'t get support, I will not be able to see my friends.',
+                agree: false
             },
             feelValued: {
                 question:
-                    'If you don’t get support to do the above will you feel valued in society',
-                more: ''
+                    'If I don\'t get support, I will not feel valued in society.',
+                agree: false
             },
             family: {
                 question:
-                    'If you don’t get support to do the above will you be able to keep you family together',
-                more: ''
+                    'If I don\'t get support, I will not be able to keep my family together',
+                agree: false
             },
-            other: {
-                question: 'Other: (please state below)',
+            more: {
+                question: 'Are there other ways that your wellbeing will be negatively affected if you do not recieve support? Please describe below.',
                 more: ''
             }
         },
         duty: {
             advocate: {
-                question: 'Would you like free support from an advocate?',
+                question: 'Yes, I would like to be considered for free support from an advocate.',
                 agree: false
             },
-            communicationAdvocate: {
+            more: {
                 question:
-                    'Is there anything you want to tell the advocate about your communication needs?',
+                    'Is there anything that you want to tell the advocate about your communication needs?',
                 more: ''
             },
-            communicationCouncil: {
+            more2: {
                 question:
-                    'Is there anything you want the local authority to know about your communication needs?',
+                    'Is there anything that you want the Local Authority to know about your communication needs?',
                 more: ''
             }
         }

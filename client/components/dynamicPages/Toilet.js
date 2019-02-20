@@ -5,7 +5,7 @@ import NavHeaderForm from '../navigation/NavHeaderForm';
 import '../../styles/css/styles.css';
 
 function Toilet(props) {
-    const displayNutrition = Object.keys(props.info).map((qs, i) => {
+    const  displayToilet  = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
             return (
                 <div>
@@ -58,7 +58,7 @@ function Toilet(props) {
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>
-                {displayNutrition}
+                { displayToilet }
                 <div className="margin50 clear" />
             </div>
             <div className="navButtons">
