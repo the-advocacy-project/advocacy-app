@@ -258,36 +258,36 @@ class App extends Component {
         wellbeing: {
             safe: {
                 question:
-                    'If you don’t get support to do the above will you feel safe?',
-                more: ''
+                    'If I don\'t get support, I will not feel safe.',
+                agree: false
             },
             relaxed: {
                 question:
-                    'If you don’t get support to do the above will you feel safe?',
-                more: ''
+                    'If I don\'t get support, I will not feel relaxed.',
+                agree: false
             },
             happy: {
                 question:
-                    'If you don’t get support to do the above will you feel happy',
-                more: ''
+                    'If I don\'t get support, I will not feel happy.',
+                agree: false
             },
             friends: {
                 question:
-                    'If you don’t get support to do the above will you be able to see your friends',
-                more: ''
+                    'If I don\'t get support, I will not be able to see my friends.',
+                agree: false
             },
             feelValued: {
                 question:
-                    'If you don’t get support to do the above will you feel valued in society',
-                more: ''
+                    'If I don\'t get support, I will not feel valued in society.',
+                agree: false
             },
             family: {
                 question:
-                    'If you don’t get support to do the above will you be able to keep you family together',
-                more: ''
+                    'If I don\'t get support, I will not be able to keep my family together',
+                agree: false
             },
-            other: {
-                question: 'Other: (please state below)',
+            more: {
+                question: 'Are there other ways that your wellbeing will be negatively affected if you do not recieve support? Please describe below.',
                 more: ''
             }
         },

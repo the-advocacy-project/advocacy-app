@@ -5,6 +5,47 @@ import NavHeader from '../navigation/NavHeaderForm';
 import '../../styles/css/home.css';
 
 function Wellbeing(props) {
+
+    const  displayWellbeing  = Object.keys(props.info).map((qs, i) => {
+        if (qs === 'more') {
+            return (
+                <div>
+                    <div className="textAreaInput" key={`wellbeing-${i}`}>
+                        <h2 className="checkboxText">{props.info[qs].question}</h2>
+                        <textarea
+                            placeholder="Tell us more..."
+                            className="textArea more__questions"
+                            type="text"
+                            name="more"
+                            key={`input-${i}`}
+                            onChange={event => {
+                                event.preventDefault();
+                                props.handleChangeInput(event, qs, props.section)
+                            }}
+                        />
+                    </div>
+                </div>
+            );
+        } else {
+            return (
+                <div className="checkboxInput">
+                    <h2 className="checkboxText">{props.info[qs].question}</h2>
+                    <input
+                        className="checkBox"
+                        type="checkbox"
+                        checked={props.info[qs].agree}
+                        name="agree"
+                        key={i}
+                        onChange={event =>
+                            props.toggleChange(event, qs, props.section)
+                        }
+                    />
+                    <div className="margin50" />
+                </div>
+            );
+        }
+    });
+
     return (
         <div>
             <NavHeader />
@@ -21,54 +62,25 @@ function Wellbeing(props) {
                 <li>suitability of the individual’s living accommodation</li>
                 <li>the individual’s contribution to society.</li>
             </ul>
-            <blockquote>"Wellbeing is all the things that are important to someone to have a good life"</blockquote>
-            <p></p>
-            <ul>
-                <li>
-                    <label>If you don’t get support will you feel safe?</label>
-                    <textarea placeholder="Yes/No..."></textarea>
-                </li>
-                <li>
-                    <label>If you don’t get support will you feel relaxed?</label>
-                    <textarea placeholder="Yes/No..."></textarea>
-                </li>
-                <li>
-                    <label>If you don’t get support will you feel happy?</label> 
-                    <textarea placeholder="Yes/No..."></textarea>
-                </li>
-                <li>
-                    <label>If you don’t get support will you be able to see your friends?</label> 
-                    <textarea placeholder="Yes/No..."></textarea>
-                </li>
-                <li>
-                    <label>If you don’t get support will you feel valued in society?</label> 
-                    <textarea placeholder="Yes/No..."></textarea>
-                </li>
-                <li>
-                    <label>If you don’t get support will you keep your family together </label>
-                    <textarea placeholder="Yes/No..."></textarea>
-                </li>
-                <li>
-                    <label>Other: (please state below)</label> 
-                    <textarea placeholder="Yes/No..."></textarea>
-                </li>
-            </ul>
-            <textarea placeholder="Tell us more..."></textarea>
+            <p>As part of your application for support and advocacy, the local authority will want to measure how much your wellbeing
+                will be negatively affected if you do not receive support. Please select the statements relevant to you.
+            </p>
+            { displayWellbeing }
             <div className="navButtons"><Link to={'./eligibility'} >
                 <Button 
-                text='Back' 
-                type='submit' 
-                className="buttons"
-                onClick={() => {}}/>
+                    text='Back' 
+                    type='submit' 
+                    className="buttons"
+                    onClick={() => {}}/>
             </Link>
             <Link to={'./duty'} >
                 <Button 
-                text='Next' 
-                type='submit' 
-                className="buttons"
-                onClick={() => {}}/>
-            </Link>
-        </div>
+                    text='Next' 
+                    type='submit' 
+                    className="buttons"
+                    onClick={() => {}}/>
+            </Link>   
+            </div>
         </div>
     );
 }
