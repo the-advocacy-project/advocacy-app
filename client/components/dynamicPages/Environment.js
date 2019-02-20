@@ -23,7 +23,7 @@ function Environment(props) {
                             name="more"
                             key={`input-${i}`}
                             onChange={event => {
-                                preventDefault();
+                                event.preventDefault();
                                 props.handleChangeInput(event, qs, props.section)
                             }}
                         />
