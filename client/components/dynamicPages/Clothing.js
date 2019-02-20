@@ -5,9 +5,8 @@ import NavHeaderForm from '../navigation/NavHeaderForm';
 import '../../styles/css/styles.css';
 
 function Clothing(props) {
-    const displayNutrition = Object.keys(props.info).map((qs, i) => {
+    const displayClothing = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
-            console.log('I am textarea');
             return (
                 <div>
                     <label>
@@ -16,27 +15,22 @@ function Clothing(props) {
                         other ways that you need help being appropriately
                         clothed.
                     </label>
-                    <div className="textAreaInput">
-                        <p className="textAreaText">Tell us more</p>
+                    <div className="textAreaInput" key={`clothing-${i}`}>
                         <textarea
+                            placeholder="Tell us more..."
                             className="textArea more__questions"
                             type="text"
                             name="more"
-                            key={i}
-                            onChange={event =>
-                                props.handleChangeInput(
-                                    event,
-                                    qs,
-                                    props.section
-                                )
-                            }
+                            key={`input-${i}`}
+                            onChange={event => {
+                                event.preventDefault();
+                                props.handleChangeInput(event, qs, props.section)
+                            }}
                         />
                     </div>
                 </div>
             );
         } else {
-            console.log('I am a checkbox');
-            console.log('checked: ', props.info[qs].agree);
             return (
                 <div className="checkboxInput">
                     <h2 className="checkboxText">{props.info[qs].question}</h2>
@@ -61,12 +55,11 @@ function Clothing(props) {
             <NavHeaderForm>
                 <h1 className="h1__questions">Being appropriately clothed</h1>
             </NavHeaderForm>
-            {/* <h1 className="nutritionH1">Managing and Maintaining Nutrition</h1> */}
             <div className="wrapper">
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>
-                {displayNutrition}
+                {displayClothing}
                 <div className="margin50 clear" />
             </div>
             <div className="navButtons">

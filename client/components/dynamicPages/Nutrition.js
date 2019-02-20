@@ -18,8 +18,8 @@ function Nutrition(props) {
                         nutritrion below.
                     </label>
                     <div className="textAreaInput" key={`nutrition-${i}`}>
-                        <p className="textAreaText">Tell us more</p>
                         <textarea
+                            placeholder="Tell us more..."
                             className="textArea more__questions"
                             type="text"
                             name="more"

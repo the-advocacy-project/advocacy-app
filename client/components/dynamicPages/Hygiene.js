@@ -7,7 +7,6 @@ import '../../styles/css/styles.css';
 function Hygiene(props) {
     const displayNutrition = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
-            console.log('I am textarea');
             return (
                 <div>
                     <label>
@@ -17,8 +16,8 @@ function Hygiene(props) {
                         hygiene below.
                     </label>
                     <div className="textAreaInput" key={`hygiene-${i}`}>
-                        <p className="textAreaText">Tell us more</p>
                         <textarea
+                            placeholder="Tell us more..."
                             className="textArea more__questions"
                             type="text"
                             name="more"

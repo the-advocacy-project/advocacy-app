@@ -4,43 +4,22 @@ import NavHeader from '../navigation/NavHeader';
 import {Button} from '../buttons/Button';
 import { Link } from 'react-router-dom';
 
-// function Contact(props) {
-//     return (
-//         <div>
-//             <img src={ houses } alt="line drawing of houses" ></img>
-//             <h1>Please enter your contact details:</h1>
-//             <label>Full Name:</label>
-//             <input type="text"></input>
-//             <label>Address:</label>
-//             <input type="text"></input>
-//             <label>Post Code:</label>
-//             <input type="text"></input>
-//             <label>Email Address:</label>
-//             <input type="text"></input>
-//             <label>Phone Number:</label>
-//             <input type="text"></input>
-//         </div>
-//     );
-// }
-
-
 const Contact = props => {
 
     const displayContact = Object.keys(props.info).map((qs, index) => {
-        console.log("index",index);
         return (
             <div className="input-align margin50" key={`container-${index}`}>
-                    <p>{props.info[qs].question}</p>
-                    <input
-                        type="text"
-                        key={`input-${index}`}
-                        value={props.info[qs].more}
-                        name="more"
-                        onChange={event => {
-                            event.preventDefault();
-                            props.handleChangeInput(event, qs, props.section)
-                        }}
-                    />
+                <p>{props.info[qs].question}</p>
+                <input
+                    type="text"
+                    key={`input-${index}`}
+                    value={props.info[qs].more}
+                    name="more"
+                    onChange={event => {
+                        event.preventDefault();
+                        props.handleChangeInput(event, qs, props.section)
+                    }}
+                />
             </div>
         );
     });

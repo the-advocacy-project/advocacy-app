@@ -28,19 +28,19 @@ function Duty(){
             <a href="../key-rights">Click here for more information on your right to a Care Act advocate </a>
             <div className="navButtons"><Link to={'./wellbeing'} >
                 <Button 
-                text='Back' 
-                type='submit' 
-                className="buttons"
-                onClick={() => {}}/>
+                    text='Back' 
+                    type='submit' 
+                    className="buttons"
+                    onClick={() => {}}/>
             </Link>
             <Link to={'./overview'} >
                 <Button 
-                text='Next' 
-                type='submit' 
-                className="buttons"
-                onClick={() => {}}/>
+                    text='Next' 
+                    type='submit' 
+                    className="buttons"
+                    onClick={() => {}}/>
             </Link>
-        </div>
+            </div>
         </div>
         
     )
