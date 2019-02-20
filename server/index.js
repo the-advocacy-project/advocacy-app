@@ -13,7 +13,10 @@ app.use(
 app.use(bodyParser.json());
 
 app.post('/', (req, res) => {
-    const {contact} = req.body;
+    const {contact, consent, initialCheck, nutrition, hygiene, toilet, clothing, safety, environment, relationships, work, transport, responsibilities, eligibility, wellbeing, duty  } = req.body;
+    // const contactMap = contact.map((data) => {
+    //    return data;
+    // })
     console.log('tis is form data', contact);
 
     const transporter = nodemailer.createTransport({
@@ -29,37 +32,17 @@ app.post('/', (req, res) => {
         to: 'theadvocacyfac@gmail.com',
         subject: 'test',
         html: `
-        Dear local authority decision maker,
-
-        Please accept this referral to Adult Social Care on behalf of the named client.
-
-        Please consider the evidence outlined in this document and fulfil the appropriate duty to provide:
-
-        A Care Act Assessment
-        S.9 (1) Care Act 2014
-        http://www.legislation.gov.uk/ukpga/2014/23/section/9/enacted
-
-        2.An Independent Care Act Advocate
-        S.67 Care Act 2014
-
-        https://www.legislation.gov.uk/ukpga/2014/23/section/67
-
-        Please note the advocacy duty applies from the first point of contact with the local authority + any subsequent stage of the assessment, planning, care review ect.
-
-        The local authority must arrange an Independent Care Act Advocate to facilitate the involvement of a person in their assessment, in the preparation of their care and support plan and in the review of their care plan in two conditions are met:
-
-        (1) That if an independent advocate were not provided the person would have substantial difficulty in being fully involved in the process.
-        (2) There is no appropriate individual available to support and represent the person’s wishes who is not paid or professionally engaged in providing care or treatment to the person or their carer.
-
-        Warm Regards,
-
-        The Advocacy Project
-
-        https://www.advocacyproject.org.uk/advocacy-referrals/
-
+        <h1>Name intn</h1>
+        <h2>Contact Information</h2>
+        <h3>${contact.name.question}</h3>
+        <p>${contact.name.more}</p>
+        <h2>Consent</h2>
+        <h3>${consent.consentToCouncil.question}</h3>
+       <p>${consent.consentToCouncil.agreed ? "Yes" : "No" }</p>
 
         
-        ${JSON.stringify(req.body)}`,
+        
+        `,
         replyTo: 'theadvocacyfac@gmail.com'
     };
 
