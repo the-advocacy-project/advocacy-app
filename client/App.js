@@ -339,6 +339,7 @@ class App extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
+        
         // const { value } = this.state;
         axios.post('/', this.state).then(result => {
             console.log(value);
@@ -549,6 +550,7 @@ class App extends Component {
                                     section="complete"
                                     handleChangeInput={this.handleChangeInput}
                                     toggleChange={this.toggleChange}
+                                    handleSubmit={this.handleSubmit}
                                 />
                             )}
                         />
