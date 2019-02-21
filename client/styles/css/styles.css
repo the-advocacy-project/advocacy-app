@@ -58,7 +58,8 @@ input[type='textarea'] {
   clear: both;
   margin: 52px auto 0;
   width: 100%;
-  padding: 22px 10px; }
+  padding: 22px 10px;
+  font-size: 3rem; }
 
 .textAreaText {
   text-align: center;
