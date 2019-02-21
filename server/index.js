@@ -14,9 +14,11 @@ app.use(bodyParser.json());
 
 app.post('/', (req, res) => {
     const {contact, consent, initialChecks, nutrition, hygiene, toilet, clothing, safety, environment, relationships, work, transport, responsibilities, eligibility, wellbeing, duty  } = req.body;
-    console.log("check", initialChecks)
+ 
+  
     
     const contactSection = Object.keys(contact).map((qs) => {
+        
      return (
          `<div>
          <h3> ${contact[qs].question} : </h3>
@@ -298,16 +300,17 @@ app.post('/', (req, res) => {
         }
     });
 
-//     <h3>${contact.name.question}</h3>
-//     <p>${contact.name.more}</p>
-    
-//     <h2>Consent</h2>
-//     <h3>${consent.consentToCouncil.question}</h3>
-//    <p>${consent.consentToCouncil.agreed ? "Yes" : "No" }</p>
+    const mailList = [
+        `${consent.consentToCouncil.agree ? "theadvocacyfac@gmail.com": null}`,
+        `${consent.consentToAdvocacy.agree ? "jaggardk@gmail.com" : null}`,
+        `${contact.email.more ? contact.email.more: null}`
+      ];
+      
+      
 
     const mailOptions = {
         from: 'theadvocacyfac@gmail.com',
-        to: 'theadvocacyfac@gmail.com',
+        to: `${mailList}`,
         subject: 'test',
         html: `
         <h4>Dear Local Authority decision maker,</h4>
@@ -344,6 +347,7 @@ app.post('/', (req, res) => {
 
         _______________________________________________________________________________________________________________
         <br><br>
+
 
         <h2>Contact Information</h2>
         ${contactSection}
