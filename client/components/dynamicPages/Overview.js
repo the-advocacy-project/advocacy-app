@@ -12,11 +12,11 @@ function Overview(props) {
     //     console.log('zzz: ', Object.keys(props.info[item]));
     // });
     let displayOverview = [];
-    for (let j = 0; j < sections.length; j++) {
-        console.log(props.info[sections[j]]);
+    sections.forEach(item => {
+        console.log(props.info[item]);
 
         displayOverview.push(
-            Object.keys(props.info[sections[j]]).map((qs, i) => {
+            Object.keys(props.info[item]).map((qs, i) => {
                 if (qs === 'more') {
                     console.log('I am textarea');
                     return (
@@ -36,14 +36,14 @@ function Overview(props) {
                                     className="textArea more__questions"
                                     type="text"
                                     name="more"
-                                    value={props.info[sections[j]][qs].more}
+                                    value={props.info[item][qs].more}
                                     key={`input-${i}`}
                                     onChange={event => {
                                         event.preventDefault();
                                         props.handleChangeInput(
                                             event,
                                             qs,
-                                            sections[j]
+                                            item
                                         );
                                     }}
                                 />
@@ -56,19 +56,15 @@ function Overview(props) {
                             className="input-align margin50"
                             key={`container-${i}`}
                         >
-                            <p>{props.info[sections[j]][qs].question}</p>
+                            <p>{props.info[item][qs].question}</p>
                             <input
                                 type="text"
                                 key={`input-${i}`}
-                                value={props.info[sections[j]][qs].more}
+                                value={props.info[item][qs].more}
                                 name="more"
                                 onChange={event => {
                                     event.preventDefault();
-                                    props.handleChangeInput(
-                                        event,
-                                        qs,
-                                        sections[j]
-                                    );
+                                    props.handleChangeInput(event, qs, item);
                                 }}
                             />
                         </div>
@@ -80,16 +76,16 @@ function Overview(props) {
                     return (
                         <div className="checkboxInput">
                             <h2 className="checkboxText">
-                                {props.info[sections[j]][qs].question}
+                                {props.info[item][qs].question}
                             </h2>
                             <input
                                 className="checkBox"
                                 type="checkbox"
-                                checked={props.info[sections[j]][qs].agree}
+                                checked={props.info[item][qs].agree}
                                 name="agree"
                                 key={i}
                                 onChange={event =>
-                                    props.toggleChange(event, qs, sections[j])
+                                    props.toggleChange(event, qs, item)
                                 }
                             />
                             <div className="margin50" />
@@ -98,7 +94,7 @@ function Overview(props) {
                 }
             })
         );
-    }
+    });
 
     // });
 
