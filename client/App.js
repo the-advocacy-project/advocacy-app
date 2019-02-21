@@ -12,6 +12,7 @@ import Home from './components/staticPages/Home';
 import How from './components/staticPages/How';
 import KeyRights from './components/staticPages/KeyRights';
 import Sorry from './components/staticPages/Sorry';
+import SorryChecks from './components/staticPages/SorryChecks';
 import Support from './components/staticPages/Support';
 import Advocacy from './components/staticPages/Advocacy';
 import Menu from './components/staticPages/Menu';
@@ -381,6 +382,7 @@ class App extends Component {
                             )}
                         />
                         <Route path="/sorry" component={Sorry} />
+                        <Route path="/sorry-checks" component={SorryChecks} />
                         <Route
                             path="/contact"
                             render={props => (
