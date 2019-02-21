@@ -2,10 +2,29 @@ import React from 'react';
 import houses from '../../images/houses.png';
 import NavHeader from '../navigation/NavHeader';
 import { Button } from '../buttons/Button';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 const Contact = props => {
+
+    console.log("validation",props.validation.consentToAdvocacy.agree)
     const displayContact = Object.keys(props.info).map((qs, index) => {
+        if (qs === "email") {
+            return (
+                <div className="input-align margin50" key={`container-${index}`}>
+                    <p>{props.info[qs].question}</p>
+                    <input
+                        type="email"
+                        key={`input-${index}`}
+                        value={props.info[qs].more}
+                        name="more"
+                        onChange={event => {
+                            event.preventDefault();
+                            props.handleChangeInput(event, qs, props.section);
+                        }}
+                    />
+                </div>
+            );
+        }
         return (
             <div className="input-align margin50" key={`container-${index}`}>
                 <p>{props.info[qs].question}</p>
@@ -23,6 +42,10 @@ const Contact = props => {
         );
     });
 
+
+    if(!props.validation.consentToCouncil.agree || !props.validation.consentToAdvocacy.agree)  {
+        return <Redirect to="/sorry" />
+    } else {
     return (
         <div id="outer-container">
             {window.scrollTo(0,0)}
@@ -54,6 +77,7 @@ const Contact = props => {
             </div>
         </div>
     );
+    }
 };
 
 export default Contact;
