@@ -53,12 +53,12 @@ class App extends Component {
             consentToCouncil: {
                 question:
                     'I consent to sharing my information and contact details with Hackney Council to see if I am eligible for a Care Act assessment',
-                agree: false
+                agree: true
             },
             consentToAdvocacy: {
                 question:
                     'I consent to sharing my information and contact details with us, the Advocacy Project, to get continued support',
-                agree: false
+                agree: true
             },
             sendToEmail: {
                 question: 'Send a copy of my application to my email',
@@ -375,6 +375,7 @@ class App extends Component {
                             render={props => (
                                 <Consent
                                     info={this.state.consent}
+                                    validation={this.state.initialChecks}
                                     section="consent"
                                     handleChangeInput={this.handleChangeInput}
                                     toggleChange={this.toggleChange}
@@ -388,6 +389,7 @@ class App extends Component {
                             render={props => (
                                 <Contact
                                     info={this.state.contact}
+                                    validation={this.state.consent}
                                     section="contact"
                                     handleChangeInput={this.handleChangeInput}
                                 />
