@@ -7,6 +7,7 @@ import {Button} from '../buttons/Button';
 function Sorry(){
     return(
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader />
             <div className="wrapper">
                 <h1>Sorry!</h1>

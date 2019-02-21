@@ -7,6 +7,7 @@ import {Button} from '../buttons/Button';
 function How(){
     return(
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader />
             <div className="wrapper">
                 <h1 className="how-h1">How this works</h1>

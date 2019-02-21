@@ -25,6 +25,7 @@ function InitialChecks(props) {
 
     return (
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader />
             <div className="wrapper">
                 <h1>Let’s get started...</h1>

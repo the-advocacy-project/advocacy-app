@@ -6,6 +6,7 @@ import NavHeader from '../navigation/navHeader';
 function Begin(){
     return(
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader />
             <div className="wrapper">
                 <h1>Let's begin</h1>

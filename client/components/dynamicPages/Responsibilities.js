@@ -53,6 +53,7 @@ function Responsibilities(props) {
 
     return (
         <div>
+            {window.scrollTo(0,0)}
             <NavHeaderForm>
                 <h1 className="h1__questions">
                     Carrying out any caring responsibilities for a child.
