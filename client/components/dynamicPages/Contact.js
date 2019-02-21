@@ -8,23 +8,7 @@ const Contact = props => {
 
     console.log("validation",props.validation.consentToAdvocacy.agree)
     const displayContact = Object.keys(props.info).map((qs, index) => {
-        if (qs === "email") {
-            return (
-                <div className="input-align margin50" key={`container-${index}`}>
-                    <p>{props.info[qs].question}</p>
-                    <input
-                        type="email"
-                        key={`input-${index}`}
-                        value={props.info[qs].more}
-                        name="more"
-                        onChange={event => {
-                            event.preventDefault();
-                            props.handleChangeInput(event, qs, props.section);
-                        }}
-                    />
-                </div>
-            );
-        }
+     
         return (
             <div className="input-align margin50" key={`container-${index}`}>
                 <p>{props.info[qs].question}</p>

@@ -15,7 +15,8 @@ app.use(bodyParser.json());
 app.post('/', (req, res) => {
     const {contact, consent, initialChecks, nutrition, hygiene, toilet, clothing, safety, environment, relationships, work, transport, responsibilities, eligibility, wellbeing, duty  } = req.body;
  
-  
+
+  console.log("contact info", contact.contactData4.more)
     
     const contactSection = Object.keys(contact).map((qs) => {
         
@@ -303,7 +304,7 @@ app.post('/', (req, res) => {
     const mailList = [
         `${consent.consentToCouncil.agree ? "theadvocacyfac@gmail.com": null}`,
         `${consent.consentToAdvocacy.agree ? "jaggardk@gmail.com" : null}`,
-        `${contact.email.more ? contact.email.more: null}`
+        `${contact.contactData4.more ? contact.contactData4.more: null}`
       ];
       
       
@@ -351,7 +352,7 @@ app.post('/', (req, res) => {
 
         <h2>Contact Information</h2>
         ${contactSection}
-        initialChecks, nutrition, hygiene, toilet, clothing, safety, environment, relationships, work, transport, responsibilities, eligibility, wellbeing, duty
+        
 
         <h2>Consent Information</h2>
         ${consentSection}

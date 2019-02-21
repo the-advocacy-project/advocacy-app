@@ -397,7 +397,11 @@ class App extends Component {
                                 />
                             )}
                         />
-                        <Route path="/begin" component={Begin} />
+                        <Route path="/begin" render={props => (
+                            <Begin 
+                                validation={this.state.contact}
+                            />  
+                        )} />
                         <Route
                             path="/nutrition"
                             render={props => (
