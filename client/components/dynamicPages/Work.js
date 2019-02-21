@@ -58,6 +58,7 @@ function Work(props) {
                     Accessing and engaging in work, training, education or
                     volunteering
                 </h1>
+                <div className="nav-containerForm--green" />
             </NavHeaderForm>
             <div id="page-wrap" className="wrapper">
                 <h2 className="margin50 h2__questions">

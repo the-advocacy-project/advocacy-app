@@ -56,6 +56,7 @@ function Hygiene(props) {
             {window.scrollTo(0,0)}
             <NavHeaderForm>
                 <h1 className="h1__questions">Maintaining personal hygiene</h1>
+                <div className="nav-containerForm--green" />
             </NavHeaderForm>
             <div id="page-wrap" className="wrapper">
                 <h2 className="margin50 h2__questions">

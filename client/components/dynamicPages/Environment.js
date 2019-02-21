@@ -57,6 +57,7 @@ function Environment(props) {
                 <h1 className="h1__questions">
                     Maintaining a habitable home environment
                 </h1>
+                <div className="nav-containerForm--green" />
             </NavHeaderForm>
             <div id="page-wrap" className="wrapper">
                 <h2 className="margin50 h2__questions">
