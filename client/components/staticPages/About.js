@@ -7,6 +7,7 @@ import '../../styles/css/styles.css';
 function About() {
     return (
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader />
             <div className="wrapper">
                 <img src={logo} className="logo align-center" />

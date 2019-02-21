@@ -25,6 +25,7 @@ const Contact = props => {
 
     return (
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader />
             <div>
                 <div className="wrapper wrapper__contact">

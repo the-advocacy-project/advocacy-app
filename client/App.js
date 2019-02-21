@@ -96,7 +96,9 @@ class App extends Component {
                 question: 'Do you need help maintaining a balanced diet?',
                 agree: false
             },
-            more: ''
+            more: {
+                more: ''
+            }
         },
         hygiene: {
             toiletries: {
@@ -342,6 +344,12 @@ class App extends Component {
         });
     };
 
+    // scroll = () => {
+    //     const attachToRoot = document.getElementById("root");
+    //     attachToRoot.innerHTML = variableLongText;
+    //     attachToRoot.scrollTop = 0;
+    // }
+
     render() {
         return (
             <BrowserRouter>
@@ -392,6 +400,7 @@ class App extends Component {
                                     section="nutrition"
                                     handleChangeInput={this.handleChangeInput}
                                     toggleChange={this.toggleChange}
+                                  
                                 />
                             )}
                         />

@@ -128,6 +128,7 @@ function Overview(props) {
 
     return (
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader />
             <h1>Overview</h1>
             <div className="wrapper">
