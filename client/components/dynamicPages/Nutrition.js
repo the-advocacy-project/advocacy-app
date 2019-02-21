@@ -71,6 +71,9 @@ function Nutrition(props) {
             </NavHeaderForm>
             {/* <h1 className="nutritionH1">Managing and Maintaining Nutrition</h1> */}
             <div id="page-wrap" className="wrapper">
+                <div className="progress-bar">
+                    <div className="progress-bar--blue10"></div>
+                </div>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>
