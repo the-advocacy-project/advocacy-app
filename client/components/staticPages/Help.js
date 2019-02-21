@@ -7,11 +7,11 @@ import '../../styles/css/home.css';
 
 function Help() {
     return (
-        <div>
+        <div id="outer-container">
             {window.scrollTo(0,0)}
             <NavHeader className="nav-container"/>
 
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1 className="help-h1">
                     How we <br />
                     aim to help

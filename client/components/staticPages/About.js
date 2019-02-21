@@ -6,10 +6,10 @@ import '../../styles/css/styles.css';
 
 function About() {
     return (
-        <div>
+        <div id="outer-container">
             {window.scrollTo(0,0)}
             <NavHeader />
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <img src={logo} className="logo align-center" />
                 <h1>About us</h1>
                 <p>

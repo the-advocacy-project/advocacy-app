@@ -51,11 +51,11 @@ function Eligibility(props) {
     });
 
     return (
-        <div>
+        <div id="outer-container">
             {window.scrollTo(0,0)}
             <NavHeader />
 
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1>Eligibility</h1>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you

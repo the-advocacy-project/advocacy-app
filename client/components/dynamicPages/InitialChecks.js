@@ -25,10 +25,10 @@ function InitialChecks(props) {
     });
 
     return (
-        <div>
+        <div id="outer-container">
             {window.scrollTo(0,0)}
             <NavHeader />
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1>Let’s get started...</h1>
                 <p>Please check the box below to confirm that:</p>
                 <div className="margin50 clear"></div>
@@ -43,7 +43,7 @@ function InitialChecks(props) {
                     className="buttons"
                     onClick={() => {}}/>
             </Link>
-            <Link to={'./consent'}>
+            <Link to={'./consent' }>
                 <Button
                     text='Next'
                     type='submit'

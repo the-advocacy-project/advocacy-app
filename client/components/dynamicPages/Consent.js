@@ -58,7 +58,7 @@ function Consent(props) {
                 <div className="wrapper">
                     <h1>Your consent</h1>
                     <p className="margin50">
-                        For this application, your consent is required so that we can share your information with the Local Authority 
+                        For this application, your consent is required so that we can share your information with the Local Authority
                         and with us, the Advocacy Project.
                     </p>
                     <p>
@@ -67,7 +67,7 @@ function Consent(props) {
                     <div className="margin50 clear"></div>
                     { displayConsent }
                 </div>
-    
+
                 <div className="navButtons"><Link to={'./initial-checks'} >
                     <Button
                     text='Back'
@@ -87,9 +87,25 @@ function Consent(props) {
         );
 
     }
-    
 
 
+
+    return (
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
+            <NavHeader />
+            <div id="page-wrap" className="wrapper">
+                <h1>Your consent</h1>
+                <p className="margin50">
+                    Select the relevant options below to give consent to share your
+                    information with the Local Authority and The Advocacy Project.
+                </p>
+                <p>
+                    If you would like a copy of your application, please check the last box.
+                </p>
+                <div className="margin50 clear"></div>
+                { displayConsent }
+            </div>
 
 }
 

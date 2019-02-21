@@ -4,10 +4,10 @@ import '../../styles/css/home.css';
 
 function CareAct(){
     return(
-        <div>
+        <div id="outer-container">
             {window.scrollTo(0,0)}
             <NavHeader />
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1>The Care Act</h1>
                 <blockquote>
                 The Care Act puts people in control of their care and support.

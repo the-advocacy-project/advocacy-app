@@ -7,15 +7,6 @@ import { Link } from 'react-router-dom';
 function Nutrition(props) {
     console.log(Object.keys(props.info));
 
-
-
-
-
-
-
-
-
-
     const displayNutrition = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
             console.log('I am textarea');
@@ -70,7 +61,7 @@ function Nutrition(props) {
     console.log(Object.prototype.toString.call(displayNutrition));
 
     return (
-        <div>
+        <div id="outer-container">
             {window.scrollTo(0,0)}
             <NavHeaderForm>
                 <h1 className="h1__questions">
@@ -78,7 +69,7 @@ function Nutrition(props) {
                 </h1>
             </NavHeaderForm>
             {/* <h1 className="nutritionH1">Managing and Maintaining Nutrition</h1> */}
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>

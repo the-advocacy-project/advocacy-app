@@ -5,10 +5,10 @@ import NavHeader from '../navigation/navHeader';
 
 function Begin(){
     return(
-        <div>
+        <div id="outer-container">
             {window.scrollTo(0,0)}
             <NavHeader />
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1>Let's begin</h1>
                 <p>We will now ask you a series of questions to gather evidence of your right to
                     a Care Act assessment, eligibility for support and an advocate to help you

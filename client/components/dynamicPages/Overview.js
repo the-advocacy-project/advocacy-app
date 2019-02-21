@@ -28,13 +28,13 @@ function Overview(props) {
     // sections.forEach(item => {
     //     console.log('zzz: ', Object.keys(props.info[item]));
     // });
-    var displayNutrition = [];
+    var displayOverview = [];
     for (let j = 0; j < sections.length; j++) {
         console.log(props.info[sections[j]]);
 
-        displayNutrition.push(
+        displayOverview.push(
             Object.keys(props.info[sections[j]]).map((qs, i) => {
-                // const displayNutrition = sections.map(item => {
+                // const displayOverview = sections.map(item => {
                 //     console.log('zzz: ', Object.keys(props.info[item]));
                 //     Object.keys(props.info[item]).map((qs, i) => {
                 if (qs === 'more') {
@@ -127,35 +127,31 @@ function Overview(props) {
     // });
 
     return (
-        <div>
+        <div id="outer-container">
             {window.scrollTo(0,0)}
             <NavHeader />
-            <h1>Overview</h1>
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
+                <h1>Overview</h1>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>
-                {displayNutrition}
-                <div className="margin50 clear" />
+                {displayOverview}
             </div>
-            <div className="navButtons">
-                <Link to={'./duty'}>
-                    <Button
-                        text="Back"
-                        type="submit"
-                        className="buttons"
-                        onClick={() => {}}
-                    />
-                </Link>
-                <Link to={'./complete'}>
-                    <Button
-                        text="Next"
-                        type="submit"
-                        className="buttons"
-                        onClick={() => {}}
-                    />
-                </Link>
-            </div>
+            <div className="navButtons"><Link to={'./duty'} >
+                <Button
+                text='Back'
+                type='submit'
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+            <Link to={'./complete'} >
+                <Button
+                text='Next'
+                type='submit'
+                className="buttons"
+                onClick={() => {}}/>
+            </Link>
+        </div>
         </div>
     );
 }
