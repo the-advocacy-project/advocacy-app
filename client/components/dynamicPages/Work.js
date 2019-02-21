@@ -52,6 +52,7 @@ function Work(props) {
 
     return (
         <div>
+            {window.scrollTo(0,0)}
             <NavHeaderForm>
                 <h1 className="h1__questions">
                     Accessing and engaging in work, training, education or

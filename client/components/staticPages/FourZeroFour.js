@@ -6,6 +6,7 @@ import '../../styles/css/home.css';
 function FourZeroFour(){
     return(
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader />
             <div className="wrapper">
                 <h1>Whoops, there's been an error</h1>

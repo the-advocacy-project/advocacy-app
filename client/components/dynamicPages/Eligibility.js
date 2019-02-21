@@ -52,6 +52,7 @@ function Eligibility(props) {
 
     return (
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader />
 
             <div className="wrapper">

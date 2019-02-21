@@ -7,6 +7,7 @@ import '../../styles/css/home.css';
 function Overview(){
     return(
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader />
             <h1>Overview</h1>
             <div className="navButtons"><Link to={'./duty'} >

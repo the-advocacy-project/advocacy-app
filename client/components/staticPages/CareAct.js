@@ -5,6 +5,7 @@ import '../../styles/css/home.css';
 function CareAct(){
     return(
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader />
             <div className="wrapper">
                 <h1>The Care Act</h1>

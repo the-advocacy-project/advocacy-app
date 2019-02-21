@@ -30,6 +30,7 @@ function Consent(props) {
 
     return (
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader />
             <div className="wrapper">
                 <h1>Your consent</h1>
