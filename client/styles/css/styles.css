@@ -148,18 +148,13 @@ a {
 .navButtons {
   margin-bottom: 150px; }
 
-@media only screen and (min-width: 1024px) {
-  .nav-container {
-    background-color: #00a06e;
-    height: 50px;
-    padding-top: 55px;
-    width: 100%; }
-    .nav-container--white {
-      background-color: #f9f9f9;
-      height: 55px;
-      border-top-right-radius: 100px; }
+@media only screen and (min-width: 900px) {
+  .wrapper {
+    width: 70%; }
   h1 {
-    font-size: 5rem; }
+    font-size: 4rem; }
+  h2 {
+    font-size: 2rem; }
   p {
     font-size: 2rem; }
   ul {
