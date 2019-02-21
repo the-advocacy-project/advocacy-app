@@ -28,10 +28,12 @@ function Overview(props) {
     // sections.forEach(item => {
     //     console.log('zzz: ', Object.keys(props.info[item]));
     // });
+    var displayNutrition = [];
     for (let j = 0; j < sections.length; j++) {
         console.log(props.info[sections[j]]);
-        var displayNutrition = Object.keys(props.info[sections[j]]).map(
-            (qs, i) => {
+
+        displayNutrition.push(
+            Object.keys(props.info[sections[j]]).map((qs, i) => {
                 // const displayNutrition = sections.map(item => {
                 //     console.log('zzz: ', Object.keys(props.info[item]));
                 //     Object.keys(props.info[item]).map((qs, i) => {
@@ -95,15 +97,16 @@ function Overview(props) {
                         </div>
                     );
                 }
-            }
+            })
         );
     }
+
     // });
 
     return (
         <div>
             <NavHeader />
-            <h1 className="h1__questions">Overview</h1>
+            <h1>Overview</h1>
             <div className="wrapper">
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you

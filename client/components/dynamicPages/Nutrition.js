@@ -58,6 +58,7 @@ function Nutrition(props) {
             );
         }
     });
+    console.log(Object.prototype.toString.call(displayNutrition));
 
     return (
         <div>
