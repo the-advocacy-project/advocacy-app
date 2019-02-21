@@ -13,285 +13,216 @@ app.use(
 app.use(bodyParser.json());
 
 app.post('/', (req, res) => {
-    const {contact, consent, initialChecks, nutrition, hygiene, toilet, clothing, safety, environment, relationships, work, transport, responsibilities, eligibility, wellbeing, duty  } = req.body;
- 
+    const {
+        contact,
+        consent,
+        initialChecks,
+        nutrition,
+        hygiene,
+        toilet,
+        clothing,
+        safety,
+        environment,
+        relationships,
+        work,
+        transport,
+        responsibilities,
+        eligibility,
+        wellbeing,
+        duty
+    } = req.body;
 
-  console.log("contact info", contact.contactData4.more)
-    
-    const contactSection = Object.keys(contact).map((qs) => {
-        
-     return (
-         `<div>
+    console.log('contact info', contact.contactData4.more);
+
+    const contactSection = Object.keys(contact).map(qs => {
+        return `<div>
          <h3> ${contact[qs].question} : </h3>
         <p>${contact[qs].more} </p>
-         </div>`
-     )
-    })
-   
-    const consentSection = Object.keys(consent).map((qs) => {
-        return (
-            `<div>
+         </div>`;
+    });
+
+    const consentSection = Object.keys(consent).map(qs => {
+        return `<div>
             <h3> ${consent[qs].question} : </h3>
-           <p>${consent[qs].agree ? "Yes" : "No"} </p>
-            </div>`
-        )
-       })
+           <p>${consent[qs].agree ? 'Yes' : 'No'} </p>
+            </div>`;
+    });
 
-       const initialCheckSection = Object.keys(initialChecks).map((qs) => {
-        return (
-            `<div>
+    const initialCheckSection = Object.keys(initialChecks).map(qs => {
+        return `<div>
             <h3> ${initialChecks[qs].question} : </h3>
-           <p>${initialChecks[qs].agree ? "Yes" : "No"} </p>
-            </div>`
-        )
-       })
+           <p>${initialChecks[qs].agree ? 'Yes' : 'No'} </p>
+            </div>`;
+    });
 
-   
-       const nutritionSection = Object.keys(nutrition).map((qs) => {
-         
-           if (qs === "more") {
-            return (
-                `<div>
+    const nutritionSection = Object.keys(nutrition).map(qs => {
+        if (qs === 'more') {
+            return `<div>
                 <p>${nutrition[qs].more}<p>
-                </div>` 
-            )
-           } else {
-            return (
-                `<div>
+                </div>`;
+        } else {
+            return `<div>
                 <h3> ${nutrition[qs].question} : </h3>
-                <p>${nutrition[qs].agree ? "Yes" : "No"} </p>
-                </div>` 
-            )
-           }
-       })
+                <p>${nutrition[qs].agree ? 'Yes' : 'No'} </p>
+                </div>`;
+        }
+    });
 
-       const hygieneSection = Object.keys(hygiene).map((qs) => {
-       
-        if (qs === "more") {
-         return (
-             `<div>
+    const hygieneSection = Object.keys(hygiene).map(qs => {
+        if (qs === 'more') {
+            return `<div>
              <p>${hygiene[qs].more}<p>
-             </div>` 
-         )
+             </div>`;
         } else {
-         return (
-             `<div>
+            return `<div>
              <h3> ${hygiene[qs].question} : </h3>
-             <p>${hygiene[qs].agree ? "Yes" : "No"} </p>
-             </div>` 
-         )
+             <p>${hygiene[qs].agree ? 'Yes' : 'No'} </p>
+             </div>`;
         }
-    })
+    });
 
-    const toiletSection = Object.keys(toilet).map((qs) => {
-        
-        if (qs === "more") {
-         return (
-             `<div>
+    const toiletSection = Object.keys(toilet).map(qs => {
+        if (qs === 'more') {
+            return `<div>
              <p>${toilet[qs].more}<p>
-             </div>` 
-         )
+             </div>`;
         } else {
-         return (
-             `<div>
+            return `<div>
              <h3> ${toilet[qs].question} : </h3>
-             <p>${toilet[qs].agree ? "Yes" : "No"} </p>
-             </div>` 
-         )
+             <p>${toilet[qs].agree ? 'Yes' : 'No'} </p>
+             </div>`;
         }
-    })
+    });
 
-
-    const clothingSection = Object.keys(clothing).map((qs) => {
-        
-        if (qs === "more") {
-         return (
-             `<div>
+    const clothingSection = Object.keys(clothing).map(qs => {
+        if (qs === 'more') {
+            return `<div>
              <p>${clothing[qs].more}<p>
-             </div>` 
-         )
+             </div>`;
         } else {
-         return (
-             `<div>
+            return `<div>
              <h3> ${clothing[qs].question} : </h3>
-             <p>${clothing[qs].agree ? "Yes" : "No"} </p>
-             </div>` 
-         )
+             <p>${clothing[qs].agree ? 'Yes' : 'No'} </p>
+             </div>`;
         }
-    })
-    
-    const safetySection = Object.keys(safety).map((qs) => {
+    });
 
-        if (qs === "more") {
-         return (
-             `<div>
+    const safetySection = Object.keys(safety).map(qs => {
+        if (qs === 'more') {
+            return `<div>
              <p>${safety[qs].more}<p>
-             </div>` 
-         )
+             </div>`;
         } else {
-         return (
-             `<div>
+            return `<div>
              <h3> ${safety[qs].question} : </h3>
-             <p>${safety[qs].agree ? "Yes" : "No"} </p>
-             </div>` 
-         )
+             <p>${safety[qs].agree ? 'Yes' : 'No'} </p>
+             </div>`;
         }
-    })
-      
+    });
 
-    const environmentSection = Object.keys(environment).map((qs) => {
-
-        if (qs === "more") {
-         return (
-             `<div>
+    const environmentSection = Object.keys(environment).map(qs => {
+        if (qs === 'more') {
+            return `<div>
              <p>${environment[qs].more}<p>
-             </div>` 
-         )
+             </div>`;
         } else {
-         return (
-             `<div>
+            return `<div>
              <h3> ${environment[qs].question} : </h3>
-             <p>${environment[qs].agree ? "Yes" : "No"} </p>
-             </div>` 
-         )
+             <p>${environment[qs].agree ? 'Yes' : 'No'} </p>
+             </div>`;
         }
-    })
+    });
 
-    const workSection = Object.keys(work).map((qs) => {
-    
-        if (qs === "more") {
-         return (
-             `<div>
+    const workSection = Object.keys(work).map(qs => {
+        if (qs === 'more') {
+            return `<div>
              <p>${work[qs].more}<p>
-             </div>` 
-         )
+             </div>`;
         } else {
-         return (
-             `<div>
+            return `<div>
              <h3> ${work[qs].question} : </h3>
-             <p>${work[qs].agree ? "Yes" : "No"} </p>
-             </div>` 
-         )
+             <p>${work[qs].agree ? 'Yes' : 'No'} </p>
+             </div>`;
         }
-    })
-    
-    
-    
+    });
 
-    const relationshipsSection = Object.keys(relationships).map((qs) => {
-       
-        if (qs === "more") {
-         return (
-             `<div>
+    const relationshipsSection = Object.keys(relationships).map(qs => {
+        if (qs === 'more') {
+            return `<div>
              <p>${relationships[qs].more}<p>
-             </div>` 
-         )
+             </div>`;
         } else {
-         return (
-             `<div>
+            return `<div>
              <h3> ${relationships[qs].question} : </h3>
-             <p>${relationships[qs].agree ? "Yes" : "No"} </p>
-             </div>` 
-         )
+             <p>${relationships[qs].agree ? 'Yes' : 'No'} </p>
+             </div>`;
         }
-    })
-    
+    });
 
-
-     const transportSection = Object.keys(transport).map((qs) => {
-      
-        if (qs === "more") {
-         return (
-             `<div>
+    const transportSection = Object.keys(transport).map(qs => {
+        if (qs === 'more') {
+            return `<div>
              <p>${transport[qs].more}<p>
-             </div>` 
-         )
+             </div>`;
         } else {
-         return (
-             `<div>
+            return `<div>
              <h3> ${transport[qs].question} : </h3>
-             <p>${transport[qs].agree ? "Yes" : "No"} </p>
-             </div>` 
-         )
+             <p>${transport[qs].agree ? 'Yes' : 'No'} </p>
+             </div>`;
         }
-    })
+    });
 
-    const responsibilitiesSection = Object.keys(responsibilities).map((qs) => {
-      
-        if (qs === "more") {
-         return (
-             `<div>
+    const responsibilitiesSection = Object.keys(responsibilities).map(qs => {
+        if (qs === 'more') {
+            return `<div>
              <p>${responsibilities[qs].more}<p>
-             </div>` 
-         )
+             </div>`;
         } else {
-         return (
-             `<div>
+            return `<div>
              <h3> ${responsibilities[qs].question} : </h3>
-             <p>${responsibilities[qs].agree ? "Yes" : "No"} </p>
-             </div>` 
-         )
+             <p>${responsibilities[qs].agree ? 'Yes' : 'No'} </p>
+             </div>`;
         }
-    })
+    });
 
-    const eligibilitySection = Object.keys(eligibility).map((qs) => {
-
-        if (qs === "more") {
-         return (
-             `<div>
+    const eligibilitySection = Object.keys(eligibility).map(qs => {
+        if (qs === 'more') {
+            return `<div>
              <p>${eligibility[qs].more}<p>
-             </div>` 
-         )
+             </div>`;
         } else {
-         return (
-             `<div>
+            return `<div>
              <h3> ${eligibility[qs].question} : </h3>
-             <p>${eligibility[qs].agree ? "Yes" : "No"} </p>
-             </div>` 
-         )
+             <p>${eligibility[qs].agree ? 'Yes' : 'No'} </p>
+             </div>`;
         }
-    })
+    });
 
-    const wellbeingSection = Object.keys(wellbeing).map((qs) => {
-       
-        if (qs === "more") {
-         return (
-             `<div>
+    const wellbeingSection = Object.keys(wellbeing).map(qs => {
+        if (qs === 'more') {
+            return `<div>
              <p>${wellbeing[qs].more}<p>
-             </div>` 
-         )
+             </div>`;
         } else {
-         return (
-             `<div>
+            return `<div>
              <h3> ${wellbeing[qs].question} : </h3>
-             <p>${wellbeing[qs].agree ? "Yes" : "No"} </p>
-             </div>` 
-         )
+             <p>${wellbeing[qs].agree ? 'Yes' : 'No'} </p>
+             </div>`;
         }
-    })
-    
-    const dutySection = Object.keys(duty).map((qs) => {
-       
-        if (qs === "more") {
-         return (
-             `<div>
+    });
+
+    const dutySection = Object.keys(duty).map(qs => {
+        if (qs === 'more') {
+            return `<div>
              <p>${duty[qs].more}<p>
-             </div>` 
-         )
+             </div>`;
         } else {
-         return (
-             `<div>
+            return `<div>
              <h3> ${duty[qs].question} : </h3>
-             <p>${duty[qs].agree ? "Yes" : "No"} </p>
-             </div>` 
-         )
+             <p>${duty[qs].agree ? 'Yes' : 'No'} </p>
+             </div>`;
         }
-    })
-    
-
-
-  
-   
+    });
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -302,12 +233,10 @@ app.post('/', (req, res) => {
     });
 
     const mailList = [
-        `${consent.consentToCouncil.agree ? "theadvocacyfac@gmail.com": null}`,
-        `${consent.consentToAdvocacy.agree ? "jaggardk@gmail.com" : null}`,
-        `${contact.contactData4.more ? contact.contactData4.more: null}`
-      ];
-      
-      
+        `${consent.consentToCouncil.agree ? 'theadvocacyfac@gmail.com' : null}`,
+        `${consent.consentToAdvocacy.agree ? 'jaggardk@gmail.com' : null}`,
+        `${contact.contactData4.more ? contact.contactData4.more : null}`
+    ];
 
     const mailOptions = {
         from: 'theadvocacyfac@gmail.com',
@@ -404,11 +333,12 @@ app.post('/', (req, res) => {
         replyTo: 'theadvocacyfac@gmail.com'
     };
 
-    transporter.sendMail(mailOptions, function(err, res) {
+    transporter.sendMail(mailOptions, function(err, innerRes) {
         if (err) {
             console.error('there was an error: ', err);
         } else {
-            console.log('here is the res: ', res);
+            console.log('here is the res: ', innerRes);
+            return res.send(innerRes);
         }
     });
 
@@ -420,6 +350,5 @@ app.use(express.static('dist'));
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/../dist/index.html'));
 });
-
 
 app.listen(3001, () => console.log('Listening on port 3001!'));

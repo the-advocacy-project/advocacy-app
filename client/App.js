@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 // STATIC PAGE IMPORTS
@@ -308,6 +308,9 @@ class App extends Component {
                     'Is there anything that you want the Local Authority to know about your communication needs?',
                 more: ''
             }
+        },
+        complete: {
+            redirect: 'false'
         }
     };
 
@@ -337,12 +340,20 @@ class App extends Component {
         });
     };
 
-    handleSubmit = event => {
-        event.preventDefault();
+    handleRoute = event => {
+        const target = event.target;
+        // console.log("target", target)
+        // const value = target.name === 'more' ? target.value : null;
+        // console.log('value', value);
+        this.setState({
+            complete: { redirect: true }
+        });
+    };
 
-        // const { value } = this.state;
+    handleSubmit = (event, callback) => {
+        // event.preventDefault();
         axios.post('/', this.state).then(result => {
-            console.log(value);
+            console.log(result);
         });
     };
 
@@ -397,11 +408,12 @@ class App extends Component {
                                 />
                             )}
                         />
-                        <Route path="/begin" render={props => (
-                            <Begin 
-                                validation={this.state.contact}
-                            />  
-                        )} />
+                        <Route
+                            path="/begin"
+                            render={props => (
+                                <Begin validation={this.state.contact} />
+                            )}
+                        />
                         <Route
                             path="/nutrition"
                             render={props => (
@@ -410,7 +422,6 @@ class App extends Component {
                                     section="nutrition"
                                     handleChangeInput={this.handleChangeInput}
                                     toggleChange={this.toggleChange}
-                                  
                                 />
                             )}
                         />
@@ -565,6 +576,7 @@ class App extends Component {
                                     section="complete"
                                     handleChangeInput={this.handleChangeInput}
                                     toggleChange={this.toggleChange}
+                                    handleRoute={this.handleRoute}
                                     handleSubmit={this.handleSubmit}
                                 />
                             )}
