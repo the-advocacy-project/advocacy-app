@@ -5,6 +5,7 @@ import {Button} from '../buttons/Button';
 import "../../styles/scss/check_consent.scss"
 
 function InitialChecks(props) {
+    console.log("check", props.info.over18.agree, props.info.resident.agree)
     const displayInitialChecks = Object.keys(props.info).map((qs, i) => {
 
         return (
@@ -42,13 +43,16 @@ function InitialChecks(props) {
                     className="buttons"
                     onClick={() => {}}/>
             </Link>
-            <Link to={'./consent'} >
+            <If condition={!props.info.over18.agree} >
+            <Else />
+            <Link> to={'./consent' }>
                 <Button
                     text='Next'
                     type='submit'
                     className="buttons"
                     onClick={() => {}}/>
             </Link>
+            </If>
             </div>
 
         </div>
