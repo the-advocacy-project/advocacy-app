@@ -65,23 +65,23 @@ class App extends Component {
             }
         },
         contact: {
-            name: {
+            contactData1: {
                 question: 'Full name',
                 more: ''
             },
-            address: {
+            contactData2: {
                 question: 'Address',
                 more: ''
             },
-            postCode: {
+            contactData3: {
                 question: 'Post code',
                 more: ''
             },
-            email: {
+            contactData4: {
                 question: 'Email',
                 more: ''
             },
-            phoneNumber: {
+            contactData5: {
                 question: 'Phone number',
                 more: ''
             }
@@ -318,45 +318,6 @@ class App extends Component {
                 [qs]: { ...this.state[section][qs], agree: value }
             }
         });
-    };
-
-    handleOverview = (event, qs) => {
-        const target = event.target;
-        const value =
-            target.type === 'checkbox' ? target.checked : target.value;
-        // const newSection = { ...this.state[qs], agree: value };
-        const sections = [
-            'initialChecks',
-            'consent',
-            'contact',
-            'nutrition',
-            'hygiene',
-            'toilet',
-            'clothing',
-            'safety',
-            'environment',
-            'relationships',
-            'work',
-            'transport',
-            'responsibilities',
-            'eligibility',
-            'welbeing',
-            'duty'
-        ];
-        sections.forEach(item => {
-            this.setState({
-                [item]: {
-                    ...this.state[item],
-                    [qs]: { ...this.state[item][qs], agree: value }
-                }
-            });
-        });
-        // this.setState({
-        //     [section]: {
-        //         ...this.state[section],
-        //         [qs]: { ...this.state[section][qs], agree: value }
-        //     }
-        // });
     };
 
     handleChangeInput = (event, qs, section) => {

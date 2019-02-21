@@ -70,6 +70,29 @@ function Overview(props) {
                             </div>
                         </div>
                     );
+                } else if (qs.includes('contactData')) {
+                    return (
+                        <div
+                            className="input-align margin50"
+                            key={`container-${i}`}
+                        >
+                            <p>{props.info[sections[j]][qs].question}</p>
+                            <input
+                                type="text"
+                                key={`input-${i}`}
+                                value={props.info[sections[j]][qs].more}
+                                name="more"
+                                onChange={event => {
+                                    event.preventDefault();
+                                    props.handleChangeInput(
+                                        event,
+                                        qs,
+                                        props.info[sections[j]]
+                                    );
+                                }}
+                            />
+                        </div>
+                    );
                 } else {
                     console.log('I am a checkbox');
                     // console.log('checked: ', props.info[qs].agree);
