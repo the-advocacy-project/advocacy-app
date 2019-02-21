@@ -315,10 +315,12 @@ class App extends Component {
     };
 
     toggleChange = (event, qs, section) => {
+        console.log('qs is :', qs);
+        console.log('section is: ', section);
         const target = event.target;
         const value =
             target.type === 'checkbox' ? target.checked : target.value;
-        const newSection = { ...this.state[section][qs], agree: value };
+        // const newSection = { ...this.state[section][qs], agree: value };
         this.setState({
             [section]: {
                 ...this.state[section],
@@ -342,15 +344,12 @@ class App extends Component {
 
     handleRoute = event => {
         const target = event.target;
-        // console.log("target", target)
-        // const value = target.name === 'more' ? target.value : null;
-        // console.log('value', value);
         this.setState({
             complete: { redirect: true }
         });
     };
 
-    handleSubmit = (event, callback) => {
+    handleSubmit = event => {
         // event.preventDefault();
         axios.post('/', this.state).then(result => {
             console.log(result);

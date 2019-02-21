@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../buttons/Button';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import NavHeader from '../navigation/navHeader';
 import '../../styles/css/home.css';
 
@@ -9,6 +9,7 @@ function Complete(props) {
 
     return (
         <div id="outer-container">
+            {props.info === true && <h2>You have unread messages.</h2>}
             {window.scrollTo(0, 0)}
             <NavHeader />
             <div id="page-wrap" className="wrapper">
@@ -35,6 +36,9 @@ function Complete(props) {
                         onClick={event => {
                             props.handleSubmit(event);
                             // props.handleRoute(event);
+                            {
+                                alert('Form has been submited');
+                            }
                         }}
                     />
                 </Link>
