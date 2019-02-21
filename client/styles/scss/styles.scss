@@ -84,6 +84,10 @@ input[type='textarea'] {
     position: relative;
 }
 
+.contactInput {
+    font-size: 3em;
+}
+
 label {
     display: block;
     width: 90%;
@@ -141,6 +145,7 @@ li {
 .checkboxText {
     grid-column: 1/5;
     color: $black;
+    margin-bottom: 1em;
 }
 .checkboxInput {
     display: grid;
@@ -171,6 +176,8 @@ ul li::before {
 a {
     color: $light-blue;
     text-decoration: underline;
+    font-size: 3rem;
+    margin-top: 50px;
 }
 
 .navButtons {
@@ -275,24 +282,24 @@ a {
 
 /****** END hack ******/
 
-@media only screen and (min-width: 900px) {
-    .wrapper {
-        width: 70%;
-    }
+// @media only screen and (min-width: 900px) {
+//     .wrapper {
+//         width: 70%;
+//     }
 
-    h1 {
-        font-size: 4rem;
-    }
+//     h1 {
+//         font-size: 4rem;
+//     }
 
-    h2 {
-        font-size: 2rem;
-    }
+//     h2 {
+//         font-size: 2rem;
+//     }
 
-    p {
-        font-size: 2rem;
-    }
+//     p {
+//         font-size: 2rem;
+//     }
 
-    ul {
-        font-size: 2rem;
-    }
-}
+//     ul {
+//         font-size: 2rem;
+//     }
+// }

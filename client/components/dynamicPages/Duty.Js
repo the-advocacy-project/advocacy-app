@@ -23,6 +23,7 @@ function Duty(props){
                                 props.handleChangeInput(event, qs, props.section)
                             }}
                         />
+                        <div className="margin50" />
                     </div>
                 </div>
             );
@@ -42,6 +43,7 @@ function Duty(props){
                                 props.handleChangeInput(event, qs, props.section)
                             }}
                         />
+                        <div className="margin50" />
                     </div>
                 </div>
             );
@@ -59,7 +61,6 @@ function Duty(props){
                             props.toggleChange(event, qs, props.section)
                         }
                     />
-                    <div className="margin50" />
                 </div>
             );
         }

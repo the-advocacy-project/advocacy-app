@@ -12,16 +12,18 @@ const Contact = props => {
         return (
             <div className="input-align margin50" key={`container-${index}`}>
                 <p>{props.info[qs].question}</p>
-                <input
-                    type="text"
-                    key={`input-${index}`}
-                    value={props.info[qs].more}
-                    name="more"
-                    onChange={event => {
-                        event.preventDefault();
-                        props.handleChangeInput(event, qs, props.section);
-                    }}
-                />
+                <div className="contactInput">
+                    <input
+                        type="text"
+                        key={`input-${index}`}
+                        value={props.info[qs].more}
+                        name="more"
+                        onChange={event => {
+                            event.preventDefault();
+                            props.handleChangeInput(event, qs, props.section);
+                        }}
+                    />
+                </div>
             </div>
         );
     });
