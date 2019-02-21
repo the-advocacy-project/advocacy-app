@@ -68,20 +68,21 @@ function Consent(props) {
                     { displayConsent }
                 </div>
 
-                <div className="navButtons"><Link to={'./initial-checks'} >
-                    <Button
-                    text='Back'
-                    type='submit'
-                    className="buttons"
-                    onClick={() => {}}/>
-                </Link>
-                <Link to={'./contact'} >
-                    <Button
-                    text='Next'
-                    type='submit'
-                    className="buttons"
-                    onClick={() => {}}/>
-                </Link>
+                <div className="navButtons">
+                    <Link to={'./initial-checks'} >
+                        <Button
+                            text='Back'
+                            type='submit'
+                            className="buttons"
+                            onClick={() => {}}/>
+                    </Link>
+                    <Link to={'./contact'} >
+                        <Button
+                            text='Next'
+                            type='submit'
+                            className="buttons"
+                            onClick={() => {}}/>
+                    </Link>
                 </div>
             </div>
         );

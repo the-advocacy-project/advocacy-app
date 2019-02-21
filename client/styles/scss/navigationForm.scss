@@ -4,6 +4,7 @@
     background-color: $green;
     height: 350px;
     padding-top: 110px;
+    width: 100%;
 
     &--white {
         position: absolute;
@@ -16,13 +17,12 @@
     }
 
     &--green {
-        position: absolute;
         background-color: $light-green;
         border-radius: 200px 200px 0 0;
-        top: 317px;
         width: 93%;
         left: 37px;
         height: 100px;
+        margin: 4% auto;
     }
 }
 
