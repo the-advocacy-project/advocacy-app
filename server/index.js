@@ -292,7 +292,7 @@ app.post('/', (req, res) => {
         <h2>Nutrition</h2>
         ${nutritionSection}
 
-        <h2>Nutrition</h2>
+        <h2>Hygiene</h2>
         ${hygieneSection}
         
         <h2>Toilet</h2>

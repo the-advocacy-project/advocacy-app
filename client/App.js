@@ -308,9 +308,6 @@ class App extends Component {
                     'Is there anything that you want the Local Authority to know about your communication needs?',
                 more: ''
             }
-        },
-        complete: {
-            redirect: 'false'
         }
     };
 

@@ -35,7 +35,6 @@ function Complete(props) {
                         className="buttons"
                         onClick={event => {
                             props.handleSubmit(event);
-                            // props.handleRoute(event);
                             {
                                 alert('Form has been submited');
                             }
