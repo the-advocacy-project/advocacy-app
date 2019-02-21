@@ -53,6 +53,7 @@ function Hygiene(props) {
 
     return (
         <div>
+            {window.scrollTo(0,0)}
             <NavHeaderForm>
                 <h1 className="h1__questions">Maintaining personal hygiene</h1>
             </NavHeaderForm>

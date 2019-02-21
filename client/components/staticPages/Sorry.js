@@ -5,6 +5,7 @@ import '../../styles/css/home.css';
 function Sorry(){
     return(
         <div>
+            {window.scrollTo(0,0)}
             <Navheader />
             <h1>Sorry, we need your consent.</h1>
             <p>In order to continue with your application, we need your consent to share your

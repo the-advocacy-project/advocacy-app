@@ -8,6 +8,7 @@ function Complete(props){
     console.log("handlesubmit prop",props)
     return(
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader />
             <h1>Complete the application</h1>
             <p>Please check the email addresses below before submitting your application. Click button to send.</p>

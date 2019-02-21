@@ -8,6 +8,7 @@ import '../../styles/css/home.css';
 function Help() {
     return (
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader className="nav-container"/>
 
             <div className="wrapper">

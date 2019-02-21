@@ -67,6 +67,7 @@ function Duty(props){
     
     return(
         <div>
+            {window.scrollTo(0,0)}
             <NavHeader />
             <h1>Duty to provide an Advocate</h1>
             <p>The Care Act puts people in control of their care and support. 

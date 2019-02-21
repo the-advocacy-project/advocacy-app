@@ -7,6 +7,15 @@ import { Link } from 'react-router-dom';
 function Nutrition(props) {
     console.log('I am props: ', props.info.more);
 
+
+
+
+
+
+
+
+
+
     const displayNutrition = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
             console.log('I am textarea');
@@ -57,6 +66,7 @@ function Nutrition(props) {
 
     return (
         <div>
+            {window.scrollTo(0,0)}
             <NavHeaderForm>
                 <h1 className="h1__questions">
                     Managing and Maintaining Nutrition
