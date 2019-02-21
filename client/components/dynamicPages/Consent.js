@@ -106,7 +106,8 @@ function Consent(props) {
                 <div className="margin50 clear"></div>
                 { displayConsent }
             </div>
-
+        </div>
+    )
 }
 
 export default Consent;
