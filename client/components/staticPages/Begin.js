@@ -5,7 +5,7 @@ import NavHeader from '../navigation/navHeader';
 
 function Begin(props){
     console.log(props.validation)
-    if (props.validation){
+    if (!props.validation.contactData1.more || !props.validation.contactData2.more || !props.validation.contactData3.more || !props.validation.contactData5.more){
         return <Redirect to="/sorry-contact" />
     } else {
         return(
