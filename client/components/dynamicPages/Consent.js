@@ -29,9 +29,9 @@ function Consent(props) {
     });
 
     return (
-        <div>
+        <div id="page-wrap">
             <NavHeader />
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1>Your consent</h1>
                 <p className="margin50">
                     Select the relevant options below to give consent to share your

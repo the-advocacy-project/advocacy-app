@@ -28,7 +28,7 @@ const Contact = props => {
         <div>
             <NavHeader />
             <div>
-                <div className="wrapper wrapper__contact">
+                <div id="page-wrap" className="wrapper wrapper__contact">
                     <img src={ houses }  className="people img-top" alt="line drawing of houses" ></img>
                     <h1>Please enter your contact details:</h1>
                     { displayContact }

@@ -55,7 +55,7 @@ function Clothing(props) {
             <NavHeaderForm>
                 <h1 className="h1__questions">Being appropriately clothed</h1>
             </NavHeaderForm>
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>

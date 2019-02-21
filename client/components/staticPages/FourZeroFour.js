@@ -7,7 +7,7 @@ function FourZeroFour(){
     return(
         <div>
             <NavHeader />
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1>Whoops, there's been an error</h1>
                 <h2>404</h2>
                 <p>Return to the homepage.</p>

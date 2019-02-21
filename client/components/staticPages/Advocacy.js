@@ -6,7 +6,7 @@ function Advocacy(props) {
     return (
         <div>
             <NavHeader />
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1>What's advocacy?</h1>
                 <p>Advocacy is taking action to help people say what they want, secure their rights,
                     represent their interests and obtain services they need.

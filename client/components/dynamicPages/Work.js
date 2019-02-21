@@ -58,7 +58,7 @@ function Work(props) {
                     volunteering
                 </h1>
             </NavHeaderForm>
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>

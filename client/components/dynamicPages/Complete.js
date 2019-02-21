@@ -9,19 +9,21 @@ function Complete(props){
     return(
         <div>
             <NavHeader />
+            <div id="page-wrap" className="wrapper">
             <h1>Complete the application</h1>
             <p>Please check the email addresses below before submitting your application. Click button to send.</p>
+            </div>
             <div className="navButtons"><Link to={'./overview'} >
-                <Button 
-                text='Back' 
-                type='submit' 
+                <Button
+                text='Back'
+                type='submit'
                 className="buttons"
                 onClick={() => {}}/>
             </Link>
             <Link to={'./'} >
-                <Button 
-                text='Send' 
-                type='submit' 
+                <Button
+                text='Send'
+                type='submit'
                 className="buttons"
                 onClick={(event) => {
                     console.log("this is the event",event)

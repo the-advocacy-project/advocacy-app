@@ -6,7 +6,7 @@ function CareAct(){
     return(
         <div>
             <NavHeader />
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1>The Care Act</h1>
                 <blockquote>
                 The Care Act puts people in control of their care and support.

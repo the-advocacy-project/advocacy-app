@@ -8,18 +8,20 @@ function Overview(){
     return(
         <div>
             <NavHeader />
-            <h1>Overview</h1>
+            <div id="page-wrap" className="wrapper">
+                <h1>Overview</h1>
+            </div>
             <div className="navButtons"><Link to={'./duty'} >
-                <Button 
-                text='Back' 
-                type='submit' 
+                <Button
+                text='Back'
+                type='submit'
                 className="buttons"
                 onClick={() => {}}/>
             </Link>
             <Link to={'./complete'} >
-                <Button 
-                text='Next' 
-                type='submit' 
+                <Button
+                text='Next'
+                type='submit'
                 className="buttons"
                 onClick={() => {}}/>
             </Link>

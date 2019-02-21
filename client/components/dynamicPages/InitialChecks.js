@@ -26,7 +26,7 @@ function InitialChecks(props) {
     return (
         <div>
             <NavHeader />
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1>Let’s get started...</h1>
                 <p>Please check the box below to confirm that:</p>
                 <div className="margin50 clear"></div>

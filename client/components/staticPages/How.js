@@ -8,7 +8,7 @@ function How(){
     return(
         <div>
             <NavHeader />
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1 className="how-h1">How this works</h1>
                 <div className="how-list">
                     <ul>

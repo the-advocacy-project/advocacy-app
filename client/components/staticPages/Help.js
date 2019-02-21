@@ -10,7 +10,7 @@ function Help() {
         <div>
             <NavHeader className="nav-container"/>
 
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1 className="help-h1">
                     How we <br />
                     aim to help

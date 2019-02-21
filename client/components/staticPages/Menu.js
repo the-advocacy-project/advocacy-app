@@ -27,19 +27,19 @@ function Menu() {
                 <p className="menuText">The Care Act</p>
 
             </Link>
-            <Link to={'./eligibility'} className="menuList">
+            <Link to={'./eligibility'} className="menu-item menuList">
                 <Eligibility />
                 <p className="menuText">Eligibility Criteria</p>
             </Link>
-            <Link to={'./key-rights'} className="menuList">
+            <Link to={'./key-rights'} className="menu-item menuList">
                 <Key />
                 <p className="menuText">Key Rights</p>
             </Link>
-            <Link to={'./initial-checks'} className="menuList" >
+            <Link to={'./initial-checks'} className="menu-item menuList" >
                 <Application />
                 <p className="menuText">Initial Checks</p>
             </Link>
-            <Link to={'./advocacy'} className="menuList">
+            <Link to={'./advocacy'} className="menu-item menuList">
                 <Advocacy />
                 <p className="menuText">Your Application</p>
             </Link>
