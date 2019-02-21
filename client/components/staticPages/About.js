@@ -6,7 +6,8 @@ import '../../styles/css/styles.css';
 
 function About() {
     return (
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeader />
             <div id="page-wrap" className="wrapper">
                 <img src={logo} className="logo align-center" />

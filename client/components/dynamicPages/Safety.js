@@ -50,7 +50,8 @@ function Safety(props) {
     });
 
     return (
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeaderForm>
                 <h1 className="h1__questions">
                     Being able to make use of your home safely

@@ -50,7 +50,8 @@ function Toilet(props) {
     });
 
     return (
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeaderForm>
                 <h1 className="h1__questions">Managing toilet needs</h1>
             </NavHeaderForm>

@@ -5,7 +5,7 @@ import { Button } from '../buttons/Button';
 import { Link } from 'react-router-dom';
 
 function Nutrition(props) {
-    console.log('I am props: ', props.info.more);
+    console.log(Object.keys(props.info));
 
     const displayNutrition = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
@@ -13,9 +13,9 @@ function Nutrition(props) {
             return (
                 <div>
                     <label>
-                        The questions above are examples of how you may need help.
-                        Please expand and / or let us know other ways that you need help maintaining and managing
-                        nutritrion below.
+                        The questions above are examples of how you may need
+                        help. Please expand and / or let us know other ways that
+                        you need help maintaining and managing nutritrion below.
                     </label>
                     <div className="textAreaInput" key={`nutrition-${i}`}>
                         <textarea
@@ -27,7 +27,11 @@ function Nutrition(props) {
                             key={`input-${i}`}
                             onChange={event => {
                                 event.preventDefault();
-                                props.handleChangeInput(event, qs, props.section)
+                                props.handleChangeInput(
+                                    event,
+                                    qs,
+                                    props.section
+                                );
                             }}
                         />
                     </div>
@@ -54,9 +58,11 @@ function Nutrition(props) {
             );
         }
     });
+    console.log(Object.prototype.toString.call(displayNutrition));
 
     return (
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeaderForm>
                 <h1 className="h1__questions">
                     Managing and Maintaining Nutrition

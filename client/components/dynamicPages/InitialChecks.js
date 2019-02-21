@@ -5,6 +5,7 @@ import {Button} from '../buttons/Button';
 import "../../styles/scss/check_consent.scss"
 
 function InitialChecks(props) {
+    console.log("check", props.info.over18.agree, props.info.resident.agree)
     const displayInitialChecks = Object.keys(props.info).map((qs, i) => {
 
         return (
@@ -24,7 +25,8 @@ function InitialChecks(props) {
     });
 
     return (
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeader />
             <div id="page-wrap" className="wrapper">
                 <h1>Let’s get started...</h1>
@@ -41,7 +43,7 @@ function InitialChecks(props) {
                     className="buttons"
                     onClick={() => {}}/>
             </Link>
-            <Link to={'./consent'} >
+            <Link to={'./consent' }>
                 <Button
                     text='Next'
                     type='submit'

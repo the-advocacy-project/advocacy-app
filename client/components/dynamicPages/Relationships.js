@@ -52,7 +52,8 @@ function Relationships(props) {
     });
 
     return (
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeaderForm>
                 <h1 className="h1__questions">
                     Developing and maintaining family or other personal

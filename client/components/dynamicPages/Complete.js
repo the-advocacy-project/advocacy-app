@@ -7,7 +7,8 @@ import '../../styles/css/home.css';
 function Complete(props){
     console.log("handlesubmit prop",props)
     return(
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeader />
             <div id="page-wrap" className="wrapper">
             <h1>Complete the application</h1>

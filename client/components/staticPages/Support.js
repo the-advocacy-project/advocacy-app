@@ -4,7 +4,8 @@ import '../../styles/css/home.css';
 
 function Support(){
     return(
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeader />
             <div id="page-wrap" className="wrapper">
                 <h1>Am I eligible for support?</h1>

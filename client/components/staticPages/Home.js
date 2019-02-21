@@ -12,6 +12,7 @@ function Home(){
 
     return(
         <div id="outer-container">
+        {window.scrollTo(0,0)}
             <NavHeader className="nav-desktop"/>
             <div id="page-wrap" className="wrapper align-center">
                 <img src={logo} className='logo' alt="The Advocacy Project logo"></img>

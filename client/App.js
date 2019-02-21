@@ -12,6 +12,7 @@ import Home from './components/staticPages/Home';
 import How from './components/staticPages/How';
 import KeyRights from './components/staticPages/KeyRights';
 import Sorry from './components/staticPages/Sorry';
+import SorryChecks from './components/staticPages/SorryChecks';
 import Support from './components/staticPages/Support';
 import Advocacy from './components/staticPages/Advocacy';
 import Menu from './components/staticPages/Menu';
@@ -65,23 +66,23 @@ class App extends Component {
             }
         },
         contact: {
-            name: {
+            contactData1: {
                 question: 'Full name',
                 more: ''
             },
-            address: {
+            contactData2: {
                 question: 'Address',
                 more: ''
             },
-            postCode: {
+            contactData3: {
                 question: 'Post code',
                 more: ''
             },
-            email: {
+            contactData4: {
                 question: 'Email',
                 more: ''
             },
-            phoneNumber: {
+            contactData5: {
                 question: 'Phone number',
                 more: ''
             }
@@ -96,7 +97,9 @@ class App extends Component {
                 question: 'Do you need help maintaining a balanced diet?',
                 agree: false
             },
-            more: ''
+            more: {
+                more: ''
+            }
         },
         hygiene: {
             toiletries: {
@@ -158,8 +161,7 @@ class App extends Component {
                 agree: false
             },
             usingKitchen: {
-                question:
-                    'Do you need help to use your cooker or heater?',
+                question: 'Do you need help to use your cooker or heater?',
                 agree: false
             },
             more: ''
@@ -257,43 +259,42 @@ class App extends Component {
         },
         wellbeing: {
             safe: {
-                question:
-                    'If I don\'t get support, I will not feel safe.',
+                question: "If I don't get support, I will not feel safe.",
                 agree: false
             },
             relaxed: {
-                question:
-                    'If I don\'t get support, I will not feel relaxed.',
+                question: "If I don't get support, I will not feel relaxed.",
                 agree: false
             },
             happy: {
-                question:
-                    'If I don\'t get support, I will not feel happy.',
+                question: "If I don't get support, I will not feel happy.",
                 agree: false
             },
             friends: {
                 question:
-                    'If I don\'t get support, I will not be able to see my friends.',
+                    "If I don't get support, I will not be able to see my friends.",
                 agree: false
             },
             feelValued: {
                 question:
-                    'If I don\'t get support, I will not feel valued in society.',
+                    "If I don't get support, I will not feel valued in society.",
                 agree: false
             },
             family: {
                 question:
-                    'If I don\'t get support, I will not be able to keep my family together',
+                    "If I don't get support, I will not be able to keep my family together",
                 agree: false
             },
             more: {
-                question: 'Are there other ways that your wellbeing will be negatively affected if you do not recieve support? Please describe below.',
+                question:
+                    'Are there other ways that your wellbeing will be negatively affected if you do not recieve support? Please describe below.',
                 more: ''
             }
         },
         duty: {
             advocate: {
-                question: 'Yes, I would like to be considered for free support from an advocate.',
+                question:
+                    'Yes, I would like to be considered for free support from an advocate.',
                 agree: false
             },
             more: {
@@ -322,12 +323,11 @@ class App extends Component {
         });
     };
 
-
     handleChangeInput = (event, qs, section) => {
         const target = event.target;
         // console.log("target", target)
         const value = target.name === 'more' ? target.value : null;
-        console.log("value", value)
+        console.log('value', value);
         this.setState({
             [section]: {
                 ...this.state[section],
@@ -336,15 +336,20 @@ class App extends Component {
         });
     };
 
-
     handleSubmit = event => {
         event.preventDefault();
-        
+
         // const { value } = this.state;
         axios.post('/', this.state).then(result => {
             console.log(value);
         });
     };
+
+    // scroll = () => {
+    //     const attachToRoot = document.getElementById("root");
+    //     attachToRoot.innerHTML = variableLongText;
+    //     attachToRoot.scrollTop = 0;
+    // }
 
     render() {
         return (
@@ -377,6 +382,7 @@ class App extends Component {
                             )}
                         />
                         <Route path="/sorry" component={Sorry} />
+                        <Route path="/sorry-checks" component={SorryChecks} />
                         <Route
                             path="/contact"
                             render={props => (
@@ -396,6 +402,7 @@ class App extends Component {
                                     section="nutrition"
                                     handleChangeInput={this.handleChangeInput}
                                     toggleChange={this.toggleChange}
+                                  
                                 />
                             )}
                         />

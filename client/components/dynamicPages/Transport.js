@@ -52,7 +52,8 @@ function Transport(props) {
     });
 
     return (
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeaderForm>
                 <h1 className="h1__questions">
                     Making use of necessary facilities or services in the local

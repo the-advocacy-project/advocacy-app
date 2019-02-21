@@ -51,7 +51,8 @@ function Eligibility(props) {
     });
 
     return (
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeader />
 
             <div id="page-wrap" className="wrapper">
