@@ -58,7 +58,9 @@ function Relationships(props) {
                 <h1 className="h1__questions">
                     Developing and maintaining family or other personal
                     relationships
+                    <div className="clear margin50"></div>
                 </h1>
+                <div className="nav-containerForm--green" />
             </NavHeaderForm>
             <div id="page-wrap" className="wrapper">
                 <h2 className="margin50 h2__questions">

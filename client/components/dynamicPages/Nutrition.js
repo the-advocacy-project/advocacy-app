@@ -67,6 +67,7 @@ function Nutrition(props) {
                 <h1 className="h1__questions">
                     Managing and Maintaining Nutrition
                 </h1>
+                <div className="nav-containerForm--green" />
             </NavHeaderForm>
             {/* <h1 className="nutritionH1">Managing and Maintaining Nutrition</h1> */}
             <div id="page-wrap" className="wrapper">
