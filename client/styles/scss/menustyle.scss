@@ -1,3 +1,5 @@
+@import "./vars.scss";
+
 button {
     width: 104px;
     height: 38px;
@@ -13,19 +15,17 @@ button {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        // padding-top: 10%;
       }
 
    .menuList{
-          display: inline-flex;
-          justify-content: space-between;
-          padding-bottom: 5%;
-          display: inline-flex;
-          justify-content: end;
-          width: 100%;
+          // justify-content: space-between;
+          padding-bottom: 6%;
+          // display: inline-flex;
+          // justify-content: end;
+          // width: 100%;
           text-decoration: none;
-          color: #132F58;
-          border-bottom: 5px solid #7BBDA8;
+          color: $white;
+          border-bottom: 5px solid $light-green;
           &:last-child {
             border-bottom: none;
           }
@@ -34,11 +34,15 @@ button {
      svg {
         padding-right: 10%;
         padding-top: 2%;
+        height: 100px;
+        width: 100px;
      }
 
 .menuText {
-        font-size: 4em;
-        color: #132F58;
+        font-size: 3em;
+        color: $white;
         margin: 0;
-        padding-top: 5%;
+        width: 70%;
+        display: inline-block;
+        // padding-top: 5%;
     }
