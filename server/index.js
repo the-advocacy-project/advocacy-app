@@ -290,14 +290,14 @@ app.post('/', (req, res) => {
     
 
 
-  
-   
+ 
+
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
             user: 'theadvocacyfac@gmail.com',
-            pass: '2password$'
+            pass: process.env.PASSWORD
         }
     });
 
