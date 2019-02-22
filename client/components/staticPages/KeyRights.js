@@ -20,7 +20,7 @@ function KeyRights(){
                         <li>if the adult does, what those needs are</li>
                     </ul>
                     <p>For more information on this section:</p>
-                    <a href="http://www.legislation.gov.uk/ukpga/2014/23/section/9/enacted">http://www.legislation.gov.uk/ukpga/2014/23/section/9/enacted</a>
+                    <a href="http://www.legislation.gov.uk/ukpga/2014/23/section/9/enacted" className="wrap">http://www.legislation.gov.uk/ukpga/2014/23/section/9/enacted</a>
                     <br/>
                     <br/>
                     <li>The duty to provide support</li>
@@ -50,9 +50,14 @@ function KeyRights(){
                     The independent care act advocate also has a legal duty to assist the individual in challenging decisions made by the
                     local authority, if the individual wishes.
                     </p>
+                    <br/><br/>
+                    <br/><br/>
                     <h2>For more information:</h2>
-                    <a href="https://www.legislation.gov.uk/ukpga/2014/23/section/67">https://www.legislation.gov.uk/ukpga/2014/23/section/67</a>
+                    <br/><br/>
+                    <a href="https://www.legislation.gov.uk/ukpga/2014/23/section/67" className="wrap">https://www.legislation.gov.uk/ukpga/2014/23/section/67</a>
                 </ol>
+                <br/><br/>
+                <br/><br/>
             </div>
         </div>
     )
