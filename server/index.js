@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 app.use(
     bodyParser.urlencoded({
@@ -345,12 +346,11 @@ app.post('/', (req, res) => {
     // res.sendFile(path.join(__dirname + '/client/index.html'));
 });
 
-
-app.use(express.static(path.join(__dirname + '/../dist')));
+app.use(express.static('dist'));
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/../dist/index.html'));
 });
 
-const port = process.env.PORT || 3001;
+const port = 3001;
 app.listen(port, () => console.log('Listening on port 3001!'));
