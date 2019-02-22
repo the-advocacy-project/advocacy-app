@@ -20,7 +20,7 @@ function Help() {
                     The Advocacy Project has developed this app to help people
                     get the help they need from the
                     local authority.
-                </p>
+                </p><br/><br/>
                 <p>This app will help you:</p>
 
                 <ul className="help-list">
@@ -40,10 +40,7 @@ function Help() {
                     <li className="help-list margin50">
                         Secure the support you need if you are eligible
                     </li>
-                    <br />
                 </ul>
-                <br />
-                <br />
 
                 <p className="help-p">
                         The Care Act is about helping and protecting people aged 18

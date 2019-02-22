@@ -30,9 +30,12 @@ function CareAct(){
                         involvement in the assessment if required.</li>
                 </ul>
                 </p>
-                <h2>For more information:</h2>
-                <h3>The Social Care Institute for Excellence:</h3>
+                <h2>For more information:</h2> <br/><br/>
+                <p>The Social Care Institute for Excellence:</p>
                 <a href="https://www.scie.org.uk/care-act-2014/advocacy-services/commissioning-independent-advocacy/duties/independent-advocacy-care-act.asp">https://www.scie.org.uk/care-act-2014/advocacy-services/commissioning-independent-advocacy/duties/independent-advocacy-care-act.asp</a>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
             </div>
         </div>
     )

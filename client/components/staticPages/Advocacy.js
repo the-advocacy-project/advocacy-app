@@ -19,8 +19,11 @@ function Advocacy(props) {
                     <br/>
                     Advocacy promotes social inclusion, equality and social justice.
                     </p>
+                    <br/><br/>
                 <h2>For more information:</h2>
-                <a href="https://qualityadvocacy.org.uk/wp-content/uploads/2018/05/Code-of-Practice-1.pdf">https://qualityadvocacy.org.uk/wp-content/uploads/2018/05/Code-of-Practice-1.pdf</a>
+                <a href="https://qualityadvocacy.org.uk/wp-content/uploads/2018/05/Code-of-Practice-1.pdf" className="wrap">https://qualityadvocacy.org.uk/wp-content/uploads/2018/05/Code-of-Practice-1.pdf</a>
+                <br/><br/>
+                <br/><br/>
             </div>
         </div>
     );

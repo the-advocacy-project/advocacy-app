@@ -4,6 +4,11 @@ body {
   letter-spacing: 0.04em;
   font-size: 16px; }
 
+blockquote {
+  font-size: 3rem;
+  color: #00a06e;
+  margin: 0 10% 10% 10%; }
+
 .margin50 {
   margin-bottom: 50px; }
 
@@ -27,6 +32,10 @@ body {
 
 .wrapper__contact .people {
   top: 0; }
+
+.wrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word; }
 
 .img-top {
   margin-top: -50px; }
@@ -66,6 +75,9 @@ input[type='textarea'] {
   font-size: 2em;
   position: relative; }
 
+.contactInput {
+  font-size: 3em; }
+
 label {
   display: block;
   width: 90%;
@@ -74,7 +86,8 @@ label {
   font-size: 2em; }
 
 li {
-  font-size: 3rem; }
+  font-size: 3rem;
+  margin-bottom: 20px; }
 
 .input-align {
   width: 100%; }
@@ -103,6 +116,9 @@ li {
   font-size: 2.5rem;
   margin-top: 20px; }
 
+h2 {
+  font-size: 4rem; }
+
 .more__questions {
   border: 2px solid #132f58;
   display: block;
@@ -112,7 +128,8 @@ li {
 
 .checkboxText {
   grid-column: 1/5;
-  color: #202020; }
+  color: #202020;
+  margin-bottom: 1em; }
 
 .checkboxInput {
   display: grid;
@@ -144,7 +161,9 @@ ul li::before {
 
 a {
   color: #0080ba;
-  text-decoration: underline; }
+  text-decoration: underline;
+  font-size: 3rem;
+  margin-top: 50px; }
 
 .navButtons {
   margin-bottom: 150px; }
@@ -234,14 +253,3 @@ a {
   border-radius: 30px; }
 
 /****** END hack ******/
-@media only screen and (min-width: 900px) {
-  .wrapper {
-    width: 70%; }
-  h1 {
-    font-size: 4rem; }
-  h2 {
-    font-size: 2rem; }
-  p {
-    font-size: 2rem; }
-  ul {
-    font-size: 2rem; } }
