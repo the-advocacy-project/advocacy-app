@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button} from '../buttons/Button';
 import { Link } from 'react-router-dom';
-import NavHeader from '../navigation/NavHeaderForm';
+import NavHeader from '../navigation/NavHeader';
 import '../../styles/css/home.css';
 
 function Wellbeing(props) {
@@ -52,6 +52,9 @@ function Wellbeing(props) {
             <NavHeader />
             <div id="page-wrap" className="wrapper">
                 <h1>Your Wellbeing</h1>
+                <div className="progress-bar">
+                    <div className="progress-bar--blue95"></div>
+                </div>
                 <p>Wellbeing is all the things that are important to someone to have a good life, in particular:</p>
                 <ul>
                     <li>personal dignity (including treatment of the individual with respect)</li>
@@ -65,7 +68,7 @@ function Wellbeing(props) {
                     <li>the individual’s contribution to society.</li>
                 </ul>
                 <p>As part of your application for support and advocacy, the local authority will want to measure how much your wellbeing
-                    will be negatively affected if you do not receive support. Please select the statements relevant to you.
+                    will be negatively affected if you do not receive support. Please select the statements relevant to you. <br/><br/>
                 </p>
                 { displayWellbeing }
             </div>

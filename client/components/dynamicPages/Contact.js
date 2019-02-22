@@ -8,12 +8,13 @@ const Contact = props => {
 
     console.log("validation",props.validation.consentToAdvocacy.agree)
     const displayContact = Object.keys(props.info).map((qs, index) => {
-        if (qs === "email") {
-            return (
-                <div className="input-align margin50" key={`container-${index}`}>
-                    <p>{props.info[qs].question}</p>
+
+        return (
+            <div className="input-align margin50" key={`container-${index}`}>
+                <p>{props.info[qs].question}</p>
+                <div className="contactInput">
                     <input
-                        type="email"
+                        type="text"
                         key={`input-${index}`}
                         value={props.info[qs].more}
                         name="more"
@@ -23,21 +24,6 @@ const Contact = props => {
                         }}
                     />
                 </div>
-            );
-        }
-        return (
-            <div className="input-align margin50" key={`container-${index}`}>
-                <p>{props.info[qs].question}</p>
-                <input
-                    type="text"
-                    key={`input-${index}`}
-                    value={props.info[qs].more}
-                    name="more"
-                    onChange={event => {
-                        event.preventDefault();
-                        props.handleChangeInput(event, qs, props.section);
-                    }}
-                />
             </div>
         );
     });
@@ -53,6 +39,9 @@ const Contact = props => {
             <div>
                 <div id="page-wrap" className="wrapper wrapper__contact">
                     <img src={ houses }  className="people img-top" alt="line drawing of houses" ></img>
+                    <div className="progress-bar">
+                        <div className="progress-bar--blue"></div>
+                    </div>
                     <h1>Please enter your contact details:</h1>
                     {displayContact}
                 </div>

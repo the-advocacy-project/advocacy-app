@@ -54,8 +54,12 @@ function Toilet(props) {
             {window.scrollTo(0,0)}
             <NavHeaderForm>
                 <h1 className="h1__questions">Managing toilet needs</h1>
+                <div className="nav-containerForm--green" />
             </NavHeaderForm>
             <div id="page-wrap" className="wrapper">
+            <div className="progress-bar">
+                <div className="progress-bar--blue30"></div>
+            </div>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>

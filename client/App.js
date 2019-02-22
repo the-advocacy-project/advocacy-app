@@ -12,6 +12,7 @@ import Home from './components/staticPages/Home';
 import How from './components/staticPages/How';
 import KeyRights from './components/staticPages/KeyRights';
 import Sorry from './components/staticPages/Sorry';
+import SorryContact from './components/staticPages/SorryContact';
 import SorryChecks from './components/staticPages/SorryChecks';
 import Support from './components/staticPages/Support';
 import Advocacy from './components/staticPages/Advocacy';
@@ -384,6 +385,7 @@ class App extends Component {
                         />
                         <Route path="/sorry" component={Sorry} />
                         <Route path="/sorry-checks" component={SorryChecks} />
+                        <Route path="/sorry-contact" component={SorryContact} />
                         <Route
                             path="/contact"
                             render={props => (
@@ -395,7 +397,11 @@ class App extends Component {
                                 />
                             )}
                         />
-                        <Route path="/begin" component={Begin} />
+                        <Route path="/begin" render={props => (
+                            <Begin 
+                                validation={this.state.contact}
+                            />  
+                        )} />
                         <Route
                             path="/nutrition"
                             render={props => (

@@ -7,11 +7,13 @@
   padding-top: 20%; }
 
 .tag-line1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #0080ba;
   text-align: left;
   position: relative;
-  top: -132px; }
+  top: -132px;
+  padding-bottom: 30px;
+  margin-top: 100px; }
 
 .people {
   width: 100%;

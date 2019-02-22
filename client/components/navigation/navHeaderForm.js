@@ -8,8 +8,9 @@ const NavHeaderForm = props => (
     <BurgerMenu pageWrapId={"page-wrap"} outerContainerId={"App"} />
     <div className="nav-containerForm">
         {props.children}
-        <div className="nav-containerForm--green" />
         <div className="nav-containerForm--white" />
+
+
     </div>
     </div>
 );

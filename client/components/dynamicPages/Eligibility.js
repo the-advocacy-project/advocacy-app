@@ -57,6 +57,9 @@ function Eligibility(props) {
 
             <div id="page-wrap" className="wrapper">
                 <h1>Eligibility</h1>
+                <div className="progress-bar">
+                    <div className="progress-bar--blue90"></div>
+                </div>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>
