@@ -288,10 +288,7 @@ app.post('/', (req, res) => {
         }
     })
     
-
-
- 
-
+    console.log("passwowrd",process.env.PASSWORD)
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
