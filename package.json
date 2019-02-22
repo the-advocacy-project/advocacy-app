@@ -8,7 +8,7 @@
         "start-watch": "nodemon server/index.js",
         "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
         "build": "parcel build ./client/index.html",
-        "start": "npm run build && node server/index.js",
+        "start": "NODE_ENV=production npm run build && node server/index.js",
         "test": "echo \"Error: no test specified\" && exit 1",
         "scss": "node-sass --watch client/styles/scss -o client/styles/css"
     },
