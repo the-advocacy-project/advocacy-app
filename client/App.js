@@ -328,7 +328,7 @@ class App extends Component {
 
     handleChangeInput = (event, qs, section) => {
         const target = event.target;
-        // console.log("target", target)
+
         const value = target.name === 'more' ? target.value : null;
         console.log('value', value);
         this.setState({
