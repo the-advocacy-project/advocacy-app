@@ -228,7 +228,7 @@ app.post('/', (req, res) => {
         service: 'gmail',
         auth: {
             user: 'theadvocacyfac@gmail.com',
-            pass: '2password$'
+            pass: process.env.PASSWORD
         }
     });
 
