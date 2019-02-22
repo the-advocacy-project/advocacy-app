@@ -62,6 +62,9 @@ function Transport(props) {
                 <div className="nav-containerForm--green" />
             </NavHeaderForm>
             <div id="page-wrap" className="wrapper">
+            <div className="progress-bar">
+                <div className="progress-bar--blue80"></div>
+            </div>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>

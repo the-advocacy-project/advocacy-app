@@ -70,6 +70,9 @@ function Duty(props){
             {window.scrollTo(0,0)}
             <NavHeader />
             <div id="page-wrap" className="wrapper">
+            <div className="progress-bar">
+                <div className="progress-bar--blue100"></div>
+            </div>
                 <h1>Duty to provide an Advocate</h1>
                 <p>The Care Act puts people in control of their care and support.
                     It gives people the right to be involved.

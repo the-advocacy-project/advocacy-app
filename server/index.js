@@ -228,7 +228,7 @@ app.post('/', (req, res) => {
         service: 'gmail',
         auth: {
             user: 'theadvocacyfac@gmail.com',
-            pass: '2password$'
+            pass: process.env.PASSWORD
         }
     });
 
@@ -351,4 +351,5 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/../dist/index.html'));
 });
 
-app.listen(3001, () => console.log('Listening on port 3001!'));
+const port = process.env.PORT || 3001;
+app.listen(port, () => console.log('Listening on port 3001!'));

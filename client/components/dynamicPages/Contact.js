@@ -8,7 +8,7 @@ const Contact = props => {
 
     console.log("validation",props.validation.consentToAdvocacy.agree)
     const displayContact = Object.keys(props.info).map((qs, index) => {
-     
+
         return (
             <div className="input-align margin50" key={`container-${index}`}>
                 <p>{props.info[qs].question}</p>
@@ -37,6 +37,9 @@ const Contact = props => {
             <div>
                 <div id="page-wrap" className="wrapper wrapper__contact">
                     <img src={ houses }  className="people img-top" alt="line drawing of houses" ></img>
+                    <div className="progress-bar">
+                        <div className="progress-bar--blue"></div>
+                    </div>
                     <h1>Please enter your contact details:</h1>
                     {displayContact}
                 </div>

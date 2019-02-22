@@ -52,6 +52,9 @@ function Wellbeing(props) {
             <NavHeader />
             <div id="page-wrap" className="wrapper">
                 <h1>Your Wellbeing</h1>
+                <div className="progress-bar">
+                    <div className="progress-bar--blue95"></div>
+                </div>
                 <p>Wellbeing is all the things that are important to someone to have a good life, in particular:</p>
                 <ul>
                     <li>personal dignity (including treatment of the individual with respect)</li>
