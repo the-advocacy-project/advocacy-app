@@ -7,6 +7,12 @@ body {
     font-size: 16px;
 }
 
+blockquote {
+    font-size: 3rem;
+    color: $green;
+    margin: 0 10% 10% 10%;
+}
+
 .margin50 {
     margin-bottom: 50px;
 }
@@ -40,6 +46,11 @@ body {
     }
 }
 
+.wrap{
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
 .img-top {
     margin-top: -50px;
 }
@@ -50,6 +61,7 @@ h1 {
     position: relative;
     padding-top: 20px;
 }
+
 
 p {
     font-size: 3rem;
@@ -84,6 +96,10 @@ input[type='textarea'] {
     position: relative;
 }
 
+.contactInput {
+    font-size: 3em;
+}
+
 label {
     display: block;
     width: 90%;
@@ -94,6 +110,7 @@ label {
 
 li {
     font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .input-align {
@@ -131,6 +148,10 @@ li {
     margin-top: 20px;
 }
 
+h2 {
+    font-size: 4rem;
+}
+
 .more__questions {
     border: 2px solid $dark-blue;
     display: block;
@@ -141,6 +162,7 @@ li {
 .checkboxText {
     grid-column: 1/5;
     color: $black;
+    margin-bottom: 1em;
 }
 .checkboxInput {
     display: grid;
@@ -171,6 +193,8 @@ ul li::before {
 a {
     color: $light-blue;
     text-decoration: underline;
+    font-size: 3rem;
+    margin-top: 50px;
 }
 
 .navButtons {
@@ -275,24 +299,24 @@ a {
 
 /****** END hack ******/
 
-@media only screen and (min-width: 900px) {
-    .wrapper {
-        width: 70%;
-    }
+// @media only screen and (min-width: 900px) {
+//     .wrapper {
+//         width: 70%;
+//     }
 
-    h1 {
-        font-size: 4rem;
-    }
+//     h1 {
+//         font-size: 4rem;
+//     }
 
-    h2 {
-        font-size: 2rem;
-    }
+//     h2 {
+//         font-size: 2rem;
+//     }
 
-    p {
-        font-size: 2rem;
-    }
+//     p {
+//         font-size: 2rem;
+//     }
 
-    ul {
-        font-size: 2rem;
-    }
-}
+//     ul {
+//         font-size: 2rem;
+//     }
+// }
