@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {Button} from "../buttons/Button";
 
-import {Home, About, Care, Eligibility, Key, Application, Advocacy} from '../../images/MenuImages';
+import {Home, About, Care, Support, Key, Application, Advocacy} from '../../images/MenuImages';
 
 import "../../styles/css/menustyle.css";
 
@@ -13,7 +13,7 @@ function Menu() {
 
     return (
         <div className="wrapper_menu" className="menuList">
-        <NavHeader />
+            <NavHeader />
             <Link to={'./'} >
                 <Home />
                 <p className="menuText">Home</p>
@@ -27,8 +27,8 @@ function Menu() {
                 <p className="menuText">The Care Act</p>
 
             </Link>
-            <Link to={'./eligibility'} className="menuList">
-                <Eligibility />
+            <Link to={'./support'} className="menuList">
+                <Support />
                 <p className="menuText">Eligibility Criteria</p>
             </Link>
             <Link to={'./key-rights'} className="menuList">

@@ -2,7 +2,7 @@ import React from 'react';
 import { slide as Menu } from "react-burger-menu";
 import { Link } from 'react-router-dom';
 import {Button} from "../buttons/Button";
-import {Home, About, Care, Eligibility, Key, Application, Advocacy} from '../../images/MenuImages';
+import {Home, About, Care, Support, Key, Application, Advocacy} from '../../images/MenuImages';
 
 
 import "../../styles/css/menustyle.css";
@@ -23,8 +23,8 @@ export default props => {
                 <p className="menuText">The Care Act</p>
 
             </Link>
-            <Link to={'./eligibility'} className="menu-item menuList">
-                <Eligibility />
+            <Link to={'./support'} className="menu-item menuList">
+                <Support />
                 <p className="menuText">Eligibility Criteria</p>
             </Link>
             <Link to={'./key-rights'} className="menu-item menuList">

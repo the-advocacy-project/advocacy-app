@@ -2,10 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {Button} from "../buttons/Button";
 
-import {Home, About, Care, Eligibility, Key, Application, Advocacy} from '../../images/MenuImages';
+import {Home, About, Care, Support, Key, Application, Advocacy} from '../../images/MenuImages';
 
 import "../../styles/css/menustyle.css";
-
 
 function Menu() {
 
@@ -27,19 +26,19 @@ function Menu() {
                 <p className="menuText">The Care Act</p>
 
             </Link>
-            <Link to={'./eligibility'} className="menu-item menuList">
-                <Eligibility />
+            <Link to={'./support'} className="menuList">
+                <Support />
                 <p className="menuText">Eligibility Criteria</p>
             </Link>
-            <Link to={'./key-rights'} className="menu-item menuList">
+            <Link to={'./key-rights'} className="menuList">
                 <Key />
                 <p className="menuText">Key Rights</p>
             </Link>
-            <Link to={'./initial-checks'} className="menu-item menuList" >
+            <Link to={'./initial-checks'} className="menuList" >
                 <Application />
                 <p className="menuText">Initial Checks</p>
             </Link>
-            <Link to={'./advocacy'} className="menu-item menuList">
+            <Link to={'./advocacy'} className="menuList">
                 <Advocacy />
                 <p className="menuText">Your Application</p>
             </Link>

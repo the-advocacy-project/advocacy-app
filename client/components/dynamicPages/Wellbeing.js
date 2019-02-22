@@ -68,7 +68,7 @@ function Wellbeing(props) {
                     <li>the individual’s contribution to society.</li>
                 </ul>
                 <p>As part of your application for support and advocacy, the local authority will want to measure how much your wellbeing
-                    will be negatively affected if you do not receive support. Please select the statements relevant to you.
+                    will be negatively affected if you do not receive support. Please select the statements relevant to you. <br/><br/>
                 </p>
                 { displayWellbeing }
             </div>
