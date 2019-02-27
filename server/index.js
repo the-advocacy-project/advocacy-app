@@ -348,10 +348,13 @@ app.post('/', (req, res) => {
     // res.sendFile(path.join(__dirname + '/client/index.html'));
 });
 
-app.use(express.static('dist'));
+if (process.env.NODE_ENV === "production") {
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/../dist/index.html'));
-});
+    app.use(express.static(path.join(__dirname, '../dist')));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '../dist', 'index.html'));
+    });
+}
 
 app.listen(port, () => console.log('Listening on port 3001!'));
