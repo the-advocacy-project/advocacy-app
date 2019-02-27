@@ -6,16 +6,17 @@ import {Button} from '../buttons/Button';
 
 function How(){
     return(
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeader />
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1 className="how-h1">How this works</h1>
                 <div className="how-list">
                     <ul>
                         <li>Answer a set of questions about what you can and cannot do</li>
                         <br/>
                         <br/>
-                        <li>With your consent, the app will send this information to the
+                        <li>With your consent, the Advocacy Project will send this information to the
                     Adult Social Care team at your local authority</li>
                         <br/>
                         <br/>

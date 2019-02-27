@@ -4,20 +4,19 @@ import '../../styles/css/how.css';
 import { Link } from 'react-router-dom';
 import {Button} from '../buttons/Button';
 
-function Sorry(){
+function SorryContact(){
     return(
         <div id="outer-container">
-            {window.scrollTo(0,0)}
             <NavHeader />
-            <div id="page-wrap" className="wrapper">
+            <div className="wrapper">
                 <h1>Sorry!</h1>
-                <p>In order to continue with your application, we need your consent to share your
-                    information with the Hackney Council and with the Advocacy Project. <br/><br/>
-                    Please click the back button and revise your consent if you would like to continue.</p>
+                <p>You need to provide us with your name and one way to contact you. <br/>
+                <br/>
+                Please go back and update your contact details.</p>
 
 
                 <div className="navButtons">
-                    <Link to={'./consent'} >
+                    <Link to={'./contact'} >
                         <Button
                             text='Back'
                             type='submit'
@@ -30,4 +29,4 @@ function Sorry(){
     )
 }
 
-export default Sorry;
+export default SorryContact;

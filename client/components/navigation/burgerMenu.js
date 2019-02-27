@@ -1,50 +1,45 @@
 import React from 'react';
+import { slide as Menu } from "react-burger-menu";
 import { Link } from 'react-router-dom';
 import {Button} from "../buttons/Button";
-
 import {Home, About, Care, Support, Key, Application, Advocacy} from '../../images/MenuImages';
+
 
 import "../../styles/css/menustyle.css";
 
-function Menu() {
-
-
-
+export default props => {
     return (
-        <div className="wrapper_menu" className="menuList">
-        <NavHeader />
-            <Link to={'./'} >
+        <Menu right className="wrapper_menu" className="menuList" {...props}>
+            <Link to={'./'} className="menu-item menuList">
                 <Home />
                 <p className="menuText">Home</p>
             </Link>
-            <Link to={'./about'} className="menuList">
+            <Link to={'./about'} className="menu-item menuList">
                 <About />
                 <p className="menuText">About</p>
             </Link>
-            <Link to={'./care-act'} className="menuList" >
+            <Link to={'./care-act'} className="menu-item menuList" >
                 <Care />
                 <p className="menuText">The Care Act</p>
 
             </Link>
-            <Link to={'./support'} className="menuList">
+            <Link to={'./support'} className="menu-item menuList">
                 <Support />
                 <p className="menuText">Eligibility Criteria</p>
             </Link>
-            <Link to={'./key-rights'} className="menuList">
+            <Link to={'./key-rights'} className="menu-item menuList">
                 <Key />
                 <p className="menuText">Key Rights</p>
             </Link>
-            <Link to={'./initial-checks'} className="menuList" >
+            <Link to={'./initial-checks'} className="menu-item menuList" >
                 <Application />
-                <p className="menuText">Initial Checks</p>
-            </Link>
-            <Link to={'./advocacy'} className="menuList">
-                <Advocacy />
                 <p className="menuText">Your Application</p>
             </Link>
+            <Link to={'./advocacy'} className="menu-item menuList">
+                <Advocacy />
+                <p className="menuText">Advocacy</p>
+            </Link>
 
-        </div>
+        </Menu>
     );
-}
-
-export default Menu;
+};

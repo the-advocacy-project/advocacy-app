@@ -5,9 +5,8 @@ import NavHeader from '../navigation/navHeader';
 import '../../styles/css/home.css';
 
 function Eligibility(props) {
-    const displayNutrition = Object.keys(props.info).map((qs, i) => {
+    const  displayEligibility  = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
-            console.log('I am textarea');
             return (
                 <div>
                     <label>
@@ -17,26 +16,21 @@ function Eligibility(props) {
                         injury.
                     </label>
                     <div className="textAreaInput">
-                        <p className="textAreaText">Tell us more</p>
                         <textarea
+                            placeholder="Tell us more..."
                             className="textArea more__questions"
                             type="text"
                             name="more"
                             key={i}
-                            onChange={event =>
-                                props.handleChangeInput(
-                                    event,
-                                    qs,
-                                    props.section
-                                )
-                            }
+                            onChange={event => {
+                                event.preventDefault();
+                                props.handleChangeInput(event, qs, props.section)
+                            }}
                         />
                     </div>
                 </div>
             );
         } else {
-            console.log('I am a checkbox');
-            console.log('checked: ', props.info[qs].agree);
             return (
                 <div className="checkboxInput">
                     <h2 className="checkboxText">{props.info[qs].question}</h2>
@@ -57,15 +51,19 @@ function Eligibility(props) {
     });
 
     return (
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeader />
 
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1>Eligibility</h1>
+                <div className="progress-bar">
+                    <div className="progress-bar--blue90"></div>
+                </div>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>
-                {displayNutrition}
+                { displayEligibility }
                 <div className="margin50 clear" />
             </div>
             <div className="navButtons">

@@ -10,3 +10,66 @@
 
 p {
   margin: 0; }
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #f9f9f9;
+  transition: color 0.2s; }
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  right: 36px;
+  top: 36px; }
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #f9f9f9; }
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 100px;
+  width: 100px; }
+
+.bm-cross {
+  background: #f9f9f9; }
+
+.bm-cross-button {
+  position: absolute;
+  width: 100px !important;
+  height: 100px !important;
+  right: 60px !important;
+  top: 20px !important; }
+  .bm-cross-button span {
+    right: 10px !important; }
+    .bm-cross-button span .bm-cross {
+      height: 120px !important;
+      width: 16px !important; }
+
+/* General sidebar styles */
+.bm-menu {
+  background: #00a06e;
+  padding: 5.5em 1.5em 0;
+  font-size: 1.15em;
+  width: 100%; }
+
+.bm-menu-wrap {
+  width: 80% !important; }
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #00a06e; }
+
+/* Wrapper for item list */
+.bm-item-list {
+  margin-top: 70px; }
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3); }

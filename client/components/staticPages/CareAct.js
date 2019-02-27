@@ -4,9 +4,10 @@ import '../../styles/css/home.css';
 
 function CareAct(){
     return(
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeader />
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1>The Care Act</h1>
                 <blockquote>
                 The Care Act puts people in control of their care and support.
@@ -25,11 +26,16 @@ function CareAct(){
                     <li>involve the person in the assessment and, where appropriate, their carer or someone
                         else they nominate provide access to an independent advocate to support the person’s
                         involvement in the assessment if required.</li>
+                    <li>provide access to an independent advocate to support the person’s
+                        involvement in the assessment if required.</li>
                 </ul>
                 </p>
-                <h2>For more information:</h2>
-                <h3>The Social Care Institute for Excellence:</h3>
+                <h2>For more information:</h2> <br/><br/>
+                <p>The Social Care Institute for Excellence:</p>
                 <a href="https://www.scie.org.uk/care-act-2014/advocacy-services/commissioning-independent-advocacy/duties/independent-advocacy-care-act.asp">https://www.scie.org.uk/care-act-2014/advocacy-services/commissioning-independent-advocacy/duties/independent-advocacy-care-act.asp</a>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
             </div>
         </div>
     )

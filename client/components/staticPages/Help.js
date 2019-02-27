@@ -7,24 +7,25 @@ import '../../styles/css/home.css';
 
 function Help() {
     return (
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeader className="nav-container"/>
 
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
                 <h1 className="help-h1">
                     How we <br />
                     aim to help
                 </h1>
                 <p>
                     The Advocacy Project has developed this app to help people
-                    with the process of getting the help they need from the
+                    get the help they need from the
                     local authority.
-                </p>
+                </p><br/><br/>
                 <p>This app will help you:</p>
 
                 <ul className="help-list">
                     <li className="help-list margin50">
-                        Identify if you have a right to a Care Act assessment by
+                        Outline your right to a Care Act assessment by
                         the local authority
                     </li>
                     <li className="help-list margin50">
@@ -39,10 +40,7 @@ function Help() {
                     <li className="help-list margin50">
                         Secure the support you need if you are eligible
                     </li>
-                    <br />
                 </ul>
-                <br />
-                <br />
 
                 <p className="help-p">
                         The Care Act is about helping and protecting people aged 18

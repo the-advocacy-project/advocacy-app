@@ -13,24 +13,22 @@ button {
   flex-direction: column; }
 
 .menuList {
-  display: inline-flex;
-  justify-content: space-between;
-  padding-bottom: 5%;
-  display: inline-flex;
-  justify-content: end;
-  width: 100%;
+  padding-bottom: 6%;
   text-decoration: none;
-  color: #132F58;
+  color: #f9f9f9;
   border-bottom: 5px solid #7BBDA8; }
   .menuList:last-child {
     border-bottom: none; }
 
 svg {
   padding-right: 10%;
-  padding-top: 2%; }
+  padding-top: 2%;
+  height: 100px;
+  width: 100px; }
 
 .menuText {
-  font-size: 4em;
-  color: #132F58;
+  font-size: 1em;
+  color: #f9f9f9;
   margin: 0;
-  padding-top: 5%; }
+  width: 70%;
+  display: inline-block; }

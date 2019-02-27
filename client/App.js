@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 // STATIC PAGE IMPORTS
@@ -12,6 +12,8 @@ import Home from './components/staticPages/Home';
 import How from './components/staticPages/How';
 import KeyRights from './components/staticPages/KeyRights';
 import Sorry from './components/staticPages/Sorry';
+import SorryContact from './components/staticPages/SorryContact';
+import SorryChecks from './components/staticPages/SorryChecks';
 import Support from './components/staticPages/Support';
 import Advocacy from './components/staticPages/Advocacy';
 import Menu from './components/staticPages/Menu';
@@ -51,37 +53,37 @@ class App extends Component {
         consent: {
             consentToCouncil: {
                 question:
-                    'I consent to sharing my information and contact details with the Hackney Council to see if I am eligible for a Care Act assessment',
-                agree: false
+                    'I consent to sharing my information and contact details with Hackney Council to see if I am eligible for a Care Act assessment',
+                agree: true
             },
             consentToAdvocacy: {
                 question:
-                    'I consent to sharing my information and contact details with the Advocacy Project to get continued support.',
-                agree: false
+                    'I consent to sharing my information and contact details with us, the Advocacy Project, to get continued support',
+                agree: true
             },
             sendToEmail: {
-                question: 'Send to me via email',
+                question: 'Send a copy of my application to my email',
                 agree: false
             }
         },
         contact: {
-            name: {
+            contactData1: {
                 question: 'Full name',
                 more: ''
             },
-            address: {
+            contactData2: {
                 question: 'Address',
                 more: ''
             },
-            postCode: {
+            contactData3: {
                 question: 'Post code',
                 more: ''
             },
-            email: {
+            contactData4: {
                 question: 'Email',
                 more: ''
             },
-            phoneNumber: {
+            contactData5: {
                 question: 'Phone number',
                 more: ''
             }
@@ -96,7 +98,9 @@ class App extends Component {
                 question: 'Do you need help maintaining a balanced diet?',
                 agree: false
             },
-            more: ''
+            more: {
+                more: ''
+            }
         },
         hygiene: {
             toiletries: {
@@ -158,8 +162,7 @@ class App extends Component {
                 agree: false
             },
             usingKitchen: {
-                question:
-                    'Do you need help to help to use your cooker or heater?',
+                question: 'Do you need help to use your cooker or heater?',
                 agree: false
             },
             more: ''
@@ -257,63 +260,64 @@ class App extends Component {
         },
         wellbeing: {
             safe: {
-                question:
-                    'If you don’t get support to do the above will you feel safe?',
-                more: ''
+                question: "If I don't get support, I will not feel safe.",
+                agree: false
             },
             relaxed: {
-                question:
-                    'If you don’t get support to do the above will you feel safe?',
-                more: ''
+                question: "If I don't get support, I will not feel relaxed.",
+                agree: false
             },
             happy: {
-                question:
-                    'If you don’t get support to do the above will you feel happy',
-                more: ''
+                question: "If I don't get support, I will not feel happy.",
+                agree: false
             },
             friends: {
                 question:
-                    'If you don’t get support to do the above will you be able to see your friends',
-                more: ''
+                    "If I don't get support, I will not be able to see my friends.",
+                agree: false
             },
             feelValued: {
                 question:
-                    'If you don’t get support to do the above will you feel valued in society',
-                more: ''
+                    "If I don't get support, I will not feel valued in society.",
+                agree: false
             },
             family: {
                 question:
-                    'If you don’t get support to do the above will you be able to keep you family together',
-                more: ''
+                    "If I don't get support, I will not be able to keep my family together",
+                agree: false
             },
-            other: {
-                question: 'Other: (please state below)',
+            more: {
+                question:
+                    'Are there other ways that your wellbeing will be negatively affected if you do not recieve support? Please describe below.',
                 more: ''
             }
         },
         duty: {
             advocate: {
-                question: 'Would you like free support from an advocate?',
+                question:
+                    'Yes, I would like to be considered for free support from an advocate.',
                 agree: false
             },
-            communicationAdvocate: {
+            more: {
                 question:
-                    'Is there anything you want to tell the advocate about your communication needs?',
+                    'Is there anything that you want to tell the advocate about your communication needs?',
                 more: ''
             },
-            communicationCouncil: {
+            more2: {
                 question:
-                    'Is there anything you want the local authority to know about your communication needs?',
+                    'Is there anything that you want the Local Authority to know about your communication needs?',
                 more: ''
             }
         }
     };
 
     toggleChange = (event, qs, section) => {
+        console.log('qs is :', qs);
+        console.log('section is: ', section);
         const target = event.target;
         const value =
             target.type === 'checkbox' ? target.checked : target.value;
-        const newSection = { ...this.state[section][qs], agree: value };
+        // const newSection = { ...this.state[section][qs], agree: value };
         this.setState({
             [section]: {
                 ...this.state[section],
@@ -322,22 +326,38 @@ class App extends Component {
         });
     };
 
-    handleChangeInput = event => {
+    handleChangeInput = (event, qs, section) => {
         const target = event.target;
-        const value = target.type === 'text' ? null : target.value;
-        // let value = event.target.value;
+
+        const value = target.name === 'more' ? target.value : null;
+        console.log('value', value);
         this.setState({
-            [target.name]: value
+            [section]: {
+                ...this.state[section],
+                [qs]: { ...this.state[section][qs], more: value }
+            }
+        });
+    };
+
+    handleRoute = event => {
+        const target = event.target;
+        this.setState({
+            complete: { redirect: true }
         });
     };
 
     handleSubmit = event => {
-        event.preventDefault();
-        // const { value } = this.state;
+        // event.preventDefault();
         axios.post('/', this.state).then(result => {
-            console.log(value);
+            console.log(result);
         });
     };
+
+    // scroll = () => {
+    //     const attachToRoot = document.getElementById("root");
+    //     attachToRoot.innerHTML = variableLongText;
+    //     attachToRoot.scrollTop = 0;
+    // }
 
     render() {
         return (
@@ -349,7 +369,7 @@ class App extends Component {
                         <Route path="/how" component={How} />
                         <Route
                             path="/initial-checks"
-                            component={props => (
+                            render={props => (
                                 <InitialChecks
                                     info={this.state.initialChecks}
                                     section="initialChecks"
@@ -360,9 +380,10 @@ class App extends Component {
                         />
                         <Route
                             path="/consent"
-                            component={props => (
+                            render={props => (
                                 <Consent
                                     info={this.state.consent}
+                                    validation={this.state.initialChecks}
                                     section="consent"
                                     handleChangeInput={this.handleChangeInput}
                                     toggleChange={this.toggleChange}
@@ -370,20 +391,28 @@ class App extends Component {
                             )}
                         />
                         <Route path="/sorry" component={Sorry} />
+                        <Route path="/sorry-checks" component={SorryChecks} />
+                        <Route path="/sorry-contact" component={SorryContact} />
                         <Route
                             path="/contact"
-                            component={props => (
+                            render={props => (
                                 <Contact
                                     info={this.state.contact}
+                                    validation={this.state.consent}
                                     section="contact"
                                     handleChangeInput={this.handleChangeInput}
                                 />
                             )}
                         />
-                        <Route path="/begin" component={Begin} />
+                        <Route
+                            path="/begin"
+                            render={props => (
+                                <Begin validation={this.state.contact} />
+                            )}
+                        />
                         <Route
                             path="/nutrition"
-                            component={props => (
+                            render={props => (
                                 <Nutrition
                                     info={this.state.nutrition}
                                     section="nutrition"
@@ -394,7 +423,7 @@ class App extends Component {
                         />
                         <Route
                             path="/hygiene"
-                            component={props => (
+                            render={props => (
                                 <Hygiene
                                     info={this.state.hygiene}
                                     section="hygiene"
@@ -405,7 +434,7 @@ class App extends Component {
                         />
                         <Route
                             path="/toilet"
-                            component={props => (
+                            render={props => (
                                 <Toilet
                                     info={this.state.toilet}
                                     section="toilet"
@@ -416,7 +445,7 @@ class App extends Component {
                         />
                         <Route
                             path="/clothing"
-                            component={props => (
+                            render={props => (
                                 <Clothing
                                     info={this.state.clothing}
                                     section="clothing"
@@ -427,7 +456,7 @@ class App extends Component {
                         />
                         <Route
                             path="/safety"
-                            component={props => (
+                            render={props => (
                                 <Safety
                                     info={this.state.safety}
                                     section="safety"
@@ -438,7 +467,7 @@ class App extends Component {
                         />
                         <Route
                             path="/environment"
-                            component={props => (
+                            render={props => (
                                 <Environment
                                     info={this.state.environment}
                                     section="environment"
@@ -449,7 +478,7 @@ class App extends Component {
                         />
                         <Route
                             path="/relationships"
-                            component={props => (
+                            render={props => (
                                 <Relationships
                                     info={this.state.relationships}
                                     section="relationships"
@@ -460,7 +489,7 @@ class App extends Component {
                         />
                         <Route
                             path="/work"
-                            component={props => (
+                            render={props => (
                                 <Work
                                     info={this.state.work}
                                     section="work"
@@ -471,7 +500,7 @@ class App extends Component {
                         />
                         <Route
                             path="/transport"
-                            component={props => (
+                            render={props => (
                                 <Transport
                                     info={this.state.transport}
                                     section="transport"
@@ -482,7 +511,7 @@ class App extends Component {
                         />
                         <Route
                             path="/responsibilites"
-                            component={props => (
+                            render={props => (
                                 <Responsibilities
                                     info={this.state.responsibilities}
                                     section="responsibilities"
@@ -493,7 +522,7 @@ class App extends Component {
                         />
                         <Route
                             path="/eligibility"
-                            component={props => (
+                            render={props => (
                                 <Eligibility
                                     info={this.state.eligibility}
                                     section="eligibility"
@@ -504,7 +533,7 @@ class App extends Component {
                         />
                         <Route
                             path="/wellbeing"
-                            component={props => (
+                            render={props => (
                                 <Wellbeing
                                     info={this.state.wellbeing}
                                     section="wellbeing"
@@ -515,7 +544,7 @@ class App extends Component {
                         />
                         <Route
                             path="/duty"
-                            component={props => (
+                            render={props => (
                                 <Duty
                                     info={this.state.duty}
                                     section="duty"
@@ -526,7 +555,7 @@ class App extends Component {
                         />
                         <Route
                             path="/overview"
-                            component={props => (
+                            render={props => (
                                 <Overview
                                     info={this.state}
                                     section="overview"
@@ -537,12 +566,14 @@ class App extends Component {
                         />
                         <Route
                             path="/complete"
-                            component={props => (
+                            render={props => (
                                 <Complete
                                     info={this.state.complete}
                                     section="complete"
                                     handleChangeInput={this.handleChangeInput}
                                     toggleChange={this.toggleChange}
+                                    handleRoute={this.handleRoute}
+                                    handleSubmit={this.handleSubmit}
                                 />
                             )}
                         />

@@ -6,13 +6,14 @@ import {Home, About, Care, Support, Key, Application, Advocacy} from '../../imag
 
 import "../../styles/css/menustyle.css";
 
+
 function Menu() {
 
 
 
     return (
         <div className="wrapper_menu" className="menuList">
-        <NavHeader />
+            <NavHeader />
             <Link to={'./'} >
                 <Home />
                 <p className="menuText">Home</p>

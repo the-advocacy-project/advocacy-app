@@ -4,6 +4,11 @@ body {
   letter-spacing: 0.04em;
   font-size: 16px; }
 
+blockquote {
+  font-size: 3rem;
+  color: #00a06e;
+  margin: 0 10% 10% 10%; }
+
 .margin50 {
   margin-bottom: 50px; }
 
@@ -27,6 +32,10 @@ body {
 
 .wrapper__contact .people {
   top: 0; }
+
+.wrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word; }
 
 .img-top {
   margin-top: -50px; }
@@ -58,12 +67,16 @@ input[type='textarea'] {
   clear: both;
   margin: 52px auto 0;
   width: 100%;
-  padding: 22px 10px; }
+  padding: 22px 10px;
+  font-size: 3rem; }
 
 .textAreaText {
   text-align: center;
   font-size: 2em;
   position: relative; }
+
+.contactInput {
+  font-size: 3em; }
 
 label {
   display: block;
@@ -73,7 +86,8 @@ label {
   font-size: 2em; }
 
 li {
-  font-size: 3rem; }
+  font-size: 3rem;
+  margin-bottom: 20px; }
 
 .input-align {
   width: 100%; }
@@ -99,7 +113,11 @@ li {
   color: #202020;
   text-align: center;
   font-weight: 900;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  margin-top: 20px; }
+
+h2 {
+  font-size: 4rem; }
 
 .more__questions {
   border: 2px solid #132f58;
@@ -110,7 +128,8 @@ li {
 
 .checkboxText {
   grid-column: 1/5;
-  color: #202020; }
+  color: #202020;
+  margin-bottom: 1em; }
 
 .checkboxInput {
   display: grid;
@@ -142,24 +161,95 @@ ul li::before {
 
 a {
   color: #0080ba;
-  text-decoration: underline; }
+  text-decoration: underline;
+  font-size: 3rem;
+  margin-top: 50px; }
 
 .navButtons {
   margin-bottom: 150px; }
 
-@media only screen and (min-width: 1024px) {
-  .nav-container {
-    background-color: #00a06e;
-    height: 50px;
-    padding-top: 55px;
-    width: 100%; }
-    .nav-container--white {
-      background-color: #f9f9f9;
-      height: 55px;
-      border-top-right-radius: 100px; }
-  h1 {
-    font-size: 5rem; }
-  p {
-    font-size: 2rem; }
-  ul {
-    font-size: 2rem; } }
+/**** Progress Bar Hack ****/
+.progress-bar {
+  background-color: #E5E5E5;
+  border-radius: 30px;
+  margin-bottom: 50px; }
+
+.progress-bar--blue10 {
+  background-color: #0080ba;
+  height: 24px;
+  width: 10%;
+  border-radius: 30px; }
+
+.progress-bar--blue20 {
+  background-color: #0080ba;
+  height: 24px;
+  width: 20%;
+  border-radius: 30px; }
+
+.progress-bar--blue30 {
+  background-color: #0080ba;
+  height: 24px;
+  width: 30%;
+  border-radius: 30px; }
+
+.progress-bar--blue40 {
+  background-color: #0080ba;
+  height: 24px;
+  width: 40%;
+  border-radius: 30px; }
+
+.progress-bar--blue50 {
+  background-color: #0080ba;
+  height: 24px;
+  width: 50%;
+  border-radius: 30px; }
+
+.progress-bar--blue60 {
+  background-color: #0080ba;
+  height: 24px;
+  width: 60%;
+  border-radius: 30px; }
+
+.progress-bar--blue70 {
+  background-color: #0080ba;
+  height: 24px;
+  width: 70%;
+  border-radius: 30px; }
+
+.progress-bar--blue75 {
+  background-color: #0080ba;
+  height: 24px;
+  width: 75%;
+  border-radius: 30px; }
+
+.progress-bar--blue80 {
+  background-color: #0080ba;
+  height: 24px;
+  width: 80%;
+  border-radius: 30px; }
+
+.progress-bar--blue85 {
+  background-color: #0080ba;
+  height: 24px;
+  width: 85%;
+  border-radius: 30px; }
+
+.progress-bar--blue90 {
+  background-color: #0080ba;
+  height: 24px;
+  width: 90%;
+  border-radius: 30px; }
+
+.progress-bar--blue95 {
+  background-color: #0080ba;
+  height: 24px;
+  width: 95%;
+  border-radius: 30px; }
+
+.progress-bar--blue100 {
+  background-color: #0080ba;
+  height: 24px;
+  width: 100%;
+  border-radius: 30px; }
+
+/****** END hack ******/

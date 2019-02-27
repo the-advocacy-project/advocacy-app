@@ -5,7 +5,7 @@ import { Button } from '../buttons/Button';
 import { Link } from 'react-router-dom';
 
 function Nutrition(props) {
-    console.log('I am props: ', props.info.more);
+    console.log(Object.keys(props.info));
 
     const displayNutrition = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
@@ -13,25 +13,26 @@ function Nutrition(props) {
             return (
                 <div>
                     <label>
-                        The questions above are examples of how you may meet
-                        this requirement. Please expand and / or let us know
-                        other ways that you need help maintaining and managing
-                        nutritrion below.
+                        The questions above are examples of how you may need
+                        help. Please expand and / or let us know other ways that
+                        you need help maintaining and managing nutritrion below.
                     </label>
-                    <div className="textAreaInput">
-                        <p className="textAreaText">Tell us more</p>
+                    <div className="textAreaInput" key={`nutrition-${i}`}>
                         <textarea
+                            placeholder="Tell us more..."
                             className="textArea more__questions"
                             type="text"
                             name="more"
-                            key={i}
-                            onChange={event =>
+                            value={props.info[qs].more}
+                            key={`input-${i}`}
+                            onChange={event => {
+                                event.preventDefault();
                                 props.handleChangeInput(
                                     event,
                                     qs,
                                     props.section
-                                )
-                            }
+                                );
+                            }}
                         />
                     </div>
                 </div>
@@ -57,16 +58,22 @@ function Nutrition(props) {
             );
         }
     });
+    console.log(Object.prototype.toString.call(displayNutrition));
 
     return (
-        <div>
+        <div id="outer-container">
+            {window.scrollTo(0,0)}
             <NavHeaderForm>
                 <h1 className="h1__questions">
                     Managing and Maintaining Nutrition
                 </h1>
+                <div className="nav-containerForm--green" />
             </NavHeaderForm>
             {/* <h1 className="nutritionH1">Managing and Maintaining Nutrition</h1> */}
-            <div className="wrapper">
+            <div id="page-wrap" className="wrapper">
+                <div className="progress-bar">
+                    <div className="progress-bar--blue10"></div>
+                </div>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>
