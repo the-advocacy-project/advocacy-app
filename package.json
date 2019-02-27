@@ -7,10 +7,10 @@
         "build-watch": "parcel watch ./client/index.html",
         "start-watch": "nodemon server/index.js",
         "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
-        "build": "parcel build ./client/index.html",
+        "build": "parcel build client/index.html",
         "start": "NODE_ENV=production node server/index.js",
         "scss": "node-sass --watch client/styles/scss -o client/styles/css",
-        "heroku-postbuild": "cd client && npm install && npm run build"
+        "heroku-postbuild": "npm run build"
     },
     "proxy": "http://localhost:5000",
     "babel": {

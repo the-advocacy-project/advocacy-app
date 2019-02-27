@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const port = process.env.PORT || 3001;
+
 require('dotenv').config();
 
 app.use(
@@ -352,5 +354,4 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/../dist/index.html'));
 });
 
-const port = 3001;
 app.listen(port, () => console.log('Listening on port 3001!'));
