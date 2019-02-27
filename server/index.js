@@ -242,7 +242,7 @@ app.post('/', (req, res) => {
     const mailOptions = {
         from: 'theadvocacyfac@gmail.com',
         to: `${mailList}`,
-        subject: 'test',
+        subject: 'Overview of Advocacy Application',
         html: `
         <h4>Dear Local Authority decision maker,</h4>
         <p>Please accept this referral to Adult Social Care on behalf of the named client.<br/>
@@ -269,7 +269,7 @@ app.post('/', (req, res) => {
         </ol>
 
         Please feel free to contact the client or The Advocacy Project if more information is required.<br/><br/>
-            
+
         Warm Regards,<br/><br/>
 
         <b>The Advocacy Project<br/></b>
@@ -282,7 +282,7 @@ app.post('/', (req, res) => {
 
         <h2>Contact Information</h2>
         ${contactSection}
-        
+
 
         <h2>Consent Information</h2>
         ${consentSection}
@@ -295,7 +295,7 @@ app.post('/', (req, res) => {
 
         <h2>Hygiene</h2>
         ${hygieneSection}
-        
+
         <h2>Toilet</h2>
         ${toiletSection}
 
@@ -319,10 +319,10 @@ app.post('/', (req, res) => {
 
         <h2>Responsibilities</h2>
         ${responsibilitiesSection}
-        
+
         <h2>Eligibility</h2>
         ${eligibilitySection}
-        
+
         <h2>Wellbeing</h2>
         ${wellbeingSection}
 
