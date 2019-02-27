@@ -8,7 +8,7 @@
         "start-watch": "nodemon server/index.js",
         "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
         "build": "parcel build ./client/index.html",
-        "start": "node server/index.js",
+        "start": "NODE_ENV=production node server/index.js",
         "scss": "node-sass --watch client/styles/scss -o client/styles/css",
         "heroku-postbuild": "cd client && npm install && npm run build"
     },
