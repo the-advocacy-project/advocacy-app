@@ -35,18 +35,6 @@ app.post('/', (req, res) => {
         duty
     } = req.body;
 
-
-    // if (process.env.NODE_ENV === "production") {
-
-    app.use(express.static(path.join(__dirname, '..', '/dist')));
-
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, '..', '/dist', 'index.html'));
-    });
-    // }
-
-    app.listen(port, () => console.log(`Listening on port ${port}!`));
-
     // console.log('contact info', contact.contactData4.more);
 
     const contactSection = Object.keys(contact).map(qs => {
@@ -356,6 +344,17 @@ app.post('/', (req, res) => {
             return res.send(innerRes);
         }
     });
+
+    // if (process.env.NODE_ENV === "production") {
+
+    app.use(express.static(path.join(__dirname, '..', '/dist')));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '..', '/dist', 'index.html'));
+    });
+    // }
+
+    app.listen(port, () => console.log(`Listening on port ${port}!`));
 
     // res.sendFile(path.join(__dirname + '/client/index.html'));
 });
