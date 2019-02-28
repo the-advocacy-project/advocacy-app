@@ -35,7 +35,19 @@ app.post('/', (req, res) => {
         duty
     } = req.body;
 
-    console.log('contact info', contact.contactData4.more);
+
+    // if (process.env.NODE_ENV === "production") {
+
+    app.use(express.static(path.join(__dirname, '..', '/dist')));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '..', '/dist', 'index.html'));
+    });
+    // }
+
+    app.listen(port, () => console.log(`Listening on port ${port}!`));
+
+    // console.log('contact info', contact.contactData4.more);
 
     const contactSection = Object.keys(contact).map(qs => {
         return `<div>
@@ -236,8 +248,8 @@ app.post('/', (req, res) => {
     });
 
     const mailList = [
-        `${consent.consentToCouncil.agree ? 'theadvocacyfac@gmail.com' : null}`,
-        `${consent.consentToAdvocacy.agree ? 'jaggardk@gmail.com' : null}`,
+        `${consent.consentToCouncil.agree ? 'hackneycouncil@gmail.com' : null}`,
+        `${consent.consentToAdvocacy.agree ? 'theadvocacyfac@gmail.com' : null}`,
         `${contact.contactData4.more ? contact.contactData4.more : null}`
     ];
 
@@ -347,14 +359,3 @@ app.post('/', (req, res) => {
 
     // res.sendFile(path.join(__dirname + '/client/index.html'));
 });
-
-if (process.env.NODE_ENV === "production") {
-
-    app.use(express.static(path.join(__dirname, '../dist')));
-
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, '../dist', 'index.html'));
-    });
-}
-
-app.listen(port, () => console.log('Listening on port 3001!'));
