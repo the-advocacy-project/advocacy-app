@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/css/help.css';
-import NavHeader from '../navigation/navHeader';
+import NavHeader from '../navigation/NavHeader';
 import { Link } from 'react-router-dom';
 import { Button } from '../buttons/Button';
 import '../../styles/css/home.css';

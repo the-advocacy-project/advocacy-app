@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavHeader from '../navigation/navHeader';
+import NavHeader from '../navigation/NavHeader';
 import logo from '../../images/logo.png';
 import '../../styles/css/styles.css';
 import '../../styles/css/about.css'

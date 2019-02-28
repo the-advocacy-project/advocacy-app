@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button} from '../buttons/Button';
 import { Link, Redirect } from 'react-router-dom';
-import NavHeader from '../navigation/navHeader';
+import NavHeader from '../navigation/NavHeader';
 
 function Begin(props){
     console.log(props.validation)

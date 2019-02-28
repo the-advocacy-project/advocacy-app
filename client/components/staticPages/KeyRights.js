@@ -1,5 +1,5 @@
 import React from 'react';
-import NavHeader from '../navigation/navHeader';
+import NavHeader from '../navigation/NavHeader';
 import '../../styles/css/home.css';
 
 function KeyRights(){
