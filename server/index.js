@@ -248,7 +248,7 @@ app.post('/', (req, res) => {
     });
 
     const mailList = [
-        `${consent.consentToCouncil.agree ? 'hackneycouncil@gmail.com' : null}`,
+        `${consent.consentToCouncil.agree ? 'theadvocacyfac@gmail.com' : null}`,
         `${consent.consentToAdvocacy.agree ? 'theadvocacyfac@gmail.com' : null}`,
         `${contact.contactData4.more ? contact.contactData4.more : null}`
     ];
