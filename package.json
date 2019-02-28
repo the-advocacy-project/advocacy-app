@@ -6,8 +6,8 @@
     "scripts": {
         "build-watch": "parcel watch ./client/index.html",
         "start-watch": "nodemon server/index.js",
-        "dev": "concurrently --killall node \"npm run start-watch\" \"npm run build-watch\"",
-        "build": "parcel build client/index.html",
+        "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
+        "build": "parcel build ./client/index.html",
         "start": "NODE_ENV=production node server/index.js",
         "scss": "node-sass --watch client/styles/scss -o client/styles/css",
         "heroku-postbuild": "npm run build"
