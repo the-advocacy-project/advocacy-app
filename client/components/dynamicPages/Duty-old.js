@@ -5,7 +5,6 @@ import NavHeader from '../navigation/navHeader';
 import '../../styles/css/home.css';
 
 function Duty(props){
-
     const displayDuty  = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
             return (
