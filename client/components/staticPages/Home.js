@@ -21,12 +21,12 @@ function Home(){
                 <p className="tag-line2">Need help with day to day tasks?<br/>
             See if you can get the help you need.</p>
 
-            <Link to={'./help'} className="beginButtonContainer" >
-                <Begin
-                text='Begin'
-                type='submit'
-                onClick={() => {}}/>
-            </Link>
+                <Link to={'./help'} className="beginButtonContainer" >
+                    <Begin
+                        text='Begin'
+                        type='submit'
+                        onClick={() => {}}/>
+                </Link>
             </div>
         </div>
     )
