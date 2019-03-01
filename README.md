@@ -2,8 +2,8 @@
 
 _Your voice. Your rights. Your choice._
 
-#### See it online https://the-advocacy-project.herokuapp.com/ (Please note this only runs for mobile)
-The version for desktop is revised.
+#### See it online https://the-advocacy-project.herokuapp.com/
+This has been designed mobile first.
 
 
 - An MVP web application created under the umbrella of the *Founders & Coders* cohort 15 Tech-For-Better scheme 
