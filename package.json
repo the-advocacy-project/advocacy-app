@@ -7,7 +7,7 @@
         "build-watch": "parcel watch ./client/index.html",
         "start-watch": "nodemon server/index.js",
         "dev": "parcel client/index.html",
-        "build": "parcel build public/index.html",
+        "build": "parcel build client/index.html",
         "start": "NODE_ENV=production node server/index.js",
         "heroku-postbuild": "npm run build"
     },
