@@ -13,8 +13,7 @@
         "build": "parcel build ./client/index.html",
         "start": "node server/index.js",
         "heroku-prebuild": "",
-        "heroku-postbuild": "",
-        "postinstall": "npm run build"
+        "heroku-postbuild": ""
     },
     "babel": {
         "presets": [
