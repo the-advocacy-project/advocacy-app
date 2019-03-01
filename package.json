@@ -2,7 +2,7 @@
     "name": "parcelExpressTest",
     "version": "1.0.0",
     "engines": {
-        "node": "10.3.0"
+        "node": "10.12.0"
     },
     "description": "",
     "main": "index.js",
@@ -11,8 +11,10 @@
         "start-watch": "nodemon server/index.js",
         "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
         "build": "parcel build ./client/index.html",
-        "start": "node server/index.js",
-        "heroku-postbuild": "npm run build"
+        "start": "NODE_ENV=production node server/index.js",
+        "heroku-prebuild": "",
+        "heroku-postbuild": "",
+        "postinstall": "npm run build"
     },
     "babel": {
         "presets": [
