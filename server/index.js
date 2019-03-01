@@ -348,11 +348,13 @@ app.post('/', (req, res) => {
     // res.sendFile(path.join(__dirname + '/client/index.html'));
 });
 
-app.use(express.static('dist'));
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('dist'));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/dist/index.html'));
-});
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname + '/dist/index.html'));
+    });
+}
 
 const port = 3001;
 app.listen(process.env.PORT || port, () =>
