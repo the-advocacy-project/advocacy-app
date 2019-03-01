@@ -1,5 +1,5 @@
 import React from 'react';
-import people from '../../images/people.png';
+// import people from '../../images/people.png';
 import NavHeader from '../navigation/NavHeader';
 import '../../styles/css/home.css';
 
@@ -13,7 +13,7 @@ function FourZeroFour(){
                 <h2>404</h2>
                 <p>Return to the homepage.</p>
                 <div className="clear"></div>
-                <img src={ people } className="people" alt="line drawing of people's faces"/>
+                <img src={ require('../../images/people.png') } className="people" alt="line drawing of people's faces"/>
             </div>
         </div>
     )
