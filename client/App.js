@@ -3,7 +3,7 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
 
 // STATIC PAGE IMPORTS
-
+import FourZeroFour from './components/staticPages/FourZeroFour';
 import About from './components/staticPages/About';
 import Begin from './components/staticPages/Begin';
 import CareAct from './components/staticPages/CareAct';
@@ -584,7 +584,8 @@ class App extends Component {
                         <Route path="/care-act" component={CareAct} />
                         <Route path="/support" component={Support} />
                         <Route path="/key-rights" component={KeyRights} />
-                        
+                        {/* 404 */}
+                        <Route path="/fourzerofour" component={FourZeroFour} />
                     </Switch>
                 </div>
             </BrowserRouter>
