@@ -10,10 +10,11 @@
         "build-watch": "parcel watch ./client/index.html",
         "start-watch": "nodemon server/index.js",
         "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
-        "build": "parcel build ./client/index.html",
+        "build": "parcel build client/index.html",
         "start": "node server/index.js",
         "heroku-prebuild": "",
-        "heroku-postbuild": ""
+        "heroku-postbuild": "",
+        "postinstall": "npm run build"
     },
     "babel": {
         "presets": [
