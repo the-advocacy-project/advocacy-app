@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '../buttons/Button';
 import { Link } from 'react-router-dom';
-import NavHeader from '../navigation/navHeader';
+import NavHeader from '../navigation/NavHeader';
 import '../../styles/css/home.css';
 
 function Overview(props) {

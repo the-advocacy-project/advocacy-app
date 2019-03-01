@@ -1,6 +1,6 @@
 import React from 'react';
-import people from '../../images/people.png'
-import NavHeader from '../navigation/navHeader';
+import people from '../../images/people.png';
+import NavHeader from '../navigation/NavHeader';
 import '../../styles/css/home.css';
 
 function FourZeroFour(){

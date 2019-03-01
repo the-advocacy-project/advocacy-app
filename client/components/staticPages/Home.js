@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../images/logo.png';
 import people from '../../images/people.png';
 import '../../styles/css/home.css';
-import NavHeader from '../navigation/navHeader';
+import NavHeader from '../navigation/NavHeader';
 import {Begin} from '../buttons/Button';
 import { Link } from 'react-router-dom';
 
