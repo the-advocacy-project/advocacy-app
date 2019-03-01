@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavHeader from '../navigation/NavHeader';
-import logo from '../../images/logo.png';
 import '../../styles/css/styles.css';
 import '../../styles/css/about.css'
 
@@ -11,7 +10,7 @@ function About() {
             {window.scrollTo(0,0)}
             <NavHeader />
             <div id="page-wrap" className="wrapper about-wrapper">
-                <img src={logo} className="align-center logo-about" />
+                <img src={require('../../images/logo.png')} className="align-center logo-about" />
                 <h1 className="about-h1">About us</h1>
                 <p>
                     The Advocacy Project has developed this app to help people get the help they need from the local
