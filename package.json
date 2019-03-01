@@ -9,8 +9,7 @@
         "dev": "parcel client/index.html",
         "build": "parcel build client/index.html",
         "start": "NODE_ENV=production node server/index.js",
-        "heroku-postbuild": "npm run build",
-        "heroku-postbuild": "source .env"
+        "heroku-postbuild": "npm run build"   
     },
     "babel": {
         "presets": [
