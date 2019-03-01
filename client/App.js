@@ -585,7 +585,7 @@ class App extends Component {
                         <Route path="/support" component={Support} />
                         <Route path="/key-rights" component={KeyRights} />
                         {/* 404 */}
-                        <Route path="/fourzerofour" component={FourZeroFour} />
+                        <Route component={FourZeroFour} />
                     </Switch>
                 </div>
             </BrowserRouter>
