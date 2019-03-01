@@ -235,7 +235,7 @@ app.post('/', (req, res) => {
 
     const mailList = [
         `${consent.consentToCouncil.agree ? 'theadvocacyfac@gmail.com' : null}`,
-        `${consent.consentToAdvocacy.agree ? 'jaggardk@gmail.com' : null}`,
+        `${consent.consentToAdvocacy.agree ? 'theadvocacyfac@gmail.com' : null}`,
         `${contact.contactData4.more ? contact.contactData4.more : null}`
     ];
 
@@ -353,4 +353,4 @@ app.get('*', (req, res) => {
 });
 
 const port = 3001;
-app.listen(port, () => console.log('Listening on port 3001!'));
+app.listen(process.env.PORT || port, () => console.log('Listening on port 3001!'));
