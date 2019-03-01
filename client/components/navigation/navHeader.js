@@ -7,7 +7,7 @@ const NavHeader = () => (
     <div>
         <BurgerMenu pageWrapId={"page-wrap"} outerContainerId={"App"} />
         <div className="nav-container">
-        <div className="nav-container--white"></div>
+            <div className="nav-container--white"></div>
         </div>
     </div>
 );
