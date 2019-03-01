@@ -237,7 +237,9 @@ app.post('/', (req, res) => {
 
     const mailList = [
         `${consent.consentToCouncil.agree ? 'theadvocacyfac@gmail.com' : null}`,
-        `${consent.consentToAdvocacy.agree ? 'theadvocacyfac@gmail.com' : null}`,
+        `${
+            consent.consentToAdvocacy.agree ? 'theadvocacyfac@gmail.com' : null
+        }`,
         `${contact.contactData4.more ? contact.contactData4.more : null}`
     ];
 
@@ -345,16 +347,15 @@ app.post('/', (req, res) => {
         }
     });
 
-    // if (process.env.NODE_ENV === "production") {
-
-    app.use(express.static(path.join(__dirname, '..', '/dist')));
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('dist'));
 
     app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, '..', '/dist', 'index.html'));
+        res.sendFile(path.join(__dirname + '/dist/index.html'));
     });
-    // }
+}
 
-    app.listen(port, () => console.log(`Listening on port ${port}!`));
-
-    // res.sendFile(path.join(__dirname + '/client/index.html'));
-});
+const port = 3001;
+app.listen(process.env.PORT || port, () =>
+    console.log('Listening on port 3001!')
+);

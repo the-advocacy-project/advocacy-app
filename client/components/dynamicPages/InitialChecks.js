@@ -2,7 +2,7 @@ import React from 'react';
 import NavHeader from '../navigation/NavHeader';
 import { Link } from 'react-router-dom';
 import {Button} from '../buttons/Button';
-import "../../styles/scss/check_consent.scss"
+import "../../styles/css/check_consent.css"
 
 function InitialChecks(props) {
     console.log("check", props.info.over18.agree, props.info.resident.agree )

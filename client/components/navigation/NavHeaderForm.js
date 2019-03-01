@@ -1,5 +1,5 @@
 import React from 'react';
-import BurgerMenu from './burgerMenu';
+import BurgerMenu from './BurgerMenu';
 
 import '../../styles/css/navigationForm.css';
 
