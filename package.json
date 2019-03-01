@@ -9,7 +9,7 @@
         "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
         "build": "parcel build dist/index.html",
         "start": "node server/index.js",
-        "heroku-postbuild": "parcel build dist/index.html"
+        "heroku-postbuild": "parcel build /dist/index.html"
     },
     "babel": {
         "presets": [
