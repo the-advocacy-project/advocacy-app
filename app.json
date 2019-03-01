@@ -1,16 +1,13 @@
 {
-  "addons": [
-
-  ],
-  "buildpacks": [
-
-  ],
-  "env": {
-  },
-  "formation": {
-  },
-  "name": "advocacy-app",
-  "scripts": {
-  },
-  "stack": "heroku-18"
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        }
+    ],
+    "env": {},
+    "formation": {},
+    "name": "advocacy-app",
+    "scripts": {},
+    "stack": "heroku-18"
 }
