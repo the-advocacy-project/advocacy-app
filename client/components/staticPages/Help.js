@@ -80,12 +80,12 @@ function Help() {
                     <br />
                     <br />
                             Email:{' '}
-                    <a href="mailto: info@advocacyproject.org.uk">info@advocacyproject.org.uk</a>
+                    <a href="mailto: info@advocacyproject.org.uk" target="_blank">info@advocacyproject.org.uk</a>
                 </section>
 
 
                 <div className="advocacy-section">
-                    <p>For more information on advocacy, <a href="/advocacy">click here.</a>
+                    <p>For more information on advocacy, <Link to={"/advocacy"}>click here.</Link>
                     </p>
                 </div>
             </div>
