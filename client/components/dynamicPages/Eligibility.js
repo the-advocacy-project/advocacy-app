@@ -5,7 +5,7 @@ import NavHeader from '../navigation/NavHeader';
 import '../../styles/css/home.css';
 
 function Eligibility(props) {
-    const  displayEligibility  = Object.keys(props.info).map((qs, i) => {
+    const displayEligibility = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
             return (
                 <div>
@@ -24,7 +24,11 @@ function Eligibility(props) {
                             key={i}
                             onChange={event => {
                                 event.preventDefault();
-                                props.handleChangeInput(event, qs, props.section)
+                                props.handleChangeInput(
+                                    event,
+                                    qs,
+                                    props.section
+                                );
                             }}
                         />
                     </div>
@@ -52,18 +56,18 @@ function Eligibility(props) {
 
     return (
         <div id="outer-container">
-            {window.scrollTo(0,0)}
+            {/* {window.scrollTo(0,0)} */}
             <NavHeader />
 
             <div id="page-wrap" className="wrapper">
                 <h1>Eligibility</h1>
                 <div className="progress-bar">
-                    <div className="progress-bar--blue90"></div>
+                    <div className="progress-bar--blue90" />
                 </div>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>
-                { displayEligibility }
+                {displayEligibility}
                 <div className="margin50 clear" />
             </div>
             <div className="navButtons">

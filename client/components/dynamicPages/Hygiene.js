@@ -10,10 +10,9 @@ function Hygiene(props) {
             return (
                 <div>
                     <label>
-                        The questions above are examples of how you may need help.
-                        Please expand and / or let us know
-                        other ways that you need help maintaining personal
-                        hygiene below.
+                        The questions above are examples of how you may need
+                        help. Please expand and / or let us know other ways that
+                        you need help maintaining personal hygiene below.
                     </label>
                     <div className="textAreaInput" key={`hygiene-${i}`}>
                         <textarea
@@ -25,7 +24,11 @@ function Hygiene(props) {
                             key={`input-${i}`}
                             onChange={event => {
                                 event.preventDefault();
-                                props.handleChangeInput(event, qs, props.section)
+                                props.handleChangeInput(
+                                    event,
+                                    qs,
+                                    props.section
+                                );
                             }}
                         />
                     </div>
@@ -53,15 +56,15 @@ function Hygiene(props) {
 
     return (
         <div id="outer-container">
-            {window.scrollTo(0,0)}
+            {/* {window.scrollTo(0,0)} */}
             <NavHeaderForm>
                 <h1 className="h1__questions">Maintaining personal hygiene</h1>
                 <div className="nav-containerForm--green" />
             </NavHeaderForm>
             <div id="page-wrap" className="wrapper">
-            <div className="progress-bar">
-                <div className="progress-bar--blue20"></div>
-            </div>
+                <div className="progress-bar">
+                    <div className="progress-bar--blue20" />
+                </div>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>

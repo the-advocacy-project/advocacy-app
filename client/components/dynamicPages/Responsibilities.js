@@ -5,15 +5,15 @@ import NavHeaderForm from '../navigation/NavHeaderForm';
 import '../../styles/css/styles.css';
 
 function Responsibilities(props) {
-    const  displayResponsibilities  = Object.keys(props.info).map((qs, i) => {
+    const displayResponsibilities = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
             return (
                 <div>
                     <label>
-                        The questions above are examples of how you may need help.
-                        Please expand and / or let us know
-                        other ways that you need help carrying out caring responsibilities
-                        for a child.
+                        The questions above are examples of how you may need
+                        help. Please expand and / or let us know other ways that
+                        you need help carrying out caring responsibilities for a
+                        child.
                     </label>
                     <div className="textAreaInput">
                         <textarea
@@ -24,14 +24,17 @@ function Responsibilities(props) {
                             key={i}
                             onChange={event => {
                                 event.preventDefault();
-                                props.handleChangeInput(event, qs, props.section)
+                                props.handleChangeInput(
+                                    event,
+                                    qs,
+                                    props.section
+                                );
                             }}
                         />
                     </div>
                 </div>
             );
         } else {
-
             return (
                 <div className="checkboxInput">
                     <h2 className="checkboxText">{props.info[qs].question}</h2>
@@ -53,7 +56,7 @@ function Responsibilities(props) {
 
     return (
         <div id="outer-container">
-            {window.scrollTo(0,0)}
+            {/* {window.scrollTo(0,0)} */}
             <NavHeaderForm>
                 <h1 className="h1__questions">
                     Carrying out any caring responsibilities for a child.
@@ -61,13 +64,13 @@ function Responsibilities(props) {
                 <div className="nav-containerForm--green" />
             </NavHeaderForm>
             <div id="page-wrap" className="wrapper">
-            <div className="progress-bar">
-                <div className="progress-bar--blue85"></div>
-            </div>
+                <div className="progress-bar">
+                    <div className="progress-bar--blue85" />
+                </div>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>
-                { displayResponsibilities }
+                {displayResponsibilities}
                 <div className="margin50 clear" />
             </div>
             <div className="navButtons">

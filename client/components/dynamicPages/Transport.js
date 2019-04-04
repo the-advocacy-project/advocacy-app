@@ -4,17 +4,16 @@ import { Link } from 'react-router-dom';
 import NavHeaderForm from '../navigation/NavHeaderForm';
 
 function Transport(props) {
-    const  displayTransport  = Object.keys(props.info).map((qs, i) => {
+    const displayTransport = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
             return (
                 <div>
                     <label>
-                        The questions above are examples of how you may need help.
-                        Please expand and / or let us know
-                        other ways that you need help making use of necessary
-                        facilities or services in the local community, including
-                        public transport, and recreational facilities or
-                        services
+                        The questions above are examples of how you may need
+                        help. Please expand and / or let us know other ways that
+                        you need help making use of necessary facilities or
+                        services in the local community, including public
+                        transport, and recreational facilities or services
                     </label>
                     <div className="textAreaInput">
                         <textarea
@@ -25,7 +24,11 @@ function Transport(props) {
                             key={i}
                             onChange={event => {
                                 event.preventDefault();
-                                props.handleChangeInput(event, qs, props.section)
+                                props.handleChangeInput(
+                                    event,
+                                    qs,
+                                    props.section
+                                );
                             }}
                         />
                     </div>
@@ -53,7 +56,7 @@ function Transport(props) {
 
     return (
         <div id="outer-container">
-            {window.scrollTo(0,0)}
+            {/* {window.scrollTo(0,0)} */}
             <NavHeaderForm>
                 <h1 className="h1__questions">
                     Making use of necessary facilities or services in the local
@@ -62,13 +65,13 @@ function Transport(props) {
                 <div className="nav-containerForm--green" />
             </NavHeaderForm>
             <div id="page-wrap" className="wrapper">
-            <div className="progress-bar">
-                <div className="progress-bar--blue80"></div>
-            </div>
+                <div className="progress-bar">
+                    <div className="progress-bar--blue80" />
+                </div>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>
-                { displayTransport }
+                {displayTransport}
                 <div className="margin50 clear" />
             </div>
             <div className="navButtons">

@@ -8,8 +8,8 @@ import '../../styles/css/home.css';
 function Help() {
     return (
         <div id="outer-container">
-            {window.scrollTo(0,0)}
-            <NavHeader className="nav-container"/>
+            {window.scrollTo(0, 0)}
+            <NavHeader className="nav-container" />
 
             <div id="page-wrap" className="wrapper">
                 <h1 className="help-h1">
@@ -18,15 +18,16 @@ function Help() {
                 </h1>
                 <p>
                     The Advocacy Project has developed this app to help people
-                    get the help they need from the
-                    local authority.
-                </p><br/><br/>
+                    get the help they need from the local authority.
+                </p>
+                <br />
+                <br />
                 <p>This app will help you:</p>
 
                 <ul className="help-list">
                     <li className="help-list margin50">
-                        Outline your right to a Care Act assessment by
-                        the local authority
+                        Outline your right to a Care Act assessment by the local
+                        authority
                     </li>
                     <li className="help-list margin50">
                         Identify if you may have a right to a Care Act Advocate
@@ -43,49 +44,56 @@ function Help() {
                 </ul>
 
                 <p className="help-p">
-                        The Care Act is about helping and protecting people aged 18
-                        and over who need care and support. The local authority has
-                        a duty under the Care Act to make sure people have the
-                        support they need to improve their independence and
-                        wellbeing and be safe. </p>
+                    The Care Act is about helping and protecting people aged 18
+                    and over who need care and support. The local authority has
+                    a duty under the Care Act to make sure people have the
+                    support they need to improve their independence and
+                    wellbeing and be safe.{' '}
+                </p>
                 <br />
                 <br />
                 <br />
-                <p>Click here to find out more about{' '}
+                <p>
+                    Click here to find out more about{' '}
                     <a href="./care-act" className="link">
-                            the Care Act{' '}
+                        the Care Act{' '}
                     </a>{' '}
-                        or{' '}
+                    or{' '}
                     <a href="./Support" className="link">
-                            the eligibility criteria.
-                    </a></p>
+                        the eligibility criteria.
+                    </a>
+                </p>
                 <br />
                 <br />
                 <p className="help-section">
-                            Need help with this app? Please contact us at:</p>
+                    Need help with this app? Please contact us at:
+                </p>
                 <br />
                 <br />
 
                 <section className="contact-p">
-                            The Advocacy Project
+                    The Advocacy Project
                     <br />
-                            73 St Charles Square
+                    73 St Charles Square
                     <br />
-                            London
+                    London
                     <br />
-                            W10 6EJ
-                    <br />
-                    <br />
-                            020 8969 3000
+                    W10 6EJ
                     <br />
                     <br />
-                            Email:{' '}
-                    <a href="mailto: info@advocacyproject.org.uk">info@advocacyproject.org.uk</a>
+                    020 8969 3000
+                    <br />
+                    <br />
+                    Email:{' '}
+                    <a href="mailto: info@advocacyproject.org.uk">
+                        info@advocacyproject.org.uk
+                    </a>
                 </section>
 
-
                 <div className="advocacy-section">
-                    <p>For more information on advocacy, <a href="/advocacy">click here.</a>
+                    <p>
+                        For more information on advocacy,{' '}
+                        <a href="/advocacy">click here.</a>
                     </p>
                 </div>
             </div>

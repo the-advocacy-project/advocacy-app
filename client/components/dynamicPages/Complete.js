@@ -10,7 +10,7 @@ function Complete(props) {
     return (
         <div id="outer-container">
             {props.info === true && <h2>You have unread messages.</h2>}
-            {window.scrollTo(0, 0)}
+            {/* {window.scrollTo(0, 0)} */}
             <NavHeader />
             <div id="page-wrap" className="wrapper">
                 <h1>Complete the application</h1>

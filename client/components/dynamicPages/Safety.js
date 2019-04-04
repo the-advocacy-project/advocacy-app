@@ -10,9 +10,9 @@ function Safety(props) {
             return (
                 <div>
                     <label>
-                        The questions above are examples of how you may need help.
-                        Please expand and / or let us know
-                        other ways that you need help using your home safely.
+                        The questions above are examples of how you may need
+                        help. Please expand and / or let us know other ways that
+                        you need help using your home safely.
                     </label>
                     <div className="textAreaInput" key={`safety-${i}`}>
                         <textarea
@@ -23,7 +23,11 @@ function Safety(props) {
                             key={`input-${i}`}
                             onChange={event => {
                                 event.preventDefault();
-                                props.handleChangeInput(event, qs, props.section)
+                                props.handleChangeInput(
+                                    event,
+                                    qs,
+                                    props.section
+                                );
                             }}
                         />
                     </div>
@@ -51,7 +55,7 @@ function Safety(props) {
 
     return (
         <div id="outer-container">
-            {window.scrollTo(0,0)}
+            {/* {window.scrollTo(0,0)} */}
             <NavHeaderForm>
                 <h1 className="h1__questions">
                     Being able to make use of your home safely
@@ -59,9 +63,9 @@ function Safety(props) {
                 <div className="nav-containerForm--green" />
             </NavHeaderForm>
             <div id="page-wrap" className="wrapper">
-            <div className="progress-bar">
-                <div className="progress-bar--blue50"></div>
-            </div>
+                <div className="progress-bar">
+                    <div className="progress-bar--blue50" />
+                </div>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>

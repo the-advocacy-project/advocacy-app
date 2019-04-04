@@ -5,15 +5,14 @@ import NavHeaderForm from '../navigation/NavHeaderForm';
 import '../../styles/css/styles.css';
 
 function Environment(props) {
-    const  displayEnvironment  = Object.keys(props.info).map((qs, i) => {
+    const displayEnvironment = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
             return (
                 <div>
                     <label>
-                        The questions above are examples of how you may need help.
-                        Please expand and / or let us know
-                        other ways that you need help maintaining a habitable
-                        home environment.
+                        The questions above are examples of how you may need
+                        help. Please expand and / or let us know other ways that
+                        you need help maintaining a habitable home environment.
                     </label>
                     <div className="textAreaInput" key={`environment-${i}`}>
                         <textarea
@@ -24,7 +23,11 @@ function Environment(props) {
                             key={`input-${i}`}
                             onChange={event => {
                                 event.preventDefault();
-                                props.handleChangeInput(event, qs, props.section)
+                                props.handleChangeInput(
+                                    event,
+                                    qs,
+                                    props.section
+                                );
                             }}
                         />
                     </div>
@@ -52,7 +55,7 @@ function Environment(props) {
 
     return (
         <div id="outer-container">
-            {window.scrollTo(0,0)}
+            {/* {window.scrollTo(0,0)} */}
             <NavHeaderForm>
                 <h1 className="h1__questions">
                     Maintaining a habitable home environment
@@ -60,13 +63,13 @@ function Environment(props) {
                 <div className="nav-containerForm--green" />
             </NavHeaderForm>
             <div id="page-wrap" className="wrapper">
-            <div className="progress-bar">
-                <div className="progress-bar--blue60"></div>
-            </div>
+                <div className="progress-bar">
+                    <div className="progress-bar--blue60" />
+                </div>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>
-                { displayEnvironment }
+                {displayEnvironment}
                 <div className="margin50 clear" />
             </div>
             <div className="navButtons">

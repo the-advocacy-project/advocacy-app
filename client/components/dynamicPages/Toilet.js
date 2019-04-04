@@ -5,14 +5,14 @@ import NavHeaderForm from '../navigation/NavHeaderForm';
 import '../../styles/css/styles.css';
 
 function Toilet(props) {
-    const  displayToilet  = Object.keys(props.info).map((qs, i) => {
+    const displayToilet = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
             return (
                 <div>
                     <label>
-                        The questions above are examples of how you may need help.
-                        Please expand and / or let us know
-                        other ways that you need help managing toilet needs.
+                        The questions above are examples of how you may need
+                        help. Please expand and / or let us know other ways that
+                        you need help managing toilet needs.
                     </label>
                     <div className="textAreaInput" key={`toilet-${i}`}>
                         <textarea
@@ -23,7 +23,11 @@ function Toilet(props) {
                             key={`input-${i}`}
                             onChange={event => {
                                 event.preventDefault();
-                                props.handleChangeInput(event, qs, props.section)
+                                props.handleChangeInput(
+                                    event,
+                                    qs,
+                                    props.section
+                                );
                             }}
                         />
                     </div>
@@ -51,19 +55,19 @@ function Toilet(props) {
 
     return (
         <div id="outer-container">
-            {window.scrollTo(0,0)}
+            {/* {window.scrollTo(0,0)} */}
             <NavHeaderForm>
                 <h1 className="h1__questions">Managing toilet needs</h1>
                 <div className="nav-containerForm--green" />
             </NavHeaderForm>
             <div id="page-wrap" className="wrapper">
-            <div className="progress-bar">
-                <div className="progress-bar--blue30"></div>
-            </div>
+                <div className="progress-bar">
+                    <div className="progress-bar--blue30" />
+                </div>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>
-                { displayToilet }
+                {displayToilet}
                 <div className="margin50 clear" />
             </div>
             <div className="navButtons">
