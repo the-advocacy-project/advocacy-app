@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const port = process.env.PORT || 3001;
+
 require('dotenv').config();
 
 app.use(
@@ -33,7 +35,7 @@ app.post('/', (req, res) => {
         duty
     } = req.body;
 
-    console.log('contact info', contact.contactData4.more);
+    // console.log('contact info', contact.contactData4.more);
 
     const contactSection = Object.keys(contact).map(qs => {
         return `<div>
@@ -344,9 +346,6 @@ app.post('/', (req, res) => {
             return res.send(innerRes);
         }
     });
-
-    // res.sendFile(path.join(__dirname + '/client/index.html'));
-});
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('dist'));

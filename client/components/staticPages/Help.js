@@ -80,7 +80,7 @@ function Help() {
                     <br />
                     <br />
                             Email:{' '}
-                    <a href="mailto: info@advocacyproject.org.uk">info@advocacyproject.org.uk</a>
+                    <a href="mailto: info@advocacyproject.org.uk" target="_blank">info@advocacyproject.org.uk</a>
                 </section>
 
 
