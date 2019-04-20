@@ -7,29 +7,26 @@ import '../../styles/css/home.css';
 function Overview(props) {
     // console.log(props.info);
     const sections = Object.keys(props.info); //get array of object sections
-    console.log(sections);
+    // console.log(sections);
     // sections.forEach(item => {
     //     console.log('zzz: ', Object.keys(props.info[item]));
     // });
     let displayOverview = [];
     sections.forEach(item => {
-        console.log(props.info[item]);
+        // console.log(props.info[item]);
 
         displayOverview.push(
             Object.keys(props.info[item]).map((qs, i) => {
-                if (qs === 'more') {
-                    console.log('I am textarea');
+                if (qs === 'more' || qs === 'more2') {
+                    // console.log('I am textarea');
                     return (
                         <div>
                             <label>
-                                The questions above are examples of how you may
-                                need help. Please expand and / or let us know
-                                other ways that you need help maintaining and
-                                managing nutritrion below.
+                                Further information about my needs:
                             </label>
                             <div
                                 className="textAreaInput"
-                                key={`nutrition-${i}`}
+                                key={`overview-${i}`}
                             >
                                 <textarea
                                     placeholder="Tell us more..."
@@ -70,9 +67,9 @@ function Overview(props) {
                         </div>
                     );
                 } else {
-                    console.log('I am a checkbox');
+                    // console.log('I am a checkbox');
                     // console.log('checked: ', props.info[qs].agree);
-                    console.log('checked: ', props.info);
+                    //console.log('checked: ', props.info);
                     return (
                         <div className="checkboxInput">
                             <h2 className="checkboxText">
