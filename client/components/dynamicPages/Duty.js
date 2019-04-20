@@ -5,7 +5,6 @@ import NavHeader from '../navigation/NavHeader';
 import '../../styles/css/home.css';
 
 function Duty(props){
-
     const displayDuty  = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
             return (
@@ -85,7 +84,7 @@ function Duty(props){
                     <li>communicate with the local authority</li>
                 </ul>
                 { displayDuty }
-                <a href="../key-rights">Click here for more information on your right to a Care Act advocate </a>
+                <Link to={"../key-rights"}>Click here for more information on your right to a Care Act advocate </Link>
             </div>
             <div className="navButtons"><Link to={'./wellbeing'} >
                 <Button
