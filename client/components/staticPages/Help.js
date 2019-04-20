@@ -52,13 +52,13 @@ function Help() {
                 <br />
                 <br />
                 <p>Click here to find out more about{' '}
-                    <a href="./care-act" className="link">
+                    <Link href="./care-act" className="link">
                             the Care Act{' '}
-                    </a>{' '}
+                    </Link>{' '}
                         or{' '}
-                    <a href="./Support" className="link">
+                    <Link href="./Support" className="link">
                             the eligibility criteria.
-                    </a></p>
+                    </Link></p>
                 <br />
                 <br />
                 <p className="help-section">
@@ -85,7 +85,7 @@ function Help() {
 
 
                 <div className="advocacy-section">
-                    <p>For more information on advocacy, <a href="/advocacy">click here.</a>
+                    <p>For more information on advocacy, <Link href="/advocacy">click here.</Link>
                     </p>
                 </div>
             </div>
