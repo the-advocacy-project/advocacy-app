@@ -52,19 +52,11 @@ function Help() {
                 <br />
                 <br />
                 <p>Click here to find out more about{' '}
-<<<<<<< HEAD
-                    <Link href="./care-act" className="link">
-                            the Care Act{' '}
-                    </Link>{' '}
-                        or{' '}
-                    <Link href="./Support" className="link">
-=======
                     <Link to={"./care-act"} className="link">
                             the Care Act{' '}
                     </Link>{' '}
                         or{' '}
                     <Link to={"./Support"} className="link">
->>>>>>> b2ba7aab735b2f1585ff4eadd71e94206a719dfc
                             the eligibility criteria.
                     </Link></p>
                 <br />
