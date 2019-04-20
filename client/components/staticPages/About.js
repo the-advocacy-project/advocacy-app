@@ -23,12 +23,17 @@ function About() {
                         <br />
                         <br />
                             Email:{' '}
+<<<<<<< HEAD
                         <a href="mailto: info@advocacyproject.org.uk">info@advocacyproject.org.uk</a>
+=======
+                        <a href="mailto: info@advocacyproject.org.uk" target="_blank">info@advocacyproject.org.uk</a>
+>>>>>>> c2215e6433795b88d35052b3e27dfb6cf0a66bce
                     </section>
 
-                    <br /><br />
+                    <br />
+                    <br />
                     For more information, check out&nbsp;
-                    <a href="https://www.advocacyproject.org.uk/news/the-advocacy-project-in-hackney/">
+                    <a href="https://www.advocacyproject.org.uk/news/the-advocacy-project-in-hackney/" target="_blank">
                         our website.
                     </a>
                 </p>

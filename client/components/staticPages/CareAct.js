@@ -32,7 +32,7 @@ function CareAct(){
                 </p>
                 <h2>For more information:</h2> <br/><br/>
                 <p>The Social Care Institute for Excellence:</p>
-                <a href="https://www.scie.org.uk/care-act-2014/advocacy-services/commissioning-independent-advocacy/duties/independent-advocacy-care-act.asp">https://www.scie.org.uk/care-act-2014/advocacy-services/commissioning-independent-advocacy/duties/independent-advocacy-care-act.asp</a>
+                <a href="https://www.scie.org.uk/care-act-2014/advocacy-services/commissioning-independent-advocacy/duties/independent-advocacy-care-act.asp" target="_blank">https://www.scie.org.uk/care-act-2014/advocacy-services/commissioning-independent-advocacy/duties/independent-advocacy-care-act.asp</a>
                 <br/><br/>
                 <br/><br/>
                 <br/><br/>
