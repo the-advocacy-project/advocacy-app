@@ -31,20 +31,21 @@ function Begin(props){
                             of receiving support under the Care Act.</p>
                     </ol>
                 </div>
-                <div className="navButtons"><Link to={'./contact'} >
-                    <Button
-                        text='Back'
-                        type='submit'
-                        className="buttons"
-                        onClick={() => {}}/>
-                </Link>
-                <Link to={'./nutrition'} >
-                    <Button
-                        text='Next'
-                        type='submit'
-                        className="buttons"
-                        onClick={() => {}}/>
-                </Link>
+                <div className="navButtons">
+                    <Link to={'./contact'} >
+                        <Button
+                            text='Back'
+                            type='submit'
+                            className="buttons"
+                            onClick={() => {}}/>
+                    </Link>
+                    <Link to={'./nutrition'} >
+                        <Button
+                            text='Next'
+                            type='submit'
+                            className="buttons"
+                            onClick={() => {}}/>
+                    </Link>
                 </div>
             </div>
         )
