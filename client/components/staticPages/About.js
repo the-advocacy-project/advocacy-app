@@ -1,14 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import NavHeader from '../navigation/NavHeader';
 import logo from '../../images/logo.png';
-||||||| merged common ancestors
-import NavHeader from '../navigation/navHeader';
-import logo from '../../images/logo.png';
-=======
-//import NavHeader from '../navigation/NavHeader';
->>>>>>> staging
+
 import '../../styles/css/styles.css';
 import '../../styles/css/about.css'
 
