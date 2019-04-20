@@ -20,7 +20,7 @@ function KeyRights(){
                         <li>if the adult does, what those needs are</li>
                     </ul>
                     <p>For more information on this section:</p>
-                    <a href="http://www.legislation.gov.uk/ukpga/2014/23/section/9/enacted" className="wrap">http://www.legislation.gov.uk/ukpga/2014/23/section/9/enacted</a>
+                    <a href="http://www.legislation.gov.uk/ukpga/2014/23/section/9/enacted" className="wrap" target="_blank">http://www.legislation.gov.uk/ukpga/2014/23/section/9/enacted</a>
                     <br/>
                     <br/>
                     <li>The duty to provide support</li>
@@ -54,7 +54,7 @@ function KeyRights(){
                     <br/><br/>
                     <h2>For more information:</h2>
                     <br/><br/>
-                    <a href="https://www.legislation.gov.uk/ukpga/2014/23/section/67" className="wrap">https://www.legislation.gov.uk/ukpga/2014/23/section/67</a>
+                    <a href="https://www.legislation.gov.uk/ukpga/2014/23/section/67" className="wrap" target="_blank">https://www.legislation.gov.uk/ukpga/2014/23/section/67</a>
                 </ol>
                 <br/><br/>
                 <br/><br/>
