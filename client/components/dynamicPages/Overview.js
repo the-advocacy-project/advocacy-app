@@ -21,15 +21,10 @@ function Overview(props) {
                     console.log('I am textarea');
                     return (
                         <div>
-                            <label>
-                                The questions above are examples of how you may
-                                need help. Please expand and / or let us know
-                                other ways that you need help maintaining and
-                                managing nutritrion below.
-                            </label>
+                            <p>{props.info[item][qs].question}</p>
                             <div
                                 className="textAreaInput"
-                                key={`nutrition-${i}`}
+                                key={`overview-${i}`}
                             >
                                 <textarea
                                     placeholder="Tell us more..."
@@ -67,6 +62,34 @@ function Overview(props) {
                                     props.handleChangeInput(event, qs, item);
                                 }}
                             />
+                        </div>
+                    );
+                } else if (qs === 'more2') {
+                    console.log('I am textarea');
+                    return (
+                        <div>
+                            <p>{props.info[item][qs].question}</p>
+                            <div
+                                className="textAreaInput"
+                                key={`overview-${i}`}
+                            >
+                                <textarea
+                                    placeholder="Tell us more..."
+                                    className="textArea more__questions"
+                                    type="text"
+                                    name="more"
+                                    value={props.info[item][qs].more}
+                                    key={`input-${i}`}
+                                    onChange={event => {
+                                        event.preventDefault();
+                                        props.handleChangeInput(
+                                            event,
+                                            qs,
+                                            item
+                                        );
+                                    }}
+                                />
+                            </div>
                         </div>
                     );
                 } else {
