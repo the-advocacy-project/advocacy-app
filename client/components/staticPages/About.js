@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import NavHeader from '../navigation/NavHeader';
 import '../../styles/css/styles.css';
 import '../../styles/css/about.css'
@@ -24,7 +23,7 @@ function About() {
                         <br />
                         <br />
                             Email:{' '}
-                            <a href="mailto: info@advocacyproject.org.uk">info@advocacyproject.org.uk</a>
+                        <a href="mailto: info@advocacyproject.org.uk">info@advocacyproject.org.uk</a>
                     </section>
 
                     <br /><br />

@@ -1,7 +1,6 @@
 import React from 'react';
 import { slide as Menu } from "react-burger-menu";
 import { Link } from 'react-router-dom';
-import {Button} from "../buttons/Button";
 import {Home, About, Care, Support, Key, Application, Advocacy} from '../../images/MenuImages';
 
 
