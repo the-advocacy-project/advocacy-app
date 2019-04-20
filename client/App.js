@@ -16,7 +16,6 @@ import SorryContact from './components/staticPages/SorryContact';
 import SorryChecks from './components/staticPages/SorryChecks';
 import Support from './components/staticPages/Support';
 import Advocacy from './components/staticPages/Advocacy';
-import Menu from './components/staticPages/Menu';
 
 // DYNAMIC PAGE IMPORTS
 import InitialChecks from './components/dynamicPages/InitialChecks';
@@ -578,7 +577,6 @@ class App extends Component {
                             )}
                         />
                         {/* NAV COMPONENTS */}
-                        <Route path="/menu" component={Menu} />
                         <Route path="/about" component={About} />
                         <Route path="/advocacy" component={Advocacy} />
                         <Route path="/care-act" component={CareAct} />
