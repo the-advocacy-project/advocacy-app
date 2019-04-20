@@ -29,7 +29,7 @@ function About() {
 
                     <br /><br />
                     For more information, check out&nbsp;
-                    <a href="https://www.advocacyproject.org.uk/news/the-advocacy-project-in-hackney/">
+                    <a href="https://www.advocacyproject.org.uk/news/the-advocacy-project-in-hackney/" target="_blank">
                         our website.
                     </a>
                 </p>
