@@ -21,7 +21,7 @@ function Advocacy(props) {
                 </p>
                 <br/><br/>
                 <h2>For more information:</h2>
-                <a href="https://qualityadvocacy.org.uk/wp-content/uploads/2018/05/Code-of-Practice-1.pdf" target="_blank" className="wrap">https://qualityadvocacy.org.uk/wp-content/uploads/2018/05/Code-of-Practice-1.pdf</a>
+                <a href="https://qualityadvocacy.org.uk/wp-content/uploads/2018/05/Code-of-Practice-1.pdf" className="wrap" target="_blank">https://qualityadvocacy.org.uk/wp-content/uploads/2018/05/Code-of-Practice-1.pdf</a>
                 <br/><br/>
                 <br/><br/>
             </div>
