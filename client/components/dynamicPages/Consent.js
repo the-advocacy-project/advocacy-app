@@ -6,11 +6,11 @@ import { Link, Redirect } from 'react-router-dom';
 
 
 function Consent(props) {
-    console.log('I am props: ', props);
-    console.log('I am validation: ', props.validation);
+    // console.log('I am props: ', props);
+    // console.log('I am validation: ', props.validation);
 
     const displayConsent = Object.keys(props.info).map((qs, i) => {
-        console.log("qs", qs)
+        // console.log("qs", qs)
         if (qs === "consentToCouncil" || qs ==="consentToAdvocacy"){
             return (
                 <div className="checkboxInput">
