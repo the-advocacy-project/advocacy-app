@@ -52,11 +52,11 @@ function Help() {
                 <br />
                 <br />
                 <p>Click here to find out more about{' '}
-                    <Link to={"/care-act"} className="link">
+                    <Link to={'./care-act'} className="link">
                             the Care Act{' '}
                     </Link>{' '}
                         or{' '}
-                    <Link to={"/support"} className="link">
+                    <Link to={'./support'} className="link">
                             the eligibility criteria.
                     </Link></p>
                 <br />
