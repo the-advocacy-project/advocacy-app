@@ -118,7 +118,7 @@ function Support(){
                     
                     </div>
                 </ol>
-                <p>For more details on eligibility, please <a href="https://www.scie.org.uk/care-act-2014/assessment-and-eligibility/eligibility/criteria-adults-care.asp">click here.</a></p>
+                <p>For more details on eligibility, please <a href="https://www.scie.org.uk/care-act-2014/assessment-and-eligibility/eligibility/criteria-adults-care.asp" target="_blank">click here.</a></p>
                 <br/><br/>
                 <br/><br/>
             </div>
