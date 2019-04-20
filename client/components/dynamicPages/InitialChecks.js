@@ -5,7 +5,7 @@ import {Button} from '../buttons/Button';
 import "../../styles/css/check_consent.css"
 
 function InitialChecks(props) {
-    console.log("check", props.info.over18.agree, props.info.resident.agree )
+    // console.log("check", props.info.over18.agree, props.info.resident.agree )
     const displayInitialChecks = Object.keys(props.info).map((qs, i) => {
 
         return (
