@@ -52,13 +52,13 @@ function Help() {
                 <br />
                 <br />
                 <p>Click here to find out more about{' '}
-                    <a href="./care-act" className="link">
+                    <Link to={"./care-act"} className="link">
                             the Care Act{' '}
-                    </a>{' '}
+                    </Link>{' '}
                         or{' '}
-                    <a href="./Support" className="link">
+                    <Link to={"./Support"} className="link">
                             the eligibility criteria.
-                    </a></p>
+                    </Link></p>
                 <br />
                 <br />
                 <p className="help-section">
