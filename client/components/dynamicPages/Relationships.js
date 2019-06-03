@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import NavHeaderForm from '../navigation/NavHeaderForm';
 
 function Relationships(props) {
+
     const  displayRelationships  = Object.keys(props.info).map((qs, i) => {
         if (qs === 'more') {
 
@@ -53,7 +54,6 @@ function Relationships(props) {
 
     return (
         <div id="outer-container">
-            {window.scrollTo(0,0)}
             <NavHeaderForm>
                 <h1 className="h1__questions">
                     Developing and maintaining family or other personal
@@ -63,9 +63,9 @@ function Relationships(props) {
                 <div className="nav-containerForm--green" />
             </NavHeaderForm>
             <div id="page-wrap" className="wrapper">
-            <div className="progress-bar">
-                <div className="progress-bar--blue70"></div>
-            </div>
+                <div className="progress-bar">
+                    <div className="progress-bar--blue70"></div>
+                </div>
                 <h2 className="margin50 h2__questions">
                     Please check what applies to you
                 </h2>
@@ -92,6 +92,7 @@ function Relationships(props) {
             </div>
         </div>
     );
+
 }
 
 export default Relationships;

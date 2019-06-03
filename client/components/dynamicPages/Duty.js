@@ -84,7 +84,7 @@ function Duty(props){
                     <li>communicate with the local authority</li>
                 </ul>
                 { displayDuty }
-                <a href="../key-rights">Click here for more information on your right to a Care Act advocate </a>
+                <Link to={"../key-rights"}>Click here for more information on your right to a Care Act advocate </Link>
             </div>
             <div className="navButtons"><Link to={'./wellbeing'} >
                 <Button
