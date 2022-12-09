@@ -39,7 +39,7 @@
         "concurrently": "^4.1.0",
         "dotenv": "^6.2.0",
         "eslint": "^4.19.1",
-        "express": "^4.16.4",
+        "express": "^4.17.3",
         "greeting": "^1.0.6",
         "nodemailer": "^5.1.1",
         "nodemon": "^1.18.10",
